@@ -515,7 +515,7 @@ views:
           - type: vertical-stack
             cards:
               - type: weather-forecast
-                entity: weather.home
+                entity: weather.thuis
                 name: Weer
           - type: vertical-stack
             cards:
