@@ -1,0 +1,4 @@
+ - platform: ping
+   host: 8.8.8.8
+   scan_interval: 60
+   name: WAN

@@ -1,0 +1,81 @@
+home_radio:
+  alias: Play Radio on Chromecast Audio
+  sequence:
+  - service: media_player.volume_set
+    data:
+      entity_id: media_player.living_room
+      volume_level: '0.35'
+  - service: media_player.volume_set
+    data:
+      entity_id: media_player.living_tv
+      volume_level: '0.20'
+  - service: media_player.play_media
+    data_template:
+      entity_id: '{% if is_state("input_select.chromecast_radio", "Livingroom") %}
+        media_player.living_room {% elif is_state("input_select.chromecast_radio",
+        "Everywhere") %} media_player.living_room {% endif %}
+
+        '
+      media_content_id: '{% if is_state("input_select.radio_station", "Studio Brussel")
+        %} http://icecast.vrtcdn.be/stubru-high.mp3 {% elif is_state("input_select.radio_station",
+        "Q-Music") %} https://icecast-qmusicnl-cdp.triple-it.nl/Qmusic_nl_live_96.mp3
+        {% elif is_state("input_select.radio_station", "Radio 1") %} http://icecast.vrtcdn.be/radio1-high.mp3
+        {% elif is_state("input_select.radio_station", "Radio 2") %} http://icecast.vrtcdn.be/ra2ant-high.mp3
+        {% elif is_state("input_select.radio_station", "Joe FM") %} https://icecast-qmusicnl-cdp.triple-it.nl/Joe_nl_1_96.mp3
+        {% elif is_state("input_select.radio_station", "MNM") %} http://icecast.vrtcdn.be/mnm-high.mp3
+        {% endif %}
+
+        '
+      media_content_type: audio/mp4
+'wake_up_light_masterbedroom':
+  alias: Wake Up Light - Test
+  sequence:
+  - data:
+      brightness_pct: 10
+    entity_id: light.dad_bedroom_spots
+    service: light.turn_on
+  - delay: 00:01
+  - data:
+      brightness_pct: 20
+    entity_id: light.dad_bedroom_spots
+    service: light.turn_on
+  - delay: 00:01
+  - data:
+      brightness_pct: 30
+    entity_id: light.dad_bedroom_spots
+    service: light.turn_on
+  - delay: 00:01
+  - data:
+      brightness_pct: 40
+    entity_id: light.dad_bedroom_spots
+    service: light.turn_on
+  - delay: 00:01
+  - data:
+      brightness_pct: 50
+    entity_id: light.dad_bedroom_spots
+    service: light.turn_on
+  - delay: 00:01
+  - data:
+      brightness_pct: 60
+    entity_id: light.dad_bedroom_spots
+    service: light.turn_on
+  - delay: 00:01
+  - data:
+      brightness_pct: 70
+    entity_id: light.dad_bedroom_spots
+    service: light.turn_on
+  - delay: 00:01
+  - data:
+      brightness_pct: 80
+    entity_id: light.dad_bedroom_spots
+    service: light.turn_on
+  - delay: 00:01
+  - data:
+      brightness_pct: 90
+    entity_id: light.dad_bedroom_spots
+    service: light.turn_on
+  - delay: 00:01
+  - data:
+      brightness_pct: 100
+    entity_id: light.dad_bedroom_spots
+    service: light.turn_on

@@ -1,0 +1,5 @@
+- id: '1576490025283'
+  name: Background lighting Livingroom
+  entities:
+   light.kitchen_coffee_area:
+    state: on

@@ -1,0 +1,4 @@
+  - platform: knx
+    name: Terrace
+    address: '1/1/74'
+    state_address: '1/4/74'

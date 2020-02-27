@@ -1,0 +1,15 @@
+spotify_playlist:
+  name: 'Playlist:'
+  options:
+    - Scream out loud
+    - Alexandra favoriet
+    - Deep Focus
+    - A - Coming undone
+  icon: mdi:spotify
+
+spotify_source:
+  name: "Source:"
+  options:
+    - Living Home
+    - Living TV
+

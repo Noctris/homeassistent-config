@@ -1,0 +1,20 @@
+  - platform: knx
+    name: Carport Night Light
+    address: '1/1/59'
+    state_address: '1/4/59'
+  - platform: knx
+    name: Carport Main Light
+    address: '1/1/60'
+    state_address: '1/4/60'
+  - platform: knx
+    name: Carport Flowerbed
+    address: '1/1/61'
+    state_address: '1/4/61'
+  - platform: knx
+    name: Carport Storage 1
+    address: '1/1/62'
+    state_address: '1/4/62'
+  - platform: knx
+    name: Carport Storage 2
+    address: '1/1/63'
+    state_address: '1/4/63'

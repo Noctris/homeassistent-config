@@ -1,0 +1,18 @@
+kids:
+  name: Kids
+  entities:
+    - person.alexandra_van_hoof
+    - person.nicholas_van_hoof
+family:
+  name: Family
+  entities:
+    - person.nicholas_van_hoof
+    - person.michel_van_hoof
+    - person.alexandra_van_hoof
+living_relax_lights:
+  name: Sfeerverlichting Living
+  entities:
+    - switch.living_couch_window
+    - switch.living_tv_light
+    - light.kitchen_coffee_area
+    - switch.dinning_table

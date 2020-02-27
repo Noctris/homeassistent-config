@@ -1,0 +1,4 @@
+  tunneling:
+    host: !secret knx_gateway_ip
+    port: 3671
+    local_ip: !secret hassio_host_ip

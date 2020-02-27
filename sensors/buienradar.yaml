@@ -1,0 +1,9 @@
+ - platform: buienradar
+   longitude: !secret home_lon
+   latitude: !secret home_lat
+   monitored_conditions:
+    - symbol
+    - humidity
+    - temperature
+    - windspeed
+    - pressure

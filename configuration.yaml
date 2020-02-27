@@ -1,0 +1,104 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret home_lat
+  longitude: !secret home_lon
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: !secret home_height
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Europe/Brussels
+  # Customization file
+  customize: !include customize.yaml
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+frontend:
+  themes: !include_dir_merge_named themes #!include_dir_merge_list themes/
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+# http:
+#   base_url: example.duckdns.org:8123
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+speedtestdotnet:
+
+# Cloud
+cloud:
+
+google:
+    client_id: !secret google_client_id
+    client_secret: !secret google_client_secret
+
+# Discover some devices automatically
+discovery:
+
+# Media Players
+media_player: !include_dir_merge_list mediaplayers/
+
+# My KNX Config
+knx: !include_dir_merge_list knx/
+#KNX Lights
+light: !include_dir_merge_list lights/
+switch: !include_dir_merge_list switches/
+input_select: !include_dir_merge_named inputs/
+input_boolean: !include input_boolean/input_boolean.yaml
+input_datetime: !include_dir_merge_named input_datetime/
+# Sensors
+sensor: !include_dir_merge_list sensors/
+binary_sensor: !include_dir_merge_list sensors_binary/
+# Device trackers we are using
+device_tracker: !include_dir_merge_list device_trackers/
+
+zone: !include_dir_merge_list zones/
+persistent_notification:
+# Example configuration.yaml entry
+sabnzbd:
+  api_key: !secret sabnzb_family_api_key
+  host: !secret sabnzb_family_host
+  path: /
+  name: Family sab
+  port: 443
+  ssl: true
+  sensors:
+    - current_status
+    - speed
+    - queue_size
+    - queue_remaining
+    - disk_size
+    - disk_free
+    - queue_count
+    - day_size
+    - week_size
+    - month_size
+    - total_size
+
+
+input_number:
+  spotify_volume:
+    name: Volume
+    icon: mdi:volume-high
+    min: 0
+    max: 1
+    step: 0.05
+
+weather:
+  - platform: darksky
+    api_key: !secret darksky_api_key
+  - platform: buienradar
+
+camera:
+  - platform: buienradar
+    country_code: BE
+    
+spotify:
+  client_id: !secret SPOTIFY_CLIENT_ID
+  client_secret: !secret SPOTIFY_CLIENT_SECRET

@@ -1,0 +1,20 @@
+# Kids Bedroom
+  - platform: knx
+    name: Kids Bedroom Spots
+    address: '1/1/108'
+    brightness_address: '1/3/79'
+    state_address: '1/4/108'
+    brightness_state_address: '1/3/79'
+  - platform: knx
+    name: Kids Bedroom L2
+    address: '1/1/109'
+    brightness_address: '1/3/80'
+    state_address: '1/4/109'
+    brightness_state_address: '1/3/80' 
+
+
+    
+    
+    
+    
+    

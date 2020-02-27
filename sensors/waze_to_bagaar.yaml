@@ -1,0 +1,5 @@
+ - platform: waze_travel_time
+   name: "To Bagaar"
+   origin: person.michel_van_hoof
+   destination: "Lamorinierestraat 161, 2018 Antwerpen, Belgium"
+   region: 'EU'

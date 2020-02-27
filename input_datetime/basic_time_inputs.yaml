@@ -1,0 +1,5 @@
+  master_bedroom_alarm_clock_time:
+    name: Master Bedroom Alarm Clock
+    has_date: false
+    has_time: true
+    icon: mdi:alarm

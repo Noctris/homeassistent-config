@@ -1,0 +1,12 @@
+  - platform: knx
+    name: Bathroom Spots
+    address: '1/1/120'
+    state_address: '1/4/120'
+  - platform: knx
+    name: Bathroom Shower Spots
+    address: '1/1/121'
+    state_address: '1/4/121'
+  - platform: knx
+    name: Bathroom L3
+    address: '1/1/122'
+    state_address: '1/4/122'

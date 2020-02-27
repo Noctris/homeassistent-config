@@ -1,0 +1,25 @@
+# Living Room Area
+  - platform: knx
+    name: Living Spots
+    address: '1/1/6'
+    brightness_address: '1/3/0'
+    state_address: '1/4/6'
+    brightness_state_address: '1/3/0'
+  - platform: knx
+    name: Living L2
+    address: '1/1/7'
+    brightness_address: '1/3/1'
+    state_address: '1/4/7'
+    brightness_state_address: '1/3/1' 
+  - platform: knx
+    name: Living L3
+    address: '1/1/5'
+    state_address: '1/4/5'
+
+
+
+    
+    
+    
+    
+    

@@ -1,0 +1,17 @@
+---
+#
+# https://www.home-assistant.io/components/input_boolean/
+
+# Input boolean that it is kids week
+  kids_week:
+    name: Kinderen zijn bij mij
+    icon: mdi:account-child
+  master_bedroom_alarm_enabled:
+    name: Master Bedroom Alarmclock Enabled
+    icon: mdi:alarm
+  washingmachine_done:
+    name: Wasmachine Klaar
+    icon: mdi:washing-machine
+  dryer_done:
+    name: Droogmachine Klaar!
+    icon: mdi:tumble-dryer

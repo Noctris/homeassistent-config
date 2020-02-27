@@ -1,0 +1,5 @@
+ - platform: waze_travel_time
+   name: "To Xant"
+   origin: person.michel_van_hoof
+   destination: !secret xant_address
+   region: 'EU'

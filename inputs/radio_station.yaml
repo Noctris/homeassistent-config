@@ -1,0 +1,10 @@
+radio_station:
+  name: 'Select Radio Station:'
+  options:
+    - None
+    - Studio Brussel
+    - Q-Music
+    - Radio 1
+    - Radio 2
+    - Joe FM
+    - MNM
