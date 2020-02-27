@@ -21,6 +21,5 @@ aircast.xml
 *.log
 sabnzbd.conf
 traccar.xml
-customize.yaml
 google_calendars.yaml
 .spotify-token-cache

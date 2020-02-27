@@ -1,0 +1,12 @@
+script.home_radio:
+    friendly_name: Start Playing
+    icon: mdi:play
+person.michel_van_hoof:
+    picture: !secret mivh_facebook_picture
+    entity_picture: !secret mivh_facebook_picture
+person.alexandra_van_hoof:
+    picture: !secret alvh_picture
+    entity_picture: !secret alvh_picture
+person.nicholas_van_hoof:
+    picture: !secret nivh_picture
+    entity_picture: !secret nivh_picture
