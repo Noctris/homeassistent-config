@@ -81,7 +81,7 @@ sabnzbd:
     - month_size
     - total_size
 
-
+#TODO: move to seperate folders
 input_number:
   spotify_volume:
     name: Volume
