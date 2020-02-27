@@ -1,14 +1,14 @@
 kids:
   name: Kids
   entities:
-    - person.alexandra_van_hoof
-    - person.nicholas_van_hoof
+    - person.alexandra
+    - person.nicholas
 family:
   name: Family
   entities:
-    - person.nicholas_van_hoof
-    - person.michel_van_hoof
-    - person.alexandra_van_hoof
+    - person.nicholas
+    - person.michel
+    - person.alexandra
 living_relax_lights:
   name: Sfeerverlichting Living
   entities:

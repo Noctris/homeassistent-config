@@ -36,7 +36,7 @@ views:
           - entity: group.living_relax_lights
         title: Verlichting
         type: entities
-      - entity: media_player.spotify_michel
+      - entity: media_player.spotify_michel_van_hoof
         type: media-control
     path: living
     title: Living
