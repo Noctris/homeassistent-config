@@ -370,7 +370,7 @@ views:
           - switch.office_library_left
         title: Schakelaar
         type: entities
-      - entity: weather.home
+      - entity: weather.thuis
         type: weather-forecast
     path: default_view
     title: Home Test
@@ -394,7 +394,7 @@ views:
         entity: camera.buienradar_loop
         image: 'https://www.home-assistant.io/images/merchandise/shirt-frontpage.png'
         type: picture-entity
-      - entity: media_player.spotify_michel
+      - entity: media_player.spotify_michel_van_hoof
         type: media-control
       - content: |-
           {% for note in states.persistent_notification -%}
