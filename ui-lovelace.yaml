@@ -36,7 +36,7 @@ views:
           - entity: group.living_relax_lights
         title: Verlichting
         type: entities
-      - entity: media_player.spotify_michel_van_hoof
+      - entity: media_player.spotify_michel
         type: media-control
     path: living
     title: Living
@@ -52,11 +52,11 @@ views:
           title: Who is home?
           type: glance
         entities:
-          - entity: person.michel_van_hoof
+          - entity: person.michel
             name: Michel
-          - entity: person.nicholas_van_hoof
+          - entity: person.nicholas
             name: Nicholas
-          - entity: person.alexandra_van_hoof
+          - entity: person.alexandra
             name: Alexandra
         show_empty: false
         state_filter:
@@ -208,33 +208,33 @@ views:
           - entity: automation.test_slow_increase
         type: entities
       - aspect_ratio: 50%
-        entity: person.alexandra_van_hoof
+        entity: person.alexandra
         image: /local/images/alexandra.jpg
         type: picture-entity
       - type: picture-glance
         image: /local/images/alexandra.jpg
         entities:
-          - entity: person.alexandra_van_hoof
+          - entity: person.alexandra
           - entity: device_tracker.alexandra_galaxya
         aspect_ratio: 0%
-        entity: person.alexandra_van_hoof
+        entity: person.alexandra
         title: Alexandra
       - type: picture-glance
         image: 'https://graph.facebook.com/1276561060/picture?type=large'
         entities:
-          - entity: person.michel_van_hoof
+          - entity: person.michel
           - entity: device_tracker.michel_ipad2
         aspect_ratio: 0%
         title: Michel
-        entity: person.michel_van_hoof
+        entity: person.michel
     icon: 'mdi:home'
     panel: false
     path: home
     title: Home
   - badges:
-      - entity: person.nicholas_van_hoof
-      - entity: person.michel_van_hoof
-      - entity: person.alexandra_van_hoof
+      - entity: person.nicholas
+      - entity: person.michel
+      - entity: person.alexandra
     cards:
       - entities:
           - entity: group.family
@@ -278,9 +278,9 @@ views:
     title: Geek
   - badges:
       - entity: binary_sensor.updater
-      - entity: person.michel_van_hoof
-      - entity: person.alexandra_van_hoof
-      - entity: person.nicholas_van_hoof
+      - entity: person.michel
+      - entity: person.alexandra
+      - entity: person.nicholas
       - entity: device_tracker.michel_s8
       - entity: device_tracker.nicholas_galaxya
       - entity: device_tracker.alexandra_galaxya
@@ -299,7 +299,7 @@ views:
           - calendar.xylos
           - calendar.family
           - calendar.kalender_venstraat
-          - calendar.michel_van_hoof_prive
+          - calendar.michel_prive
           - calendar.kalender_lagere_school
           - calendar.todoist
           - calendar.holidays_in_belgium
@@ -394,7 +394,7 @@ views:
         entity: camera.buienradar_loop
         image: 'https://www.home-assistant.io/images/merchandise/shirt-frontpage.png'
         type: picture-entity
-      - entity: media_player.spotify_michel_van_hoof
+      - entity: media_player.spotify_michel
         type: media-control
       - content: |-
           {% for note in states.persistent_notification -%}
