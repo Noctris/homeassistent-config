@@ -17,4 +17,16 @@
         delay_off:
           minutes: 5
         value_template: >-
-          Wasmachine: {{ states('sensor.wasmachine_watts')|float > 1 and states('sensor.wasmachine_watts')|float < 10 }}
+          {{ states('sensor.wasmachine_watts')|float > 1 and states('sensor.wasmachine_watts')|float < 10 }}
+      washing_machine_status:
+        friendly_name: "Wasching Machine Status"
+      value_template: >-
+        {% if states('sensor.wasmachine_watts') | float <= 0.31 and states('sensor.wasmachine_watts') | float < 10  -%}
+        Uit
+        {% endif %}
+        {% if states('sensor.wasmachine_watts') | float > 0.32 and states('sensor.wasmachine_watts') | float < 10  -%}
+        Aan
+        {% endif %}
+        {% if states('sensor.wasmachine_watts') | float > 20 -%}
+        Draaiend
+        {% endif %}
