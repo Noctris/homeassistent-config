@@ -1,0 +1,22 @@
+  - platform: template
+    sensors:
+      wasmachine_amp:
+        friendly_name_template: "{{ states.switch.wasmachine.name}} Current"
+        value_template: '{{ states.switch.wasmachine.attributes["current_a"] | float }}'
+        unit_of_measurement: 'A'
+      wasmachine_watts:
+        friendly_name_template: "{{ states.switch.wasmachine.name}} Current Consumption"
+        value_template: '{{ states.switch.wasmachine.attributes["current_power_w"] | float }}'
+        unit_of_measurement: 'W'
+      wasmachine_total_kwh:
+        friendly_name_template: "{{ states.switch.wasmachine.name}} Total Consumption"
+        value_template: '{{ states.switch.wasmachine.attributes["total_energy_kwh"] | float }}'
+        unit_of_measurement: 'kWh'
+      wasmachine_volts:
+        friendly_name_template: "{{ states.switch.wasmachine.name}} Voltage"
+        value_template: '{{ states.switch.wasmachine.attributes["voltage"] | float }}'
+        unit_of_measurement: 'V'
+      wasmachine_today_kwh:
+        friendly_name_template: "{{ states.switch.wasmachine.name}} Today's Consumption"
+        value_template: '{{ states.switch.wasmachine.attributes["today_energy_kwh"] | float }}'
+        unit_of_measurement: 'kWh'
