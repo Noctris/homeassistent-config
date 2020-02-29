@@ -26,20 +26,6 @@ resources:
       https://raw.githubusercontent.com/gadgetchnnel/lovelace-home-feed-card/master/custom_card.json
 title: Van Hoof
 views:
-  - badges: []
-    cards:
-      - entities:
-          - entity: light.kitchen_main
-          - entity: light.kitchen_coffee_area
-          - entity: light.dinning_spots
-          - entity: light.living_spots
-          - entity: group.living_relax_lights
-        title: Verlichting
-        type: entities
-      - entity: media_player.spotify_michel_van_hoof
-        type: media-control
-    path: living
-    title: Living
   - badges:
       - entity: sensor.to_xant
       - entity: sensor.home_commute
@@ -160,6 +146,8 @@ views:
           - entity: sensor.speedtest_upload
           - entity: sensor.speedtest_ping
           - entity: input_boolean.kids_week
+          - entity: input_select.dryer_state
+          - entity: input_select.washingmachine_state
         show_header_toggle: false
         title: Quick Info
         type: entities
@@ -231,6 +219,20 @@ views:
     panel: false
     path: home
     title: Home
+  - badges: []
+    cards:
+      - entities:
+          - entity: light.kitchen_main
+          - entity: light.kitchen_coffee_area
+          - entity: light.dinning_spots
+          - entity: light.living_spots
+          - entity: group.living_relax_lights
+        title: Verlichting
+        type: entities
+      - entity: media_player.spotify_michel_van_hoof
+        type: media-control
+    path: living
+    title: Living
   - badges:
       - entity: person.nicholas
       - entity: person.michel

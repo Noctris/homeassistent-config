@@ -1,0 +1,6 @@
+dryer_state:
+    name: Droogkast
+    icon: mdi:tumble-dryer
+    options:
+      - Klaar
+      - Draaiend

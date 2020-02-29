@@ -5,13 +5,3 @@ chromecast_radio:
       - Everywhere
     initial: Livingroom
     icon: mdi:speaker-wireless
-washingmachine_state:
-    name: Wasmachine
-    options:
-      - Klaar
-      - Draaiend
-tumble-dryer_state:
-    name: Droogkast
-    options:
-      - Klaar
-      - Draaiend
