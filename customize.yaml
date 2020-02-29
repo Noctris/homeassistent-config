@@ -19,4 +19,36 @@ switch.office_desk_left:
 switch.office_s2:
     icon: mdi:power-socket-eu
 switch.office_library_left:
-    icon: mdi:power-socket-eu 
+    icon: mdi:power-socket-eu
+switch.living_tv_light_socket:
+    icon: mdi:power-socket-eu
+switch.living_couch_window_socket:
+    icon: mdi:power-socket-eu
+switch.living_couch_dinning_socket:
+    icon: mdi:power-socket-eu
+switch.dinning_table_socket:
+    icon: mdi:power-socket-eu
+switch.dad_bedroom_fan:
+    icon: mdi:fan
+switch.dad_bedroom_s1:
+    icon: mdi:power-socket-eu
+switch.dad_bedroom_s2:
+    icon: mdi:power-socket-eu
+switch.dad_bedroom_s3:
+    icon: mdi:power-socket-eu
+switch.kids_bedroom_fan:
+    icon: mdi:fan
+switch.kids_bedroom_s1:
+    icon: mdi:power-socket-eu
+switch.kids_bedroom_window_left:
+    icon: mdi:power-socket-eu
+switch.kids_bedroom_s3:
+    icon: mdi:power-socket-eu
+switch.kids_bedroom_s4:
+    icon: mdi:power-socket-eu
+switch.master_bedroom_s1:
+    icon: mdi:power-socket-eu
+switch.master_bedroom_s2:
+    icon: mdi:power-socket-eu
+switch.master_bedroom_s3:
+    icon: mdi:power-socket-eu
