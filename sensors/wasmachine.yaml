@@ -20,3 +20,16 @@
         friendly_name_template: "{{ states.switch.wasmachine.name}} Today's Consumption"
         value_template: '{{ states.switch.wasmachine.attributes["today_energy_kwh"] | float }}'
         unit_of_measurement: 'kWh'
+      washing_machine_status:
+        icon: mdi:washing-machine
+        friendly_name: "Washing Machine Status"
+        value_template: >-
+          {% if states('sensor.wasmachine_watts') | float <= 0.31 -%}
+          off
+          {% elif states('sensor.wasmachine_watts') | float > 0.32 and states('sensor.wasmachine_watts') | float < 10  -%}
+          on
+          {% elif states('sensor.wasmachine_watts') | float > 20 -%}
+          running
+          {% else %}
+          unkown
+          {% endif %}
