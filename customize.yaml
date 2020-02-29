@@ -62,3 +62,5 @@ light.living_couch_window:
     icon: mdi:floor-lamp
 media_player.living_kodi:
     icon: mdi:kodi
+light.achtergrond_verlichting_leefruimte:
+    icon: mdi:lamp
