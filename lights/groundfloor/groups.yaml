@@ -4,7 +4,8 @@
       - light.living_couch_window
       - light.living_tv_light
       - light.kitchen_coffee_area
-      - light.dinning_table_light
+      - light.dinning_table_lamp
+      - light.living_couch_dinning
   - platform: group
     name: Keuken Verlichting
     entities:
