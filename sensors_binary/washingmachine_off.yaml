@@ -1,21 +1,21 @@
   - platform: template
     sensors:
       washing_machine_running:
-        icon: mdi:washing-machine
+        icon_template: mdi:washing-machine
         friendly_name: "Washing Machine Running"
         delay_off:
           minutes: 5
         value_template: >-
           {{ states('sensor.wasmachine_watts')|float > 10 }}
       washing_machine_off:
-        icon: mdi:washing-machine
+        icon_template: mdi:washing-machine
         friendly_name: "Washing Machine Off"
         delay_off:
           minutes: 5
         value_template: >-
           {{ states('sensor.wasmachine_watts')|float < 1 }}
       washing_machine_on:
-        icon: mdi:washing-machine
+        icon_template: mdi:washing-machine
         friendly_name: "Washing Machine On"
         delay_off:
           minutes: 5
