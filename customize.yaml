@@ -10,3 +10,7 @@ person.alexandra:
 person.nicholas:
     picture: !secret nivh_picture
     entity_picture: !secret nivh_picture
+switch.droogkast:
+    icon: mdi:tumble-dryer
+switch.wasmachine:
+    icon: mdi:washer
