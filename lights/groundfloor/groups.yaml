@@ -1,7 +1,7 @@
   - platform: group
-    name: Relax Lights Downstairs
+    name: Background Lights Downstairs
     entities:
-      - switch.living_couch_window
-      - switch.living_tv_light
+      - light.living_couch_window
+      - light.living_tv_light
       - light.kitchen_coffee_area
-      - switch.dinning_table
+      - light.dinning_table_light

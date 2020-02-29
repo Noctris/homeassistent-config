@@ -1,14 +1,17 @@
 # Office Area
 
   - platform: knx
+    icon: mdi:power-socket-fr
     name: Office Desk Left
     address: '1/1/18'
     state_address: '1/4/18'
   - platform: knx
+    icon: mdi:power-socket-fr
     name: Office S2
     address: '1/1/19'
     state_address: '1/4/19'
   - platform: knx
+    icon: mdi:power-socket-fr
     name: Office Library Left
     address: '1/1/20'
     state_address: '1/4/20'

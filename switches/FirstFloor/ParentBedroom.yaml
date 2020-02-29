@@ -1,17 +1,21 @@
 # Dad Bedroom
   - platform: knx
+    icon: mdi:power-socket-fr
     name: Dad Bedroom FAN
     address: '1/1/91'
     state_address: '1/4/91'
   - platform: knx
+    icon: mdi:power-socket-fr
     name: Dad Bedroom S1
     address: '1/1/88'
     state_address: '1/4/88'
   - platform: knx
+    icon: mdi:power-socket-fr
     name: Dad Bedroom S2
     address: '1/1/89'
     state_address: '1/4/89'
   - platform: knx
+    icon: mdi:power-socket-fr
     name: Dad Bedroom S3
     address: '1/1/90'
     state_address: '1/4/90'

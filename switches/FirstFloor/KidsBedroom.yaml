@@ -1,21 +1,26 @@
 # Kids Bedroom
   - platform: knx
+    icon: mdi:power-socket-fr
     name: Kids Bedroom FAN
     address: '1/1/107'
     state_address: '1/4/107'
   - platform: knx
+    icon: mdi:power-socket-fr
     name: Kids Bedroom S1
     address: '1/1/103'
     state_address: '1/4/103'
   - platform: knx
+    icon: mdi:power-socket-fr
     name: Kids Bedroom Window Left
     address: '1/1/104'
     state_address: '1/4/104'
   - platform: knx
+    icon: mdi:power-socket-fr
     name: Kids Bedroom S3
     address: '1/1/105'
     state_address: '1/4/105'
   - platform: knx
+    icon: mdi:power-socket-fr
     name: Kids Bedroom S4
     address: '1/1/106'
     state_address: '1/4/106'

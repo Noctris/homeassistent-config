@@ -1,13 +1,16 @@
 # Master Bedroom
   - platform: knx
+    icon: mdi:power-socket-fr
     name: Master Bedroom S1
     address: '1/1/133'
     state_address: '1/4/133'
   - platform: knx
+    icon: mdi:power-socket-fr
     name: Master Bedroom S2
     address: '1/1/134'
     state_address: '1/4/134'
   - platform: knx
+    icon: mdi:power-socket-fr
     name: Master Bedroom S3
     address: '1/1/135'
     state_address: '1/4/135'
