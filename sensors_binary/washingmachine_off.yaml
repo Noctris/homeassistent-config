@@ -1,0 +1,20 @@
+  - platform: template
+    sensors:
+      washing_machine_running:
+        friendly_name: "Washing Machine Running Sensor"
+        delay_off:
+          minutes: 5
+        value_template: >-
+          {{ states('sensor.washing_machine_power')|float > 20 }}
+      washing_machine_off:
+        friendly_name: "Washing Machine Off Sensor"
+        delay_off:
+          minutes: 5
+        value_template: >-
+          {{ states('sensor.washing_machine_power')|float < 1 }}
+      washing_machine_off:
+        friendly_name: "Washing Machine Off Sensor"
+        delay_off:
+          minutes: 5
+        value_template: >-
+          {{ states('sensor.washing_machine_power')|float > 1 }}
