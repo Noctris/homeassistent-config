@@ -24,11 +24,11 @@
         icon_template: mdi:washing-machine
         friendly_name: "Washing Machine Status"
         value_template: >-
-          {% if states('sensor.wasmachine_watts') | float <= 0.31 -%}
+          {% if states('sensor.wasmachine_watts') | float < 1 -%}
           off
-          {% elif states('sensor.wasmachine_watts') | float > 0.32 and states('sensor.wasmachine_watts') | float < 10  -%}
+          {% elif states('sensor.wasmachine_watts') | float > 1 and states('sensor.wasmachine_watts') | float < 10  -%}
           on
-          {% elif states('sensor.wasmachine_watts') | float > 20 -%}
+          {% elif states('sensor.wasmachine_watts') | float > 10 -%}
           running
           {% else %}
           unkown

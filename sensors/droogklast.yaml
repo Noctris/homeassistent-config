@@ -24,11 +24,11 @@
         icon_template: mdi:tumble-dryer
         friendly_name: "Dryer Status"
         value_template: >-
-          {% if states('sensor.droogkast_watts') | float <= 0.31 -%}
+          {% if states('sensor.droogkast_watts') | float < 1 -%}
           off
-          {% elif states('sensor.droogkast_watts') | float > 0.32 and states('sensor.droogkast_watts') | float < 10  -%}
+          {% elif states('sensor.droogkast_watts') | float > 1 and states('sensor.droogkast_watts') | float < 10  -%}
           on
-          {% elif states('sensor.droogkast_watts') | float > 20 -%}
+          {% elif states('sensor.droogkast_watts') | float > 10 -%}
           running
           {% else %}
           unkown
