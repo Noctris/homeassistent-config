@@ -14,3 +14,9 @@ switch.droogkast:
     icon: mdi:tumble-dryer
 switch.wasmachine:
     icon: mdi:washing-machine
+switch.office_desk_left:
+    icon: mdi:power-socket-eu
+switch.office_s2:
+    icon: mdi:power-socket-eu
+switch.office_library_left:
+    icon: mdi:power-socket-eu 
