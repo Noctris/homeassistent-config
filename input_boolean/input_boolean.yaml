@@ -9,9 +9,6 @@
   master_bedroom_alarm_enabled:
     name: Master Bedroom Alarmclock Enabled
     icon: mdi:alarm
-  washingmachine_done:
-    name: Wasmachine Klaar
-    icon: mdi:washing-machine
-  dryer_done:
-    name: Droogmachine Klaar!
-    icon: mdi:tumble-dryer
+  guests_in_the_house:
+    name: Zijn er Gasten?
+    icon: mdi:account-group
