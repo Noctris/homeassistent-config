@@ -2,7 +2,8 @@
   alias: Turn on lights when i arrive home in the dark
   description: ''
   trigger:
-  - entity_id: person.michel_van_hoof
+  - entity_id: person.michel
+    for: '0'
     from: not_home
     platform: state
     to: home
@@ -24,7 +25,7 @@
     platform: sun
   condition:
   - condition: state
-    entity_id: person.michel_van_hoof
+    entity_id: person.michel
     state: home
   action:
   - alias: ''
@@ -86,15 +87,18 @@
     value_template: '{{ (states.input_datetime.master_bedroom_alarm_clock_time.attributes[''timestamp'']
       | timestamp_custom(''%H:%M'', False) ) == ( states.sensor.time.state ) }}'
   condition:
-  - condition: state
-    entity_id: input_boolean.master_bedroom_alarm_enabled
-    state: 'on'
+  - condition: and
+    conditions:
+    - condition: state
+      entity_id: person.michel
+      state: home
+    - condition: state
+      entity_id: input_boolean.master_bedroom_alarm_enabled
+      state: 'on'
   action:
-  - data:
-      brightness: 255
-      transition: 600
+  - data: {}
     entity_id: light.kitchen_main
-    service: light.turn_on
+    service: script.wake_up_light_masterbedroom
   - data:
       message: Time to get buzzzzzy
       title: Wake Up Asshole
@@ -112,3 +116,110 @@
       transition: 60
     entity_id: light.living_spots
     service: light.turn_on
+- id: '1582990500029'
+  alias: Washing Machine is Turned On
+  description: ''
+  trigger:
+  - above: '1'
+    entity_id: sensor.wasmachine_watts
+    for: 00:01:00
+    platform: numeric_state
+  condition:
+  - condition: state
+    entity_id: input_select.washingmachine_state
+    state: Uit
+  action:
+  - data:
+      entity_id: input_select.washingmachine_state
+      options: Aan
+    entity_id: input_select.washingmachine_state
+    service: input_select.set_options
+  - event: home_feed_washingmachine_status_changed
+    event_data:
+      message: Washing Machine status Changed
+      status: 'on'
+- id: '1582990732553'
+  alias: Set Washing Machine Turning
+  description: ''
+  trigger:
+  - above: '20'
+    entity_id: sensor.wasmachine_watts
+    for: 00:05
+    platform: numeric_state
+  condition: []
+  action:
+  - data:
+      entity_id: input_select.washingmachine_state
+      option: Draaiend
+    entity_id: input_select.washingmachine_state
+    service: input_select.set_options
+- id: '1582991423988'
+  alias: Set Washing Machine Done
+  description: ''
+  trigger:
+  - below: '20'
+    entity_id: sensor.wasmachine_watts
+    for: 00:05
+    platform: numeric_state
+  condition:
+  - condition: state
+    entity_id: input_select.washingmachine_state
+    state: Draaiend
+  action:
+  - data:
+      entity_id: washingmachine_state
+      option: Klaar
+    entity_id: input_select.washingmachine_state
+    service: input_select.set_options
+- id: '1582991538386'
+  alias: Notify Me when washing machine state changes
+  description: ''
+  trigger:
+  - entity_id: input_select.washingmachine_state
+    from: Draaiend
+    platform: state
+    to: Klaar
+  condition: []
+  action:
+  - data:
+      message: Wasmachine Klaar!
+      notification_id: home_feed_wasmachine_status_klaar
+      title: Wasmachine
+    service: persistent_notification.create
+  - data:
+      message: Wasmachine is klaar!
+      title: Wasmachine Klaar
+    service: notify.mobile_app_michel_s10_plus
+- id: '1582992007044'
+  alias: Vertel me dat de wasmachine klaar is als ik thuis ben
+  description: ''
+  trigger:
+  - entity_id: input_select.washingmachine_state
+    for: 00:05
+    from: Draaiend
+    platform: state
+    to: Klaar
+  condition:
+  - condition: state
+    entity_id: person.michel
+    state: Home
+  action:
+  - data:
+      entity_id: media_player.living_room
+      message: Laundry is done
+    service: tts.google_translate_say
+- id: '1582992648686'
+  alias: Wasmachine turned Off
+  description: ''
+  trigger:
+  - below: '1'
+    entity_id: sensor.wasmachine_watts
+    for: 00:02
+    platform: numeric_state
+  condition: []
+  action:
+  - data:
+      entity_id: input_select.washingmachine_state
+      option: Uit
+    entity_id: input_select.washingmachine_state
+    service: input_select.set_options
