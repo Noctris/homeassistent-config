@@ -1,7 +1,62 @@
   - platform: group
-    name: Background Lights Downstairs
+    name: Achtergrond verlichting Leefruimte
     entities:
       - light.living_couch_window
       - light.living_tv_light
       - light.kitchen_coffee_area
       - light.dinning_table_light
+  - platform: group
+    name: Keuken Verlichting
+    entities:
+      - light.kitchen_main
+      - light.kitchen_main
+  - platform: group
+    name: Leefruimte Spots
+    entities:
+      - light.kitchen_main
+      - light.dinning_spots
+      - light.living_spots
+  - platform: group
+    name: Alle Lichten
+    entities:
+      - light.background_lights_downstairs
+      - light.bathroom_l3
+      - light.bathroom_shower_spots
+      - light.bathroom_spots
+      - light.carport_flowerbed
+      - light.carport_main_light
+      - light.carport_night_light
+      - light.carport_storage_1
+      - light.carport_storage_2
+      - light.cv_room
+      - light.dad_bedroom_spots
+      - light.dinning_l2
+      - light.dinning_l3
+      - light.dinning_spots
+      - light.dinning_table_lamp
+      - light.dressing_spots
+      - light.enterance_light
+      - light.hallway_lights
+      - light.kids_bedroom_l2
+      - light.kids_bedroom_spots
+      - light.kitchen_coffee_area
+      - light.kitchen_l3
+      - light.kitchen_main
+      - light.living_couch_dinning
+      - light.living_couch_window
+      - light.living_l2
+      - light.living_l3
+      - light.living_spots
+      - light.living_tv_light
+      - light.master_bathroom_l2
+      - light.master_bathroom_l3
+      - light.master_bathroom_spots
+      - light.master_bedroom_l2
+      - light.master_bedroom_l3
+      - light.master_bedroom_spots
+      - light.office_l2
+      - light.office_l3
+      - light.office_spots
+      - light.stairs_0_1
+      - light.stairs_1_2
+      - light.terrace
