@@ -1,8 +1,0 @@
-washingmachine_state:
-    name: Wasmachine
-    icon: mdi:washing-machine
-    options:
-      - Uit
-      - Aan
-      - Draaiend
-      - Klaar
