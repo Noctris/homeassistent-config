@@ -123,3 +123,6 @@ influxdb:
 calendar:
   - platform: todoist
     token: !secret todoist_api_token
+mqtt:
+  discovery: true
+  broker: !secret hassio_host_ip
