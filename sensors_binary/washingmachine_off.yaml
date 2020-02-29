@@ -26,11 +26,11 @@
         friendly_name: "Wasching Machine Status"
         value_template: >-
           {% if states('sensor.wasmachine_watts') | float <= 0.31 -%}
-          Uit
-          {% endif %}
-          {% if states('sensor.wasmachine_watts') | float > 0.32 and states('sensor.wasmachine_watts') | float < 10  -%}
-          Aan
-          {% endif %}
-          {% if states('sensor.wasmachine_watts') | float > 20 -%}
-          Draaiend
+          off
+          {% elif states('sensor.wasmachine_watts') | float > 0.32 and states('sensor.wasmachine_watts') | float < 10  -%}
+          on
+          {% elif states('sensor.wasmachine_watts') | float > 20 -%}
+          running
+          {% else %}
+          unkown
           {% endif %}
