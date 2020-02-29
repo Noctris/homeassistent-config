@@ -21,7 +21,7 @@
         value_template: '{{ states.switch.wasmachine.attributes["today_energy_kwh"] | float }}'
         unit_of_measurement: 'kWh'
       washing_machine_status:
-        icon: mdi:washing-machine
+        icon_template: mdi:washing-machine
         friendly_name: "Washing Machine Status"
         value_template: >-
           {% if states('sensor.wasmachine_watts') | float <= 0.31 -%}
