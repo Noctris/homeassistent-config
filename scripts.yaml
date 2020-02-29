@@ -18,7 +18,7 @@ home_radio:
         '
       media_content_id: '{% if is_state("input_select.radio_station", "Studio Brussel")
         %} http://icecast.vrtcdn.be/stubru-high.mp3 {% elif is_state("input_select.radio_station",
-        "Q-Music") %} https://icecast-qmusicnl-cdp.triple-it.nl/Qmusic_nl_live_96.mp3
+        "Q-Music") %} https://playerservices.streamtheworld.com/api/livestream-redirect/QMUSIC.mp3
         {% elif is_state("input_select.radio_station", "Radio 1") %} http://icecast.vrtcdn.be/radio1-high.mp3
         {% elif is_state("input_select.radio_station", "Radio 2") %} http://icecast.vrtcdn.be/ra2ant-high.mp3
         {% elif is_state("input_select.radio_station", "Joe FM") %} https://icecast-qmusicnl-cdp.triple-it.nl/Joe_nl_1_96.mp3
