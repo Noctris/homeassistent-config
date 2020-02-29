@@ -13,4 +13,4 @@ person.nicholas:
 switch.droogkast:
     icon: mdi:tumble-dryer
 switch.wasmachine:
-    icon: mdi:washer
+    icon: mdi:washing-machine
