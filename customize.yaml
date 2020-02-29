@@ -56,5 +56,9 @@ light.dinning_table_lamp:
     icon: mdi:lamp
 light.living_tv_light:
     icon: mdi:lamp
+light.living_couch_dinning:
+    icon: mdi:lamp
 light.living_couch_window:
     icon: mdi:floor-lamp
+media_player.living_kodi:
+    icon: mdi:kodi
