@@ -204,7 +204,7 @@
       message: kids arrived sensor
       title: kids arrived
     service: notify.mobile_app_michel_s10_plus
-- id: save_notification_create
+- id: 'save_notification_create'
   alias: Save Notifications on Create
   initial_state: 'on'
   trigger:
@@ -228,7 +228,7 @@
             "message" : "{{ trigger.event.data.service_data.message }}"
           }
         retain: true
-- id: save_notification_dismiss
+- id: 'save_notification_dismiss'
   alias: Removed Saved Notifications on Dismiss
   initial_state: 'on'
   trigger:
@@ -242,7 +242,7 @@
       data_template:
         topic: "home-assistant/notifications/{{ trigger.event.data.service_data.notification_id }}"
         retain: true
-- id: restore_notifications
+- id: 'restore_notifications'
   alias: Restore Notifications
   initial_state: 'on'
   trigger:
