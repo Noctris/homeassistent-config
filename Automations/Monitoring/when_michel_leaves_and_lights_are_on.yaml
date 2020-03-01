@@ -1,0 +1,17 @@
+- id: 'lights_on_while_michel_is_gone'
+  alias: When Michel Leaves and there are still lights On
+  description: ''
+  trigger:
+  - entity_id: person.michel
+    for: 00:10
+    platform: state
+    to: not_home
+  condition:
+  - condition: state
+    entity_id: light.alle_lichten
+    state: 'on'
+  action:
+  - data:
+      message: Je bent vertrokken en er brand nog licht.
+      title: Er is nog licht aan
+    service: notify.mobile_app_michel_s10_plus
