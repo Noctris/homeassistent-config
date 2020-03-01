@@ -1,0 +1,4 @@
+ - name: Opa
+   latitude: !secret opa_lat
+   longitude: !secret opa_lon
+   radius: 40

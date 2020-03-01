@@ -1,0 +1,4 @@
+ - name: Boma
+   latitude: !secret boma_lat
+   longitude: !secret boma_lon
+   radius: 40
