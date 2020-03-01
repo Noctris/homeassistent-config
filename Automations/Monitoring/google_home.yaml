@@ -1,0 +1,27 @@
+- id: 'google_home_is_offline'
+  alias: Inform me when Living Room Google Home is unavailable
+  description: ''
+  trigger:
+  - entity_id: media_player.living_room
+    for: 00:05
+    platform: state
+    to: Unavailable
+  condition: []
+  action:
+  - data:
+      message: Google home has been offline for more then 5 minutes
+      notification_id: home_feed_google_home_offline
+      title: Google Home Offline
+    service: persistent_notification.create
+- id: 'google_home_is_back'
+  alias: Google Home came back
+  description: ''
+  trigger:
+  - entity_id: media_player.living_room
+    from: Unavailable
+    platform: state
+  condition: []
+  action:
+  - data:
+      notification_id: home_feed_google_home_offline
+    service: persistent_notification.dismiss
