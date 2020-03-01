@@ -24,3 +24,4 @@ traccar.xml
 google_calendars.yaml
 .spotify-token-cache
 automations.yaml
+.vscode/settings.json
