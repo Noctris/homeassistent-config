@@ -13,19 +13,14 @@ home_radio:
     data_template:
       entity_id: '{% if is_state("input_select.chromecast_radio", "Livingroom") %}
         media_player.living_room {% elif is_state("input_select.chromecast_radio",
-        "Everywhere") %} media_player.living_room {% endif %}
-
-        '
+        "Everywhere") %} media_player.living_room {% endif %}'
       media_content_id: '{% if is_state("input_select.radio_station", "Studio Brussel")
-        %} http://icecast.vrtcdn.be/stubru-high.mp3 {% elif is_state("input_select.radio_station",
-        "Q-Music") %} https://playerservices.streamtheworld.com/api/livestream-redirect/QMUSIC.mp3
-        {% elif is_state("input_select.radio_station", "Radio 1") %} http://icecast.vrtcdn.be/radio1-high.mp3
-        {% elif is_state("input_select.radio_station", "Radio 2") %} http://icecast.vrtcdn.be/ra2ant-high.mp3
-        {% elif is_state("input_select.radio_station", "Joe FM") %} https://icecast-qmusicnl-cdp.triple-it.nl/Joe_nl_1_96.mp3
-        {% elif is_state("input_select.radio_station", "MNM") %} http://icecast.vrtcdn.be/mnm-high.mp3
-        {% endif %}
-
-        '
+        %}http://icecast.vrtcdn.be/stubru-high.mp3{% elif is_state("input_select.radio_station",
+        "Q-Music") %}https://playerservices.streamtheworld.com/api/livestream-redirect/QMUSIC.mp3
+        {% elif is_state("input_select.radio_station", "Radio 1") %}http://icecast.vrtcdn.be/radio1-high.mp3
+        {% elif is_state("input_select.radio_station", "Radio 2") %}http://icecast.vrtcdn.be/ra2ant-high.mp3
+        {% elif is_state("input_select.radio_station", "Joe FM") %}https://icecast-qmusicnl-cdp.triple-it.nl/Joe_nl_1_96.mp3
+        {% elif is_state("input_select.radio_station", "MNM") %}http://icecast.vrtcdn.be/mnm-high.mp3{% endif %}'
       media_content_type: audio/mp4
 'wake_up_light_masterbedroom':
   alias: Wake Up Light - Test
