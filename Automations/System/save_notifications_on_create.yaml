@@ -22,3 +22,12 @@
             "message" : "{{ trigger.event.data.service_data.message }}"
           }
         retain: true
+    - service: mqtt.publish
+      data_template:
+        topic: "notifications/michel/{{ trigger.event.data.service_data.notification_id }}"
+        payload: >-
+          {
+            "notification_id" : "{{ trigger.event.data.service_data.notification_id }}",
+            "title" : "{{ trigger.event.data.service_data.title }}",
+            "message" : "{{ trigger.event.data.service_data.message }}"
+          }
