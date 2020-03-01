@@ -10,3 +10,8 @@
     name: Bathroom L3
     address: '1/1/122'
     state_address: '1/4/122'
+  - platform: group
+    name: Badkamer 1ste
+    entities:
+     - light.bathroom_spots
+     - light.bathroom_shower_spots
