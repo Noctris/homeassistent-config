@@ -123,3 +123,9 @@ influxdb:
 calendar:
   - platform: todoist
     token: !secret todoist_api_token
+# Removing it from config and trying in the UI first
+#mqtt:
+  #discovery: true
+  #broker: !secret hassio_host_ip
+  #username: !secret mqtt_user
+  #password: !secret mqtt_password
