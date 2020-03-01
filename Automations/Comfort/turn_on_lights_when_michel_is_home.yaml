@@ -1,0 +1,13 @@
+- id: 'turn_on_light_when_Michel_is_home_and_it_gets_dark'
+  alias: Turn on lights when i am home and it is getting dark
+  description: ''
+  trigger:
+  - event: sunset
+    offset: -00:30
+    platform: sun
+  condition:
+  - condition: state
+    entity_id: person.michel
+    state: home
+  action:
+  - scene: scene.turn_on_relax_lights
