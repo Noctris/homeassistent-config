@@ -1,13 +1,14 @@
 # Master Dressing
-  - platform: knx
-    name: Dressing Spots
-    address: '1/1/163'
-    brightness_address: '1/3/125'
-    state_address: '1/4/163'
-    brightness_state_address: '1/3/125'
-  - platform: knx
-    name: CV Room
-    address: '1/1/162'
-    brightness_address: '1/3/124'
-    state_address: '1/4/162'
-    brightness_state_address: '1/3/124'
+# Uncomment when this floor is finished
+#  - platform: knx
+#    name: Dressing Spots
+#    address: '1/1/163'
+#    brightness_address: '1/3/125'
+#    state_address: '1/4/163'
+#    brightness_state_address: '1/3/125'
+#  - platform: knx
+#    name: CV Room
+#    address: '1/1/162'
+#    brightness_address: '1/3/124'
+#    state_address: '1/4/162'
+#    brightness_state_address: '1/3/124'
