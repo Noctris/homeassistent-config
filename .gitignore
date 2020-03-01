@@ -11,6 +11,7 @@
 .cloud
 .google.token
 www/secret_pictures/
+.vscode/
 
 # Ensure these YAML files are ignored, otherwise your secret data/credentials will leak.
 ip_bans.yaml
