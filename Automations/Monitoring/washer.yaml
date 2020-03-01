@@ -1,0 +1,14 @@
+- id: 'washer_is_ready'
+  alias: Inform Home when the washer is done
+  description: ''
+  trigger:
+  - entity_id: sensor.washing_machine_status
+    from: running
+    platform: state
+  condition: []
+  action:
+  - data:
+      message: Gelieve de wasmachine over te laden in de droger
+      notification_id: home_feed_wasmachine_status_klaar
+      title: Wasmachine Klaar!
+    service: persistent_notification.create
