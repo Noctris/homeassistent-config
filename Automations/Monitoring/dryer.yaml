@@ -1,0 +1,14 @@
+- id: 'dryer_is_done'
+  alias: Notify me the dryer is done!
+  description: ''
+  trigger:
+  - entity_id: sensor.droogkast_status
+    from: running
+    platform: state
+  condition: []
+  action:
+  - data:
+      message: Droogkast uitladen!
+      notification_id: home_feed_dryer_is_done
+      title: Droogkast uitladen!
+    service: persistent_notification.create
