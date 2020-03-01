@@ -1,0 +1,6 @@
+ - platform: template
+   sensors:
+    guests_have_arrived:
+      friendly_name: Gasten zijn aangekomen
+      value_template: >-
+        {{states('guests_in_the_house')}}
