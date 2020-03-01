@@ -1,5 +1,5 @@
 - id: restore_notifications
-  alias: Restore Notifications
+  alias: Restore Notifications from MQTT
   initial_state: 'on'
   trigger:
     - platform: mqtt
