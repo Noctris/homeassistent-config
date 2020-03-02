@@ -14,5 +14,6 @@
       entity_id: input_boolean.master_bedroom_alarm_enabled
       state: 'on'
   action:
-  - service: script.masterbedroom_wakeup_routine__wake_up_lights
+  - service: script.turn_on
     data: {}
+    entity_id: script.wake_up_light_masterbedroom
