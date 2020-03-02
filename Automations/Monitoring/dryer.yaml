@@ -1,5 +1,5 @@
 - id: 'dryer_is_done'
-  alias: Notify me the dryer is done!
+  alias: Monitor - Notify me the dryer is done!
   description: ''
   trigger:
   - entity_id: sensor.droogkast_status

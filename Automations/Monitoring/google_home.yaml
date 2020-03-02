@@ -1,5 +1,5 @@
 - id: 'google_home_is_offline'
-  alias: Inform me when Living Room Google Home is unavailable
+  alias: Monitor - Goole Home - Inform me when Living Room Google Home is unavailable
   description: ''
   trigger:
   - entity_id: media_player.living_room
@@ -14,7 +14,7 @@
       title: Google Home Offline
     service: persistent_notification.create
 - id: 'google_home_is_back'
-  alias: Google Home came back
+  alias: Monitor - Google Home - Google Home is Back
   description: ''
   trigger:
   - entity_id: media_player.living_room

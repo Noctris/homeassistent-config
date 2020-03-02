@@ -1,5 +1,5 @@
 - id: save_notification_create
-  alias: Save Notifications on Create
+  alias: zSystem - Save Notifications on Create
   initial_state: 'on'
   trigger:
     - platform: event

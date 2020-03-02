@@ -1,5 +1,5 @@
 - id: save_notification_dismiss
-  alias: Removed Saved Notifications on Dismiss
+  alias: zSystem - Removed Saved Notifications on Dismiss
   initial_state: 'on'
   trigger:
     - platform: event

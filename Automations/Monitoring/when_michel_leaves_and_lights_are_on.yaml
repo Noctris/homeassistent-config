@@ -1,5 +1,5 @@
 - id: 'lights_on_while_michel_is_gone'
-  alias: When Michel Leaves and there are still lights On
+  alias: Monitor - Michel - When Michel Leaves and there are still lights On
   description: ''
   trigger:
   - entity_id: person.michel

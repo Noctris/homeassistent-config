@@ -1,5 +1,5 @@
 - id: 'kids_arrived_sensor_changed'
-  alias: Sensor Kids arrived Fired
+  alias: Monitor - Kids - Sensor Kids arrived Fired
   description: ''
   trigger:
   - entity_id: binary_sensor.kids_arrived
