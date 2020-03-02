@@ -20,11 +20,15 @@ home_radio:
         {% elif is_state("input_select.radio_station", "Radio 1") %}http://icecast.vrtcdn.be/radio1-high.mp3
         {% elif is_state("input_select.radio_station", "Radio 2") %}http://icecast.vrtcdn.be/ra2ant-high.mp3
         {% elif is_state("input_select.radio_station", "Joe FM") %}https://icecast-qmusicnl-cdp.triple-it.nl/Joe_nl_1_96.mp3
-        {% elif is_state("input_select.radio_station", "MNM") %}http://icecast.vrtcdn.be/mnm-high.mp3{% endif %}'
+        {% elif is_state("input_select.radio_station", "MNM") %}http://icecast.vrtcdn.be/mnm-high.mp3{%
+        endif %}'
       media_content_type: audio/mp4
-'wake_up_light_masterbedroom':
-  alias: Wake Up Light - Test
+wake_up_light_masterbedroom:
+  alias: Masterbedroom Wakeup Routine wake up lights
   sequence:
+  - data: {}
+    entity_id: light.dad_bedroom_spots
+    service: light.turn_on
   - data:
       brightness_pct: 10
     entity_id: light.dad_bedroom_spots
