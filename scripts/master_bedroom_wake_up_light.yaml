@@ -1,0 +1,57 @@
+
+wake_up_light_masterbedroom:
+  alias: Masterbedroom Wakeup Routine wake up lights
+  sequence:
+    - data:
+       {}
+      entity_id: light.dad_bedroom_spots
+      service: light.turn_on
+    - data:
+       brightness_pct: 10
+     entity_id: light.dad_bedroom_spots
+     service: light.turn_on
+    - delay: 00:01
+    - data:
+        brightness_pct: 20
+     entity_id: light.dad_bedroom_spots
+     service: light.turn_on
+    - delay: 00:01
+    - data:
+        brightness_pct: 30
+      entity_id: light.dad_bedroom_spots
+      service: light.turn_on
+    - delay: 00:01
+    - data:
+        brightness_pct: 40
+      entity_id: light.dad_bedroom_spots
+      service: light.turn_on
+    - delay: 00:01
+    - data:
+        brightness_pct: 50
+      entity_id: light.dad_bedroom_spots
+      service: light.turn_on
+    - delay: 00:01
+    - data:
+        brightness_pct: 60
+      entity_id: light.dad_bedroom_spots
+      service: light.turn_on
+    - delay: 00:01
+    - data:
+        brightness_pct: 70
+      entity_id: light.dad_bedroom_spots
+      service: light.turn_on
+    - delay: 00:01
+    - data:
+        brightness_pct: 80
+      entity_id: light.dad_bedroom_spots
+      service: light.turn_on
+    - delay: 00:01
+    - data:
+        brightness_pct: 90
+      entity_id: light.dad_bedroom_spots
+      service: light.turn_on
+    - delay: 00:01
+    - data:
+        brightness_pct: 100
+      entity_id: light.dad_bedroom_spots
+      service: light.turn_on
