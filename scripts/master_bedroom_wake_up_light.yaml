@@ -1,4 +1,3 @@
-
 wake_up_light_masterbedroom:
   alias: Masterbedroom Wakeup Routine wake up lights
   sequence:
