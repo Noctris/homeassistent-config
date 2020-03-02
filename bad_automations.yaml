@@ -15,19 +15,7 @@
   - entity_id: light.hallway_lights
     service: light.turn_on
   - scene: scene.turn_on_relax_lights
-- id: '1576489962101'
-  alias: Turn on lights when i am home and it is getting dark
-  description: ''
-  trigger:
-  - event: sunset
-    offset: -00:30
-    platform: sun
-  condition:
-  - condition: state
-    entity_id: person.michel
-    state: home
-  action:
-  - scene: scene.turn_on_relax_lights
+
 - id: '1582727666736'
   alias: Turn on kids week when their tablets arrive
   description: ''
@@ -70,77 +58,8 @@
       message: notifynotify Kids week just started
       title: notifynotify Kids week
     service: notify.notify
-- id: '1582759366549'
-  alias: Master Bedroom Wake-up Routine when alarm is set
-  description: ''
-  trigger:
-  - platform: template
-    value_template: '{{ (states.input_datetime.master_bedroom_alarm_clock_time.attributes[''timestamp'']
-      | timestamp_custom(''%H:%M'', False) ) == ( states.sensor.time.state ) }}'
-  condition:
-  - condition: and
-    conditions:
-    - condition: state
-      entity_id: person.michel
-      state: home
-    - condition: state
-      entity_id: input_boolean.master_bedroom_alarm_enabled
-      state: 'on'
-  action:
-  - data: {}
-    entity_id: light.kitchen_main
-    service: script.wake_up_light_masterbedroom
-  - data:
-      message: Time to get buzzzzzy
-      title: Wake Up Asshole
-    service: notify.mobile_app_michel_s10plus
-- id: '1582990500029'
-  alias: Washing Machine is Turned On
-  description: ''
-  trigger:
-  - above: '1'
-    entity_id: sensor.wasmachine_watts
-    for: 00:01:00
-    platform: numeric_state
-  condition:
-  - condition: state
-    entity_id: input_select.washingmachine_state
-    state: Uit
-  action:
-  - data:
-      entity_id: input_select.washingmachine_state
-      options: Aan
-    entity_id: input_select.washingmachine_state
-    service: input_select.set_options
-  - event: home_feed_washingmachine_status_changed
-    event_data:
-      message: Washing Machine status Changed
-      status: 'on'
-- id: '1582991538386'
-  alias: Notify Michel when the washing machine is done!
-  description: ''
-  trigger:
-  - entity_id: sensor.washing_machine_status
-    from: running
-    platform: state
-  condition: []
-  action:
-  - data:
-      message: Wasmachine Klaar!
-      notification_id: home_feed_wasmachine_status_klaar
-      title: Wasmachine
-    service: persistent_notification.create
-  - data:
-      message: Wasmachine is klaar!
-      title: Wasmachine Klaar
-    service: notify.mobile_app_michel_s10_plus
-  - data:
-      content: Wamachine Overladen in droogkast
-      due_date_string: Today
-      labels: Home
-      priority: 1
-      project: Household
-    service: todoist.new_task
+
+
 - id: '1582992007044'
   alias: Vertel me dat de wasmachine klaar is als ik thuis ben
   description: ''
@@ -161,73 +80,9 @@
     service: tts.google_translate_say
   - entity_id: media_player.living_room
     service: media_player.media_previous_track
-- id: '1582999052015'
-  alias: Notify me the dryer is done!
-  description: ''
-  trigger:
-  - entity_id: sensor.droogkast_status
-    from: running
-    platform: state
-  condition: []
-  action:
-  - data:
-      message: Droogkast uitladen!
-      notification_id: home_feed_dryer_is_done
-      title: Droogkast uitladen!
-    service: persistent_notification.create
-  - data:
-      content: Droogkast Leegmaken
-      due_date_string: Today
-      labels: Home
-      priority: 1
-      project: Household
-    service: todoist.new_task
-- id: '1583058664092'
-  alias: Sensor Kids arrived Fired
-  description: ''
-  trigger:
-  - entity_id: binary_sensor.kids_arrived
-    from: 'off'
-    platform: state
-    to: 'on'
-  condition: []
-  action:
-  - data:
-      id: home_feed_kids_arrived
-      message: kids arrived sensor
-      title: kids arrived
-    service: persistent_notification.create
-  - data:
-      message: kids arrived sensor
-      title: kids arrived
-    service: notify.mobile_app_michel_s10_plus
-- id: '1583061956692'
-  alias: Inform me when Living Room Google Home is unavailable
-  description: ''
-  trigger:
-  - entity_id: media_player.living_room
-    for: 00:05
-    platform: state
-    to: Unavailable
-  condition: []
-  action:
-  - data:
-      message: Google home has been offline for more then 5 minutes
-      notification_id: home_feed_google_home_offline
-      title: Google Home Offline
-    service: persistent_notification.create
-- id: '1583062042812'
-  alias: Google Home came back
-  description: ''
-  trigger:
-  - entity_id: media_player.living_room
-    from: Unavailable
-    platform: state
-  condition: []
-  action:
-  - data:
-      notification_id: home_feed_google_home_offline
-    service: persistent_notification.dismiss
+
+
+
 - id: '1583062395933'
   alias: When Michel is home he wants to be informed
   description: ''
@@ -263,61 +118,3 @@
       priority: 1
       project: Household
     service: todoist.new_task
-- id: save_notification_create
-  alias: Save Notifications on Create
-  initial_state: 'on'
-  trigger:
-    - platform: event
-      event_type: call_service
-      event_data:
-        domain: persistent_notification
-        service: create
-  condition:
-    - condition: template
-      value_template: >-
-        {{ trigger.event.data.service_data.notification_id != "config_entry_discovery" }}
-  action:
-    - service: mqtt.publish
-      data_template:
-        topic: "home-assistant/notifications/{{ trigger.event.data.service_data.notification_id }}"
-        payload: >-
-          {
-            "notification_id" : "{{ trigger.event.data.service_data.notification_id }}",
-            "title" : "{{ trigger.event.data.service_data.title }}",
-            "message" : "{{ trigger.event.data.service_data.message }}"
-          }
-        retain: true
-
-- id: save_notification_dismiss
-  alias: Removed Saved Notifications on Dismiss
-  initial_state: 'on'
-  trigger:
-    - platform: event
-      event_type: call_service
-      event_data:
-        domain: persistent_notification
-        service: dismiss
-  action:
-    - service: mqtt.publish
-      data_template:
-        topic: "home-assistant/notifications/{{ trigger.event.data.service_data.notification_id }}"
-        retain: true
-- id: restore_notifications
-  alias: Restore Notifications
-  initial_state: 'on'
-  trigger:
-    - platform: mqtt
-      topic: home-assistant/notifications/+
-  condition:
-    - condition: template
-      value_template: >-
-        {{ trigger.payload != '' and state_attr("persistent_notification." + trigger.payload_json.notification_id | replace("-","_"),"message") != trigger.payload_json.message }}
-  action:
-    - service: persistent_notification.create
-      data_template:
-        title: >-
-          {{ trigger.payload_json.title }}
-        message: >-
-          {{ trigger.payload_json.message }}
-        notification_id: >-
-          {{ trigger.payload_json.notification_id }}
