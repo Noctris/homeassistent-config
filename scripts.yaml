@@ -27,7 +27,7 @@ wake_up_light_masterbedroom:
   alias: Masterbedroom Wakeup Routine wake up lights
   sequence:
     - alias: Turn on bedroom lights
-      date:
+      data:
         entity: light.dad_bedroom_spots
       service: light.turn_on
     - data:
