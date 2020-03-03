@@ -121,9 +121,7 @@ influxdb:
   max_retries: 3
   default_measurement: state
 
-calendar:
-  - platform: todoist
-    token: !secret todoist_api_token
+calendar: !include integrations/todoist.yaml
 # Removing it from config and trying in the UI first
 #mqtt:
   #discovery: true
