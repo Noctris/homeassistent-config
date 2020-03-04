@@ -1,0 +1,3 @@
+radio_stream_studio_brussel:
+  name: 'Studio Brussel Stream'
+  initial: 'http://icecast.vrtcdn.be/stubru-high.mp3'

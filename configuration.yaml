@@ -57,6 +57,7 @@ knx: !include_dir_merge_list knx/
 light: !include_dir_merge_list lights/
 switch: !include_dir_merge_list switches/
 input_select: !include_dir_merge_named inputs/
+input_text: !include_dir_merge_named input/text/
 input_boolean: !include input_boolean/input_boolean.yaml
 input_datetime: !include_dir_merge_named input_datetime/
 # Sensors
