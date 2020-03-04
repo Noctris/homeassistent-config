@@ -31,6 +31,7 @@ automation old: !include_dir_merge_list Automations/
 script: !include scripts.yaml
 #script: !include_dir_merge_list scripts/ 
 scene: !include scenes.yaml
+scene old: !include_dir_merge_list scenes/
 
 speedtestdotnet:
 
@@ -132,3 +133,10 @@ calendar: !include integrations/todoist.yaml
 spotcast:
   username: !secret spotify_username
   password: !secret spotify_password
+
+white_noise:
+  module: whitenoise
+  class: WhiteNoise
+  media_player: living_room
+  input_boolean: living_white_noise_machine
+  filename: https://xyz.duckdns.org/local/audio/42-Rain-60min.mp3
