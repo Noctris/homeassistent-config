@@ -3,3 +3,5 @@ music_type_source:
   options:
     - Spotify
     - Radio
+  initial: Radio
+  icon: mdi:music

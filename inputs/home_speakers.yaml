@@ -7,4 +7,6 @@ home_speakers:
     - Alexandra
     - Gelijkvloers
     - Overal
+  initial: Living
+  icon: mdi:speaker-wireless
     
