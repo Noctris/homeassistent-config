@@ -1,0 +1,10 @@
+home_speakers:
+  name: 'Select Speakers:'
+  options:
+    - Living
+    - Kantoor
+    - Master Bedroom
+    - Alexandra
+    - Gelijkvloers
+    - Overal
+    

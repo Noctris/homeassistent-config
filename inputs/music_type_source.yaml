@@ -1,0 +1,5 @@
+music_type_source:
+  name: 'Muziek Keuze:'
+  options:
+    - Spotify
+    - Radio
