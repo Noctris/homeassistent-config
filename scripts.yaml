@@ -1,19 +1,18 @@
 home_radio:
   alias: Play Radio on Chromecast Audio
   sequence:
-  - service: media_player.volume_set
-    data:
+  - data:
       entity_id: media_player.living_room
       volume_level: '0.35'
-  - service: media_player.volume_set
-    data:
+    service: media_player.volume_set
+  - data:
       entity_id: media_player.living_tv
       volume_level: '0.20'
-  - service: media_player.play_media
-    data_template:
+    service: media_player.volume_set
+  - data_template:
       entity_id: '{% if is_state("input_select.chromecast_radio", "Livingroom") %}
         media_player.living_room {% elif is_state("input_select.chromecast_radio",
-        "Everywhere") %} media_player.living_room {% endif %}'
+        "Everywhere") %} media_player.home_group {% endif %}'
       media_content_id: '{% if is_state("input_select.radio_station", "Studio Brussel")
         %}http://icecast.vrtcdn.be/stubru-high.mp3{% elif is_state("input_select.radio_station",
         "Q-Music") %}https://playerservices.streamtheworld.com/api/livestream-redirect/QMUSIC.mp3
@@ -23,59 +22,99 @@ home_radio:
         {% elif is_state("input_select.radio_station", "MNM") %}http://icecast.vrtcdn.be/mnm-high.mp3{%
         endif %}'
       media_content_type: audio/mp4
+    service: media_player.play_media
 wake_up_light_masterbedroom:
   alias: Masterbedroom Wakeup Routine wake up lights
   sequence:
-    - alias: Turn on bedroom lights
-      data:
-        entity: light.dad_bedroom_spots
-      service: light.turn_on
-    - data:
-        brightness_pct: 10
-        entity_id: light.dad_bedroom_spots
-      service: light.turn_on
-    - delay: 00:01
-    - data:
-        brightness_pct: 20
-        entity_id: light.dad_bedroom_spots
-      service: light.turn_on
-    - delay: 00:01
-    - data:
-        brightness_pct: 30
-        entity_id: light.dad_bedroom_spots
-      service: light.turn_on
-    - delay: 00:01
-    - data:
-        brightness_pct: 40
-        entity_id: light.dad_bedroom_spots
-      service: light.turn_on
-    - delay: 00:01
-    - data:
-        brightness_pct: 50
-        entity_id: light.dad_bedroom_spots
-      service: light.turn_on
-    - delay: 00:01
-    - data:
-        brightness_pct: 60
-        entity_id: light.dad_bedroom_spots
-      service: light.turn_on
-    - delay: 00:01
-    - data:
-        brightness_pct: 70
-        entity_id: light.dad_bedroom_spots
-      service: light.turn_on
-    - delay: 00:01
-    - data:
-        brightness_pct: 80
-        entity_id: light.dad_bedroom_spots
-      service: light.turn_on
-    - delay: 00:01
-    - data:
-        brightness_pct: 90
-        entity_id: light.dad_bedroom_spots
-      service: light.turn_on
-    - delay: 00:01
-    - data:
-        brightness_pct: 100
-        entity_id: light.dad_bedroom_spots
-      service: light.turn_on
+  - alias: Turn on bedroom lights
+    entity_id: light.dad_bedroom_spots
+    service: light.turn_on
+  - data:
+      brightness_pct: 10
+    entity_id: light.dad_bedroom_spots
+    service: light.turn_on
+  - delay: 00:01
+  - data:
+      brightness_pct: 20
+      entity_id: light.dad_bedroom_spots
+    service: light.turn_on
+  - delay: 00:01
+  - data:
+      brightness_pct: 30
+      entity_id: light.dad_bedroom_spots
+    service: light.turn_on
+  - delay: 00:01
+  - data:
+      brightness_pct: 40
+      entity_id: light.dad_bedroom_spots
+    service: light.turn_on
+  - delay: 00:01
+  - data:
+      brightness_pct: 50
+      entity_id: light.dad_bedroom_spots
+    service: light.turn_on
+  - delay: 00:01
+  - data:
+      brightness_pct: 60
+      entity_id: light.dad_bedroom_spots
+    service: light.turn_on
+  - delay: 00:01
+  - data:
+      brightness_pct: 70
+      entity_id: light.dad_bedroom_spots
+    service: light.turn_on
+  - delay: 00:01
+  - data:
+      brightness_pct: 80
+      entity_id: light.dad_bedroom_spots
+    service: light.turn_on
+  - delay: 00:01
+  - data:
+      brightness_pct: 90
+      entity_id: light.dad_bedroom_spots
+    service: light.turn_on
+  - delay: 00:01
+  - data:
+      brightness_pct: 100
+      entity_id: light.dad_bedroom_spots
+    service: light.turn_on
+'1583258208878':
+  alias: Wakup Light Test
+  sequence:
+  - data:
+      brightness: 10
+    entity_id: light.living_spots
+    service: light.turn_on
+  - data:
+      brightness: 10
+    entity_id: light.living_spots
+    service: light.turn_on
+  - delay: 00:00:20
+  - data:
+      brightness: 100
+    entity_id: light.living_spots
+    service: light.turn_on
+play_music_selection:
+  alias: Muziek afspelen op een speaker
+  sequence:
+  - data_template:
+      entity_id: '{% if is_state("input_select.home_speakers", "Living") %}
+        media_player.living_room 
+        {% elif is_state("input_select.home_speakers","Kantoor") %}
+         media_player.office_mini
+        {% elif is_state("input_select.home_speakers","Master Bedroom") %}
+         media_player.master_bedroom_speaker
+        {% elif is_state("input_select.home_speakers","Alexandra") %}
+         media_player.slaapkamer_alexandra_speaker
+        {% elif is_state("input_select.home_speakers","Gelijkvloers") %}
+         media_player.gelijkvloers
+        {% elif is_state("input_select.home_speakers","Gelijkvloers") %}
+         media_player.home_group
+        {% endif %}'
+      media_content_id: '{% if is_state("input_select.music_type_source","Radio") %}
+      {% for state in states.input_text %}{% if states("input_select.radio_station")|lower==state.name|lower%}{{state.state}}{% else%}{% endif %}{% endfor %}
+{% elif is_state("input_select.music_type_source","Spotify") %}
+Spotify
+{% endif %}'
+      media_content_type: audio/mp4
+    service: media_player.play_media
