@@ -12,3 +12,6 @@
   guests_in_the_house:
     name: Zijn er Gasten?
     icon: mdi:account-group
+  school_night:
+    name: School Avond
+    icon: mdi:school
