@@ -118,3 +118,11 @@ Spotify
 {% endif %}'
       media_content_type: audio/mp4
     service: media_player.play_media
+spotifydemo:
+  alias: 'Spotify Demo'
+  sequence:
+    - service: media_player.play_media
+      data_template:
+        entity_id: media_player.living_room
+        media_content_id: 'spotify:user:spotify:playlist:3xVR8cMwohCrRQnaXL6GFz'
+        media_content_type: 'PLAYLIST'
