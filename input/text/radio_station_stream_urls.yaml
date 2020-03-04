@@ -1,3 +1,18 @@
 radio_stream_studio_brussel:
-  name: 'Studio Brussel Stream'
+  name: 'Studio Brussel'
   initial: 'http://icecast.vrtcdn.be/stubru-high.mp3'
+radio_stream_q_music_belgium:
+  name: 'Q-Music'
+  initial: 'https://playerservices.streamtheworld.com/api/livestream-redirect/QMUSIC.mp3'
+radio_stream_joe_fm_belgium:
+  name: 'Joe FM'
+  initial: 'https://icecast-qmusicnl-cdp.triple-it.nl/Joe_nl_1_96.mp3'
+radio_stream_mnm:
+  name: 'MNM'
+  initial: 'http://icecast.vrtcdn.be/mnm-high.mp3'
+radio_stream_radio_1:
+  name: 'Radio 1'
+  initial: 'http://icecast.vrtcdn.be/radio1-high.mp3'
+radio_stream_radio_2_antwerpen:
+  name: 'Radio 2 Antwerpen'
+  initial: 'http://icecast.vrtcdn.be/ra2ant-high.mp3'
