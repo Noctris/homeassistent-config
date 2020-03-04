@@ -1,0 +1,5 @@
+{% if is_state('input_select.music_type_source','Radio') %}
+Radio
+{% elif is_state('input_select.music_type_source','Spotify') %}
+Spotify
+{% endif %}
