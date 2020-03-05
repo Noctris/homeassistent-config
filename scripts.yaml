@@ -98,23 +98,11 @@ play_music_selection:
   alias: Muziek afspelen op een speaker
   sequence:
   - data_template:
-      entity_id: '{% if is_state("input_select.home_speakers", "Living") %}
-        media_player.living_room 
-        {% elif is_state("input_select.home_speakers","Kantoor") %}
-         media_player.office_mini
-        {% elif is_state("input_select.home_speakers","Master Bedroom") %}
-         media_player.master_bedroom_speaker
-        {% elif is_state("input_select.home_speakers","Alexandra") %}
-         media_player.slaapkamer_alexandra_speaker
-        {% elif is_state("input_select.home_speakers","Gelijkvloers") %}
-         media_player.gelijkvloers
-        {% elif is_state("input_select.home_speakers","Overal") %}
-         media_player.home_group
-        {% endif %}'
+      entity_id: '{{selected_home_speaker}}'
       media_content_id: '{% if is_state("input_select.music_type_source","Radio") %}
-      {% for state in states.input_text %}{% if states("input_select.radio_station")|lower==state.name|lower%}{{state.state}}{% else%}{% endif %}{% endfor %}
+      {{ sensor.selected_home_radio_stream}}
 {% elif is_state("input_select.music_type_source","Spotify") %}
-Spotify
+{{ sensor.selected_spotify_playlist}}
 {% endif %}'
       media_content_type: audio/mp4
     service: media_player.play_media
