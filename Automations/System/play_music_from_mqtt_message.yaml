@@ -1,4 +1,4 @@
-- id: play_music_from_mqtt_message
+- id: play_radio_music_from_mqtt_message
   alias: zSystem - Play Radio From an MQTT Message
   initial_state: 'on'
   trigger:
