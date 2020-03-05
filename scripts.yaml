@@ -108,7 +108,7 @@ play_music_selection:
          media_player.slaapkamer_alexandra_speaker
         {% elif is_state("input_select.home_speakers","Gelijkvloers") %}
          media_player.gelijkvloers
-        {% elif is_state("input_select.home_speakers","Gelijkvloers") %}
+        {% elif is_state("input_select.home_speakers","Overal") %}
          media_player.home_group
         {% endif %}'
       media_content_id: '{% if is_state("input_select.music_type_source","Radio") %}
