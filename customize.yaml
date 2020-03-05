@@ -66,3 +66,11 @@ light.achtergrond_verlichting_leefruimte:
     icon: mdi:lamp
 media_player.living_room:
     icon: mdi:google-home
+media_player.office_mini:
+    icon: mdi:cast-audio
+media_player.master_bedroom_speaker:
+    icon: mdi:cast-audio
+media_player.slaapkamer_alexandra_speaker:
+    icon: mdi:cast-audio
+media_player.living_tv:
+    icon: mdi:cast
