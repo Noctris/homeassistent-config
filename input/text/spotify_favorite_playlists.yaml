@@ -1,0 +1,24 @@
+spotify_playlist_michel_coming_undone:
+  name: 'Coming Undone'
+  initial: 'spotify:playlist:3xVR8cMwohCrRQnaXL6GFz'
+spotify_playlist_michel_big_ones:
+  name: 'Big Ones'
+  initial: 'spotify:playlist:3EqF4tK6JIvWGHcsKWItam'
+spotify_playlist_michel_in_a_hurry:
+  name: 'In A Hurry'
+  initial: 'spotify:playlist:0YMSB9tHvuAtiOcFTxJdsN'
+spotify_playlist_michel_deep_focus:
+  name: 'Deep Focus'
+  initial: 'spotify:playlist:37i9dQZF1DWZeKCadgRdKQ'
+spotify_playlist_michel_foo_fighters:
+  name: 'Foo Fighters'
+  initial: 'spotify:playlist:37i9dQZF1DX9Ozxs05KifN'
+spotify_playlist_michel_discover_weekly:
+  name: 'Discover Weekly'
+  initial: 'spotify:playlist:37i9dQZEVXcEuDkdDlLncQ'
+spotify_playlist_michel_xylos_35years:
+  name: 'Xylos 35'
+  initial: 'spotify:playlist:0aaUy0lCQ6cT08Tu8x2b3C'
+spotify_playlist_alexandra_favoriet:
+  name: 'Alexandra Favoriet'
+  initial: 'spotify:playlist:0RjWeffpczpDLonTnsuml9'
