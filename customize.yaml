@@ -1,5 +1,5 @@
-script.home_radio:
-    friendly_name: Start Playing
+script.play_selected_source_on_selected_speaker:
+    friendly_name: Play Music
     icon: mdi:play
 person.michel:
     picture: !secret mivh_facebook_picture
