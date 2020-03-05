@@ -1,0 +1,6 @@
+home_radio_volume:
+  name: Huis Radio Volume
+  icon: mdi:volume-high
+  min: 0
+  max: 100
+  step: 1

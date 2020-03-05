@@ -91,13 +91,7 @@ sabnzbd:
     - total_size
 
 #TODO: move to seperate folders
-input_number:
-  spotify_volume:
-    name: Volume
-    icon: mdi:volume-high
-    min: 0
-    max: 1
-    step: 0.05
+input_number: !include_dir_merge_named input/number/
 
 tplink: !include integrations/tp-link/tp-link.yaml
 
