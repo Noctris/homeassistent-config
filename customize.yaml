@@ -64,3 +64,5 @@ media_player.living_kodi:
     icon: mdi:kodi
 light.achtergrond_verlichting_leefruimte:
     icon: mdi:lamp
+media_player.living_room:
+    icon: mdi:google-home
