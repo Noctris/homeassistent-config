@@ -92,7 +92,7 @@ spotifydemo:
         entity_id: media_player.spotify_michel_van_hoof
         #media_content_id: 'spotify:user:spotify:playlist:3xVR8cMwohCrRQnaXL6GFz'
         media_content_id: ' {{states("sensor.selected_spotify_playlist")}}'
-        media_content_type: music
+        media_content_type: playlist
 play_spotify_on_selected_speaker:
   alias: 'Play Spotify on a Selected Home Speaker'
   sequence:
