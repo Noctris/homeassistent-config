@@ -111,5 +111,6 @@ spotifydemo:
     - service: media_player.play_media
       data_template:
         entity_id: media_player.living_room
-        media_content_id: 'spotify:user:spotify:playlist:3xVR8cMwohCrRQnaXL6GFz'
-        media_content_type: 'PLAYLIST'
+        #media_content_id: 'spotify:user:spotify:playlist:3xVR8cMwohCrRQnaXL6GFz'
+        media_content_id: 'spotify:playlist:3xVR8cMwohCrRQnaXL6GFz'
+        media_content_type: 'playlist'
