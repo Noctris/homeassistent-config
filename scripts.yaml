@@ -98,7 +98,7 @@ play_music_selection:
   alias: Muziek afspelen op een speaker
   sequence:
   - data_template:
-      entity_id: '{{selected_home_speaker}}'
+      entity_id: '{{sensor.selected_home_speaker}}'
       media_content_id: '{% if is_state("input_select.music_type_source","Radio") %}
       {{ sensor.selected_home_radio_stream}}
 {% elif is_state("input_select.music_type_source","Spotify") %}
