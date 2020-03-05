@@ -10,6 +10,8 @@ person.alexandra:
 person.nicholas:
     picture: !secret nivh_picture
     entity_picture: !secret nivh_picture
+
+### Schakelaars
 switch.droogkast:
     icon: mdi:tumble-dryer
 switch.wasmachine:
@@ -52,6 +54,8 @@ switch.master_bedroom_s2:
     icon: mdi:power-socket-eu
 switch.master_bedroom_s3:
     icon: mdi:power-socket-eu
+
+### Verlichting
 light.dinning_table_lamp:
     icon: mdi:lamp
 light.living_tv_light:
@@ -60,6 +64,9 @@ light.living_couch_dinning:
     icon: mdi:lamp
 light.living_couch_window:
     icon: mdi:floor-lamp
+
+
+# Media Player
 media_player.living_kodi:
     icon: mdi:kodi
 light.achtergrond_verlichting_leefruimte:
@@ -74,3 +81,9 @@ media_player.slaapkamer_alexandra_speaker:
     icon: mdi:cast-audio
 media_player.living_tv:
     icon: mdi:cast
+media_player.woonkamer:
+    icon: mdi:cast-audio
+    name: Gelijkvloers
+media_player.home_group:
+    icon: mdi:cast-audio
+    name: Alle Speakers
