@@ -89,3 +89,13 @@ spotifydemo:
         #media_content_id: 'spotify:user:spotify:playlist:3xVR8cMwohCrRQnaXL6GFz'
         media_content_id: 'spotify:playlist:3xVR8cMwohCrRQnaXL6GFz'
         media_content_type: 'playlist'
+play_spotify_on_selected_speaker:
+  alias: 'Play Spotify on a Selected Home Speaker'
+  sequence:
+    - service: spotcast.start
+      data_template:
+        entity_id: '{{states("sensor.selected_home_speaker")}}'
+        uri: '{{states("sensor.selected_spotify_playlist")}}'
+        transfer_playback: true
+        random_song: true
+        shuffle: true
