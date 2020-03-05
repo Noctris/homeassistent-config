@@ -15,3 +15,6 @@
         {% elif is_state("input_select.home_speakers","Overal") %}
          media_player.home_group
         {% endif %}'
+      selected_home_radio_stream:
+        friendly_name: 'Gekozen Radio Station'
+        value_template: '{% for state in states.input_text %}{% if states("input_select.radio_station")|lower==state.name|lower%}{{state.state}}{% else%}{% endif %}{% endfor %}'
