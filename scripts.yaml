@@ -83,12 +83,16 @@ play_music_selection:
 spotifydemo:
   alias: 'Spotify Demo'
   sequence:
+    - service: media_player.select_source
+      data:
+        entity_id: media_player.spotify_michel_van_hoof
+        source: 'Living Room'
     - service: media_player.play_media
       data_template:
-        entity_id: media_player.living_room
+        entity_id: media_player.spotify_michel_van_hoof
         #media_content_id: 'spotify:user:spotify:playlist:3xVR8cMwohCrRQnaXL6GFz'
         media_content_id: 'spotify:playlist:3xVR8cMwohCrRQnaXL6GFz'
-        media_content_type: 'playlist'
+        media_content_type: music
 play_spotify_on_selected_speaker:
   alias: 'Play Spotify on a Selected Home Speaker'
   sequence:
@@ -113,3 +117,4 @@ play_song_on_spotify:
         media_content_id: spotify:track:1wLQwg0mloy3yXjL0jPE0N
         # Below is a hockey horn. Can be nice for an alarm ;-)
         # media_content_id: spotify:track:6xFXusME7FMMyMkPrIv2WJ
+        media_content_id: spotify:playlist:0Yk3e3szcyx9LZdjn0mUHf
