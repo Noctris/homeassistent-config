@@ -1,15 +1,12 @@
 spotify_playlist:
-  name: 'Playlist:'
+  name: 'Spotify Playlist:'
   options:
-    - Scream out loud
-    - Alexandra favoriet
+    - Coming Undone
+    - Big Ones
+    - In A Hurry
     - Deep Focus
-    - A - Coming undone
-  icon: mdi:spotify
-
-spotify_source:
-  name: "Source:"
-  options:
-    - Living Home
-    - Living TV
-
+    - Foo Fighters
+    - Discover Weekly
+    - Xylos 35
+    - Alexandra Favoriet
+  icon: mdi:playlist-music
