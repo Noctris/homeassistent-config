@@ -143,7 +143,7 @@ play_song_on_spotify:
         media_content_id: spotify:track:1wLQwg0mloy3yXjL0jPE0N
         # Below is a hockey horn. Can be nice for an alarm ;-)
         # media_content_id: spotify:track:6xFXusME7FMMyMkPrIv2WJ
-        media_content_id: spotify:playlist:0Yk3e3szcyx9LZdjn0mUHf
+        # media_content_id: spotify:playlist:0Yk3e3szcyx9LZdjn0mUHf
 play_selected_source_on_selected_speaker:
   alias: 'Play the Selected Source on The selected Speaker'
   sequence:
