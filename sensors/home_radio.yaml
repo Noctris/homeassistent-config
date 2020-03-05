@@ -1,0 +1,17 @@
+  - platform: template
+    sensors:
+      selected_home_speaker:
+        friendly_name_template: "Selected Home Speaker"
+        value_template: '{% if is_state("input_select.home_speakers", "Living") %}
+        media_player.living_room 
+        {% elif is_state("input_select.home_speakers","Kantoor") %}
+         media_player.office_mini
+        {% elif is_state("input_select.home_speakers","Master Bedroom") %}
+         media_player.master_bedroom_speaker
+        {% elif is_state("input_select.home_speakers","Alexandra") %}
+         media_player.slaapkamer_alexandra_speaker
+        {% elif is_state("input_select.home_speakers","Gelijkvloers") %}
+         media_player.gelijkvloers
+        {% elif is_state("input_select.home_speakers","Overal") %}
+         media_player.home_group
+        {% endif %}'
