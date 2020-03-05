@@ -12,5 +12,5 @@
     - service: media_player.play_media
       data_template:
         entity_id: '{{trigger.payload_json.player}}'
-        media_content_id:  '{{tigger.payload_json.media_content_id}}'
+        media_content_id:  '{{trigger.payload_json.media_content_id}}'
         media_content_type: audio/mp4
