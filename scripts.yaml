@@ -111,3 +111,5 @@ play_song_on_spotify:
         entity_id: media_player.spotify_michel_van_hoof
         media_content_type: music
         media_content_id: spotify:track:1wLQwg0mloy3yXjL0jPE0N
+        # Below is a hockey horn. Can be nice for an alarm ;-)
+        # media_content_id: spotify:track:6xFXusME7FMMyMkPrIv2WJ
