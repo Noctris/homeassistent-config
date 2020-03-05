@@ -99,11 +99,10 @@ play_music_selection:
   sequence:
   - data_template:
       entity_id: '{{sensor.selected_home_speaker}}'
-      media_content_id: '{% if is_state("input_select.music_type_source","Radio") %}
-      {{ sensor.selected_home_radio_stream}}
-{% elif is_state("input_select.music_type_source","Spotify") %}
-{{ sensor.selected_spotify_playlist}}
-{% endif %}'
+      media_content_id: ' {% if is_state("input_select.music_type_source","Radio") %} {{states("sensor.selected_home_radio_stream")}}
+ {% elif is_state("input_select.music_type_source","Spotify") %}
+ {{states("sensor.selected_spotify_playlist")}}
+ {% endif %}'
       media_content_type: audio/mp4
     service: media_player.play_media
 spotifydemo:
