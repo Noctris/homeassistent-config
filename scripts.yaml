@@ -94,7 +94,7 @@ play_spotify_on_selected_speaker:
   sequence:
     - service: spotcast.start
       data_template:
-        entity_id: {{states("sensor.selected_home_speaker")}}
+        entity_id: '{{states("sensor.selected_home_speaker")}}'
         uri: '{{states("sensor.selected_spotify_playlist")}}'
         transfer_playback: true
         random_song: true
