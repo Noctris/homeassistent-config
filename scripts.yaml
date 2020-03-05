@@ -69,17 +69,6 @@ wake_up_light_masterbedroom:
       brightness: 100
     entity_id: light.living_spots
     service: light.turn_on
-play_music_selection:
-  alias: Muziek afspelen op een speaker
-  sequence:
-  - data_template:
-      entity_id: '{{states("sensor.selected_home_speaker")}}'
-      media_content_id: ' {% if is_state("input_select.music_type_source","Radio") %} {{states("sensor.selected_home_radio_stream")}}
- {% elif is_state("input_select.music_type_source","Spotify") %}
- {{states("sensor.selected_spotify_playlist")}}
- {% endif %}'
-      media_content_type: audio/mp4
-    service: media_player.play_media
 spotifydemo:
   alias: 'Spotify Demo'
   sequence:
