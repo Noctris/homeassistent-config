@@ -133,10 +133,3 @@ calendar: !include integrations/todoist.yaml
 spotcast:
   username: !secret spotify_username
   password: !secret spotify_password
-
-white_noise:
-  module: whitenoise
-  class: WhiteNoise
-  media_player: living_room
-  input_boolean: living_white_noise_machine
-  filename: https://xyz.duckdns.org/local/audio/42-Rain-60min.mp3
