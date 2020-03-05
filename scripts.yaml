@@ -154,4 +154,4 @@ play_selected_source_on_selected_speaker:
         # Execute radio script which will check if Radio is selected
         - script.play_radio_on_selected_speaker
         # Execute Spotify script which will check if Spotify is selected
-        - play_spotify_on_selected_speaker
+        - script.play_spotify_on_selected_speaker
