@@ -99,3 +99,15 @@ play_spotify_on_selected_speaker:
         transfer_playback: true
         random_song: true
         shuffle: true
+play_song_on_spotify:
+  alias: 'Play a Spotify track on Chromecast'
+  sequence:
+    - service: media_player.select_source
+      data:
+        entity_id: media_player.spotify_michel_van_hoof
+        source: 'Living Room'
+    - service: media_player.play_media 
+      data:
+        entity_id: media_player.spotify
+        media_content_type: music
+        media_content_id: spotify:track:6xFXusME7FMMyMkPrIv2WJ
