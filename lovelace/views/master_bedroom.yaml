@@ -5,4 +5,6 @@ badges: []
 cards:
   - !include /config/lovelace/components/home-radio.yaml
   - !include /config/lovelace/components/master-bedroom-alarm.yaml
+  - entity: media_player.master_bedroom_speaker
+    type: media-control
     
