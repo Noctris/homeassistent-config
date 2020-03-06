@@ -12,4 +12,5 @@ cards:
     aspect_ratio: 86%
     camera_image: camera.buienradar_loop
     entity: camera.buienradar_loop
+  - !inlcude /config/lovelace/components/home-radio.yaml
        
