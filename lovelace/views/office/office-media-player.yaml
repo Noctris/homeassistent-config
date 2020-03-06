@@ -1,11 +1,15 @@
-title: Media Playing
-type: entity-filter
+title: Media
+type: entities
 entities:
   - entity: media_player.office_mini
     type: 'custom:mini-media-player'
     artwork: full-cover-fit
-  - entity: media_player.spotify_michel_van_hoof
-    type: 'custom:mini-media-player'
-    artwork: full-cover-fit
-state_filter:
-- playing
+    shortcuts:
+      buttons:
+        - data:
+          entity_id: media_player.office_mini
+          shuffle: true
+          uri: 'spotify:playlist:3xVR8cMwohCrRQnaXL6GFz'
+      id: spotcast.start
+      name: Undone
+      type: service
