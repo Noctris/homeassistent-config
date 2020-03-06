@@ -46,6 +46,7 @@ views:
   - !include /config/lovelace/views/status.yaml
   - !include /config/lovelace/views/living_area.yaml
   - !include /config/lovelace/views/master_bedroom.yaml
+  - !include /config/lovelace/views/debug.yaml
   - badges: []
     cards:
       - cards:
@@ -604,55 +605,3 @@ views:
     panel: false
     path: new-home-view
     title: New Home View
-  - badges: []
-    cards:
-      - artwork: cover
-        entity: media_player.office_mini
-        shortcuts:
-          buttons:
-            - data:
-                entity_id: media_player.office_mini
-                shuffle: true
-                uri: 'spotify:playlist:3xVR8cMwohCrRQnaXL6GFz'
-              id: spotcast.start
-              name: Undone
-              type: service
-            - data:
-                entity_id: media_player.office_mini
-                shuffle: true
-                uri: 'spotify:playlist:3xVR8cMwohCrRQnaXL6GFz'
-              id: spotcast.start
-              name: Undone
-              type: service
-          column_height: 100
-          columns: 4
-        source: icon
-        type: 'custom:mini-media-player'
-      - action: more_info
-        color: auto
-        color_type: card
-        default_color: 'rgb(255, 233, 155)'
-        entity: light.living_spots
-        icon: 'mdi:home'
-        name: Home
-        style:
-          - font-size: 12px
-          - font-weight: bold
-        type: 'custom:button-card'
-      - cards:
-          - artwork: cover
-            column_height: 100
-            columns: 4
-            entity: media_player.office_mini
-            source: icon
-            type: 'custom:mini-media-player'
-          - action: call-service
-            icon: 'mdi:play'
-            name: Play
-            service: script.turn_on
-            service_data:
-              - entity_id: script.play_selected_source_on_selected_speaker
-            type: 'custom:button-card'
-        type: vertical-stack
-    path: debug
-    title: Debug
