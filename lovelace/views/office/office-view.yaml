@@ -3,6 +3,7 @@ path: office
 panel: true
 badges: []
 cards:
+    - !include /local/lovelace/views/office/office-lights.yaml
     - type: horizontal-stack
       column_width: 100%
       cards:
