@@ -11,6 +11,6 @@ cards:
   - !include /config/lovelace/components/home_status.yaml
   - type: entities
     entities:
-      - type: custom:slider-entity-row
-        entitiy: light.living_spots
+      - type: 'custom:slider-entity-row'
+        entity: light.living_spots
        
