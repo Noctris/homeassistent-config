@@ -17,3 +17,12 @@
   - service: script.wake_up_light_10_minutes
     data_template:
       lamp: light.master_bedroom_spots
+  - service: media_player.volume_set
+    data:
+      entity_id: media_player.master_bedroom_speaker
+      volume_level: 30
+  - service: spotcast.start
+    - data:
+        entity_id: media_player.master_bedroom_speaker
+        shuffle: true
+        uri: 'spotify:playlist:3xVR8cMwohCrRQnaXL6GFz'
