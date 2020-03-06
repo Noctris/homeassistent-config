@@ -1,33 +1,14 @@
 title: Kantoor
 path: office
-panel: true
+panel: false
 badges: []
 cards:
-    - !include office-lights.yaml
+    - !include /config/lovelace/views/office/office-lights.yaml
+    - !include /config/lovelace/components/home-radio.yaml
+    - !include office-media-player.yaml
     - type: horizontal-stack
       column_width: 100%
       cards:
-          - type: vertical-stack
-            cards:
-              - title: Verlichting
-                type: glance
-                column_width: calc(100%/3)
-                columns: 2
-                entities:
-                  - entity: light.office_spots
-                    tap_action:
-                      action: toggle
-                  - entity: switch.office_desk_left
-                    tap_action:
-                      action: toggle
-                  - entity: switch.office_library_left
-                    tap_action:
-                      action: toggle
-                  - entity: switch.office_s2
-                    tap_action:
-                      action: toggle                
-              - entity: light.office_spots
-                type: light
           - type: vertical-stack
             cards:
               - type: 'custom:mini-media-player'
@@ -45,13 +26,5 @@ cards:
               - type: 'custom:mini-media-player'
                 artwork: cover
                 entity: media_player.living_room
-              - type: 'custom:mini-media-player'
-                artwork: cover
-                entity: media_player.woonkamer
-          - client_id: f159c1ec38974e0da0ddfba8822457ed
-            device: media_player.office_mini
-            limit: 10
-            player: Office speaker
-            type: 'custom:spotify-card'
         
   
