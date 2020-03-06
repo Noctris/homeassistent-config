@@ -1,0 +1,17 @@
+type: 'custom:auto-entities'
+card:
+  title: Lights on
+  type: entities
+filter:
+  exclude:
+    - entity_id: switch.droogkast
+    - entity_id: switch.wasmachine
+    - domain: light_group
+  include:
+    - domain: light
+      options:
+tap_action:
+  action: toggle
+state: 'on'
+show_empty: false
+sort: name
