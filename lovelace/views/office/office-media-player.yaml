@@ -7,9 +7,9 @@ entities:
     shortcuts:
       buttons:
         - data:
-          entity_id: media_player.office_mini
-          shuffle: true
-          uri: 'spotify:playlist:3xVR8cMwohCrRQnaXL6GFz'
-      id: spotcast.start
-      name: Undone
-      type: service
+            entity_id: media_player.office_mini
+            shuffle: true
+            uri: 'spotify:playlist:3xVR8cMwohCrRQnaXL6GFz'
+          id: spotcast.start
+          name: Undone
+          type: service
