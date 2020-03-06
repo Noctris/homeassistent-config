@@ -1,0 +1,56 @@
+type: vertical-stack
+cards:
+  - type: horizontal-stack
+    cards:
+      - type: 'custom:button-card'
+        action: more_info
+        color: auto
+        color_type: card
+        default_color: 'rgb(255, 233, 155)'
+        entity: light.master_bedroom_spots
+        icon: 'mdi:light'
+        name: Spots
+        style:
+          - font-size: 12px
+          - font-weight: bold
+  - type: horizontal-stack
+    cards:
+      - type: 'custom:button-card'
+        action: more_info
+        color: auto
+        color_type: card
+        default_color: 'rgb(255, 233, 155)'
+        entity: switch.office_desk_left
+        icon: 'mdi:lamp'
+        name: Bureau L
+        style:
+          - font-size: 12px
+          - font-weight: bold
+      - type: 'custom:button-card'
+        action: more_info
+        color: auto
+        color_type: card
+        default_color: 'rgb(255, 233, 155)'
+        entity: switch.office_library_left
+        icon: 'mdi:lamp'
+        name: Library Left
+        style:
+          - font-size: 12px
+          - font-weight: bold
+      - type: 'custom:button-card'
+        action: more_info
+        color: auto
+        color_type: card
+        default_color: 'rgb(255, 233, 155)'
+        entity: switch.office_s2
+        icon: 'mdi:lamp'
+        name: S2
+        style:
+          - font-size: 12px
+          - font-weight: bold
+  - type: entity-filter
+    entities:
+      - entity: light.office_spots
+        type: 'custom:slider-entity-row'
+    state_filter:
+      - 'on'
