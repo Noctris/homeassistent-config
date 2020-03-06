@@ -6,4 +6,7 @@ badges: []
 cards:
   - !include /config/lovelace/components/lights/lights_living_area.yaml
   - !include /config/lovelace/components/media/living_players_extended.yaml
+  - type: entities
+    entities:
+      - light.living_spots
        
