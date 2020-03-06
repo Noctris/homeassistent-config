@@ -9,4 +9,8 @@ cards:
   - !include /config/lovelace/components/lights_turned_on.yaml
   - !include /config/lovelace/components/who-is-home.yaml
   - !include /config/lovelace/components/home_status.yaml
+  - type: entities
+    entities:
+      - type: custom:slider-entity-row
+        entitiy: light.living_spots
        
