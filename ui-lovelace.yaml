@@ -39,7 +39,7 @@ resources:
   - type: module
     url: /community_plugin/atomic_calendar/atomic_calendar.js
   - type: module
-    url: https://github.com/thomasloven/lovelace-auto-entities/raw/master/auto-entities.js
+    url: /auto-entities.js
 title: Van Hoof
 views:
   - !include /config/lovelace/views/home.yaml
@@ -47,38 +47,6 @@ views:
   - !include /config/lovelace/views/living_area.yaml
   - !include /config/lovelace/views/master_bedroom.yaml
   - !include /config/lovelace/views/debug.yaml
-  - badges: []
-    cards:
-      - cards:
-          - card:
-              entity: media_player.spotify_michel_van_hoof
-              type: media-control
-            conditions:
-              - entity: media_player.spotify_michel_van_hoof
-                state: playing
-            type: conditional
-        type: vertical-stack
-      - card:
-          title: Lights on
-          type: entities
-        filter:
-          exclude:
-            - entity_id: switch.droogkast
-            - entity_id: switch.wasmachine
-            - domain: light_group
-          include:
-            - domain: light
-              options:
-                tap_action:
-                  action: toggle
-              state: 'on'
-        show_empty: false
-        sort: name
-        type: 'custom:auto-entities'
-    icon: 'mdi:home'
-    panel: false
-    path: home
-    title: Home
   - badges: []
     cards:
       - card:
@@ -101,34 +69,10 @@ views:
         show_empty: false
         sort: 'domain, name'
         type: 'custom:auto-entities'
-      - calendars:
-          - calendar.due_this_week
-        column_width: calc(100% / 3)
-        title: Home Feed
-        type: 'custom:home-feed-card'
     path: home-status
     title: Status
   - badges: []
     cards:
-      - columns: 2
-        entities:
-          - entity: light.dad_bedroom_spots
-            name: Spots
-            tap_action:
-              action: toggle
-          - entity: light.stairs_0_1
-            name: Hal 0/1
-            tap_action:
-              action: toggle
-          - entity: light.bathroom_spots
-            tap_action:
-              action: toggle
-          - entity: light.bathroom_shower_spots
-            name: Douche Spots
-            tap_action:
-              action: toggle
-        title: Verlichting
-        type: glance
       - card:
           title: Lights on
           type: entities
@@ -151,20 +95,6 @@ views:
         show_empty: false
         sort: name
         type: 'custom:auto-entities'
-      - entities: []
-        type: entities
-      - entity: media_player.master_bedroom_speaker
-        type: media-control
-      - cards:
-          - entities:
-              - entity: input_boolean.master_bedroom_alarm_enabled
-              - entity: input_datetime.master_bedroom_alarm_clock_time
-              - entity: script.wake_up_light_masterbedroom
-              - entity: script.wake_up_light_masterbedroom
-            show_header_toggle: false
-            title: Alarm
-            type: entities
-        type: vertical-stack
     icon: ''
     path: bedroom
     title: Bedroom
