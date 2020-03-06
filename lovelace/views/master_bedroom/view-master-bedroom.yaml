@@ -7,6 +7,7 @@ cards:
     column_width: 100% / 3
     entity: weather.thuis
     theme: Backend-selected
+  - !include lights-master-bedroom.yaml
   - !include /config/lovelace/components/home-radio.yaml
   - !include /config/lovelace/components/master-bedroom-alarm.yaml
   - !include chromecast-master-bedroom.yaml
