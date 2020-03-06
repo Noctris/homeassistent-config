@@ -10,10 +10,18 @@ cards:
   - !include /config/lovelace/components/who-is-home.yaml
   - !include /config/lovelace/components/home_status.yaml
   - type: entities
+    name: Verlichting
     entities:
+      - type: 'custom:slider-entity-row'
+        entity: light.living_spots
+      - type: 'custom:slider-entity-row'
+        entity: light.light.dinning_spots
+        entity: light.living_spots
+      - type: 'custom:slider-entity-row'
+        entity: light.kitchen_main
       - type: section
         label: Living Spots
       - type: 'custom:slider-entity-row'
         full_row: true
-        entity: light.living_spots
+        entity: light.leefruimte_spots
        
