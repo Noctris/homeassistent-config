@@ -58,43 +58,49 @@ wake_up_light_masterbedroom:
   sequence:
   - data_template:
       brightness_pct: 5
-      entity_id: {{lamp}}
+      entity_id: {{ lamp }}
     service: light.turn_on
   - delay:
       seconds: 30
   - data_template:
       brightness_pct: 10
-      entity_id: {{lamp}}
+      entity_id: {{ lamp }}
     service: light.turn_on
   - delay:
       seconds: 30
   - data_template:
       brightness_pct: 15
-      entity_id: {{lamp}}
+      entity_id: {{ lamp }}
     service: light.turn_on
   - delay:
       seconds: 30
   - data_template:
       brightness_pct: 20
-      entity_id: {{lamp}}
+      entity_id: {{ lamp }}
     service: light.turn_on
   - delay:
       seconds: 30
   - data_template:
       brightness_pct: 25
-      entity_id: {{lamp}}
+      entity_id: {{ lamp }}
     service: light.turn_on
   - delay:
       seconds: 30
   - data_template:
       brightness_pct: 30
-      entity_id: {{lamp}}
+      entity_id: {{ lamp }}
     service: light.turn_on
   - delay:
       seconds: 30
   - data_template:
       brightness_pct: 35
-      entity_id: {{lamp}}
+      entity_id: {{ lamp }}
+    service: light.turn_on
+  - delay:
+      seconds: 30
+  - data_template:
+      brightness_pct: 100
+      entity_id: {{ lamp }}
     service: light.turn_on
 spotifydemo:
   alias: 'Spotify Demo'
