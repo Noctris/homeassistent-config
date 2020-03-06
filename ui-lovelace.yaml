@@ -42,6 +42,7 @@ title: Van Hoof
 views:
   - !include /config/lovelace/views/home.yaml
   - !include /config/lovelace/views/status.yaml
+  - !include /config/lovelace/views/living_area.yaml
   - !include /config/lovelace/views/master_bedroom.yaml
   - badges: []
     cards:
@@ -106,34 +107,6 @@ views:
     title: Status
   - badges: []
     cards:
-      - columns: 3
-        entities:
-          - entity: light.kitchen_main
-            name: Keuken Spots
-            tap_action:
-              action: toggle
-          - entity: light.kitchen_coffee_area
-            name: Keuken Wasbak
-            tap_action:
-              action: toggle
-          - entity: light.dinning_spots
-            name: Eetkamer
-            tap_action:
-              action: toggle
-          - entity: light.living_spots
-            name: Living
-            tap_action:
-              action: toggle
-          - entity: light.achtergrond_verlichting_leefruimte
-            name: Achtergrond
-            tap_action:
-              action: toggle
-          - entity: light.leefruimte_spots
-            tap_action:
-              action: toggle
-        show_state: false
-        title: Verlichting
-        type: glance
       - entities:
           - entity: input_select.chromecast_radio
           - entity: input_select.radio_station

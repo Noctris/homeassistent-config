@@ -1,0 +1,28 @@
+title: Verlichting
+type: glance
+show_state: false
+columns: 3
+entities:
+  - entity: light.kitchen_main
+    name: Keuken Spots
+    tap_action:
+      action: toggle
+  - entity: light.kitchen_coffee_area
+    name: Keuken Wasbak
+    tap_action:
+      action: toggle
+  - entity: light.dinning_spots
+    name: Eetkamer
+    tap_action:
+      action: toggle
+  - entity: light.living_spots
+    name: Living
+    tap_action:
+    action: toggle
+  - entity: light.achtergrond_verlichting_leefruimte
+    name: Achtergrond
+    tap_action:
+    action: toggle
+  - entity: light.leefruimte_spots
+    tap_action:
+      action: toggle

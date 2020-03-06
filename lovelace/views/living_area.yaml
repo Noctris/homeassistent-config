@@ -1,0 +1,8 @@
+title: Leefruimte
+path: living-area
+#icon: 'mdi:eye-outline'
+panel: false
+badges: []
+cards:
+  - !include lovelace/components/lights/lights_living_area.yaml
+       
