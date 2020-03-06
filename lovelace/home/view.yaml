@@ -1,3 +1,10 @@
 title: Home2 Van Hoof
 path: home2
 icon: 'mdi:home'
+panel: false
+badges: []
+cards:
+  - type: weather-forecast
+    column_width: 100% / 3
+    entity: weather.thuis
+    theme: Backend-selected
