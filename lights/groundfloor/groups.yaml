@@ -17,7 +17,6 @@
       - light.kitchen_main
       - light.dinning_spots
       - light.living_spots
-      - light.kitchen_coffee_area
   - platform: group
     name: Alle Lichten
     entities:
