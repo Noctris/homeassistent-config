@@ -40,8 +40,9 @@ resources:
     url: /community_plugin/atomic_calendar/atomic_calendar.js
 title: Van Hoof
 views:
-  - !include /config/lovelace/home/view.yaml
-  - !include /config/lovelace/home/master_bedroom.yaml
+  - !include /config/lovelace/views/home.yaml
+  - !include /config/lovelace/views/status.yaml
+  - !include /config/lovelace/views/master_bedroom.yaml
   - badges: []
     cards:
       - id_filter: ^home_feed_.*
@@ -110,13 +111,6 @@ views:
     title: Home
   - badges: []
     cards:
-      - column_width: calc(100% / 3)
-        entities:
-          - entity: person.michel
-          - entity: person.alexandra
-          - entity: person.nicholas
-        title: Where Is everyone?
-        type: glance
       - column_width: calc(100% / 3)
         entities:
           - entity: input_boolean.guests_in_the_house

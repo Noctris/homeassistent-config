@@ -1,0 +1,10 @@
+type: entities
+entities:
+  - input_select.home_speakers
+  - input_select.music_type_source
+  - input_select.radio_station
+  - input_select.spotify_playlist
+  - input_number.home_radio_volume
+  - entity: script.play_selected_source_on_selected_speaker
+      type: 'custom:button-card'
+            
