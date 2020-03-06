@@ -1,5 +1,20 @@
 type: vertical-stack
 cards:
+  - type: entity-filter
+    entities:
+      - entity: light.leefruimte_spots
+        type: 'custom:slider-entity-row'
+      - entity: light.living_spots
+        type: 'custom:slider-entity-row'
+      - entity: light.dinning_spots
+        name: Eetkamer Spots
+        type: 'custom:slider-entity-row'
+      - entity: light.kitchen_main
+        type: 'custom:slider-entity-row'
+      - entity: light.kitchen_coffee_area
+        type: 'custom:slider-entity-row'
+    state_filter:
+      - 'on'
   - type: horizontal-stack
     cards:
       - type: 'custom:button-card'
@@ -70,18 +85,3 @@ cards:
         style:
           - font-size: 12px
           - font-weight: bold
-  - type: entity-filter
-    entities:
-      - entity: light.leefruimte_spots
-        type: 'custom:slider-entity-row'
-      - entity: light.living_spots
-        type: 'custom:slider-entity-row'
-      - entity: light.dinning_spots
-        name: Eetkamer Spots
-        type: 'custom:slider-entity-row'
-      - entity: light.kitchen_main
-        type: 'custom:slider-entity-row'
-      - entity: light.kitchen_coffee_area
-        type: 'custom:slider-entity-row'
-    state_filter:
-      - 'on'
