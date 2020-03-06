@@ -1,0 +1,9 @@
+title: Master Bedroom
+path: room/master_bedroom
+panel: false
+badges: []
+cards:
+  - !include /config/lovelace/components/master-bedroom-alarm.yaml
+  - !include /config/lovelace/components/home-radio.yaml
+  - !include /config/lovelace/components/who-is-home.yaml
+       
