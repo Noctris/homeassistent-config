@@ -6,25 +6,5 @@ cards:
     - !include /config/lovelace/views/office/office-lights.yaml
     - !include /config/lovelace/components/home-radio.yaml
     - !include office-media-player.yaml
-    - type: horizontal-stack
-      column_width: 100%
-      cards:
-          - type: vertical-stack
-            cards:
-              - type: 'custom:mini-media-player'
-                artwork: cover-full-fit
-                entity: media_player.office_mini
-                shortcuts:
-                  buttons:
-                    - data:
-                        entity_id: media_player.office_mini
-                        shuffle: true
-                        uri: 'spotify:playlist:3xVR8cMwohCrRQnaXL6GFz'
-                      id: spotcast.start
-                      name: Undone
-                      type: service
-              - type: 'custom:mini-media-player'
-                artwork: cover
-                entity: media_player.living_room
         
   
