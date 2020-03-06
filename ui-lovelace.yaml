@@ -54,35 +54,6 @@ views:
                 state: playing
             type: conditional
         type: vertical-stack
-      - entities:
-          - media_player.living_room
-          - media_player.living_tv
-          - media_player.woonkamer
-          - media_player.living_kodi
-          - media_player.spotify_michel_van_hoof
-        state_filter:
-          - playing
-        title: Media Playing
-        type: entity-filter
-      - columns: 4
-        entities:
-          - entity: sensor.home_commute
-            name: To Home
-          - entity: sensor.to_xant
-          - entity: sensor.to_bagaar
-          - entity: sensor.speedtest_download
-            name: Download
-          - entity: sensor.speedtest_upload
-            name: Upload
-          - entity: sensor.speedtest_ping
-            name: Ping
-          - entity: sensor.washing_machine_status
-            name: Wasmachine
-          - entity: sensor.droogkast_status
-            name: Droogkast
-        show_header_toggle: false
-        title: Quick Info
-        type: glance
       - card:
           title: Lights on
           type: entities
@@ -106,23 +77,6 @@ views:
     title: Home
   - badges: []
     cards:
-      - column_width: calc(100% / 3)
-        entities:
-          - entity: input_boolean.guests_in_the_house
-            name: Guests
-          - entity: input_boolean.kids_week
-            name: Kids Week
-          - entity: input_boolean.school_night
-            name: School Night
-          - entity: input_boolean.master_bedroom_alarm_enabled
-            name: Alarmclock
-          - entity: sensor.droogkast_status
-            name: Droogkast
-          - entity: sensor.washing_machine_status
-            name: Wasmachine
-        show_header_toggle: false
-        title: Status
-        type: glance
       - card:
           title: Lights on
           type: entities

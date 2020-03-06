@@ -1,5 +1,5 @@
 type: glance
-columns: 2
+columns: 3
 entities:
   - entity: input_boolean.kids_week
     name: Kids Week
@@ -9,4 +9,7 @@ entities:
     name: Guests ?
     tap_action:
       action: toggle
-                
+  - entity: input_boolean.school_night
+    name: School ?
+    tap_action:
+      action: toggle
