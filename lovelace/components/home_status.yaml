@@ -1,0 +1,12 @@
+type: glance
+columns: 2
+entities:
+  - entity: input_boolean.kids_week
+    name: Kids Week
+    tap_action:
+      action: toggle
+  - entity: input_boolean.guests_in_the_house
+    name: Guests ?
+    tap_action:
+      action: toggle
+                

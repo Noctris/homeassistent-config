@@ -44,22 +44,6 @@ views:
   - !include /config/lovelace/home/master_bedroom.yaml
   - badges: []
     cards:
-      - cards:
-          
-          - cards:
-              - columns: 2
-                entities:
-                  - entity: input_boolean.kids_week
-                    name: Kids Week
-                    tap_action:
-                      action: toggle
-                  - entity: input_boolean.guests_in_the_house
-                    name: Guests ?
-                    tap_action:
-                      action: toggle
-                type: glance
-            type: horizontal-stack
-        type: vertical-stack
       - id_filter: ^home_feed_.*
         more_info_on_tap: true
         show_empty: true
