@@ -53,6 +53,12 @@ wake_up_light_masterbedroom:
       brightness_pct: 100
       entity_id: light.dad_bedroom_spots
     service: light.turn_on
+'run_lamp_in_living':
+  alias: Living Spots Wake Up Test
+  sequence:
+    service: script.wake_up_light_test
+    data_template:
+      lamp: light.living_spots
 'wake_up_light_test':
   alias: Wakup Light Test
   sequence:
