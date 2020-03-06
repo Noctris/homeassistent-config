@@ -4,5 +4,5 @@ path: living-area
 panel: false
 badges: []
 cards:
-  - !include ./lovelace/components/lights/lights_living_area.yaml
+  - !include /config/lovelace/components/lights/lights_living_area.yaml
        
