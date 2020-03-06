@@ -53,21 +53,48 @@ wake_up_light_masterbedroom:
       brightness_pct: 100
       entity_id: light.dad_bedroom_spots
     service: light.turn_on
-'1583258208878':
+'wake_up_light_test':
   alias: Wakup Light Test
   sequence:
-  - data:
-      brightness: 10
-    entity_id: light.living_spots
+  - data_template:
+      brightness_pct: 5
+      entity_id: {{lamp}}
     service: light.turn_on
-  - data:
-      brightness: 10
-    entity_id: light.living_spots
+  - delay:
+      seconds: 30
+  - data_template:
+      brightness_pct: 10
+      entity_id: {{lamp}}
     service: light.turn_on
-  - delay: 00:00:20
-  - data:
-      brightness: 100
-    entity_id: light.living_spots
+  - delay:
+      seconds: 30
+  - data_template:
+      brightness_pct: 15
+      entity_id: {{lamp}}
+    service: light.turn_on
+  - delay:
+      seconds: 30
+  - data_template:
+      brightness_pct: 20
+      entity_id: {{lamp}}
+    service: light.turn_on
+  - delay:
+      seconds: 30
+  - data_template:
+      brightness_pct: 25
+      entity_id: {{lamp}}
+    service: light.turn_on
+  - delay:
+      seconds: 30
+  - data_template:
+      brightness_pct: 30
+      entity_id: {{lamp}}
+    service: light.turn_on
+  - delay:
+      seconds: 30
+  - data_template:
+      brightness_pct: 35
+      entity_id: {{lamp}}
     service: light.turn_on
 spotifydemo:
   alias: 'Spotify Demo'
