@@ -3,6 +3,17 @@ path: master-bedroom
 panel: false
 badges: []
 cards:
+  - type: entities
+    name: Verlichting
+    entities:
+      - type: 'custom:slider-entity-row'
+        full_row: false
+        entity: light.master_bedroom_spots
+      - type: section
+        label: Muziek
+      - type: 'custom:slider-entity-row'
+        full_row: false
+        entity: media_player.master_bedroom_speaker
   - !include /config/lovelace/components/home-radio.yaml
   - !include /config/lovelace/components/master-bedroom-alarm.yaml
   - entity: media_player.master_bedroom_speaker
