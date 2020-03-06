@@ -3,17 +3,10 @@ path: master-bedroom
 panel: false
 badges: []
 cards:
-  - type: entities
-    name: Verlichting
-    entities:
-      - type: 'custom:slider-entity-row'
-        full_row: false
-        entity: light.master_bedroom_spots
-      - type: section
-        label: Muziek
-      - type: 'custom:slider-entity-row'
-        full_row: false
-        entity: media_player.master_bedroom_speaker
+  - type: weather-forecast
+    column_width: 100% / 3
+    entity: weather.thuis
+    theme: Backend-selected
   - !include /config/lovelace/components/home-radio.yaml
   - !include /config/lovelace/components/master-bedroom-alarm.yaml
   - !include chromecast-master-bedroom.yaml
