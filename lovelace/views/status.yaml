@@ -4,7 +4,7 @@ icon: 'mdi:eye-outline'
 panel: false
 badges: []
 cards:
-  - !include /config/lovelace/components/who_is_where.yaml
+  - !include /config/lovelace/components/where_is_everyone.yaml
   - !include /config/lovelace/components/who-is-home.yaml
   - !include /config/lovelace/components/home_status.yaml
        
