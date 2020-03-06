@@ -1,7 +1,7 @@
-type: 'custom:auto-entities'
 card:
   title: Lights on
   type: entities
+column_width: calc(100% / 3)
 filter:
   exclude:
     - entity_id: switch.droogkast
@@ -10,8 +10,11 @@ filter:
   include:
     - domain: light
       options:
-tap_action:
-  action: toggle
-state: 'on'
+        tap_action:
+          action: toggle
+      state: 'on'
+    - domain: media_player
+      state: playing
 show_empty: false
-sort: name
+sort: 'domain, name'
+type: 'custom:auto-entities'
