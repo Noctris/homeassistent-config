@@ -1,0 +1,11 @@
+title: Media Playing
+type: entity-filter
+entities:
+  - entity: media_player.office_mini
+    type: 'custom:mini-media-player'
+    artwork: full-cover-fit
+  - entity: media_player.spotify_michel_van_hoof
+    type: 'custom:mini-media-player'
+    artwork: full-cover-fit
+state_filter:
+- playing
