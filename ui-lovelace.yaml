@@ -2,7 +2,7 @@ custom_header:
   chevrons: false
   compact_mode: true
   exceptions: []
-  menu_dropdown: true
+  menu_dropdown: false
   shadow: false
 resources:
   - type: module
@@ -39,12 +39,13 @@ resources:
   - type: module
     url: /community_plugin/atomic_calendar/atomic_calendar.js
   - type: module
-    url: /auto-entities.js
+    url: /local/auto-entities.js
 title: Van Hoof
 views:
   - !include /config/lovelace/views/home.yaml
   - !include /config/lovelace/views/status.yaml
   - !include /config/lovelace/views/living_area.yaml
+  - !include /config/lovelace/views/kantoor.yaml
   - !include /config/lovelace/views/master_bedroom.yaml
   - !include /config/lovelace/views/debug.yaml
   - badges: []
@@ -98,48 +99,6 @@ views:
     icon: ''
     path: bedroom
     title: Bedroom
-  - badges: []
-    cards:
-      - columns: 4
-        entities:
-          - entity: sensor.washing_machine_status
-            name: Status
-          - entity: switch.wasmachine
-            name: Power
-          - entity: sensor.wasmachine_volts
-            name: Voltage
-          - entity: sensor.wasmachine_amp
-            name: Amperage
-          - entity: sensor.wasmachine_watts
-            name: Watt
-          - entity: sensor.wasmachine_today_kwh
-            name: Today Kwh
-          - entity: sensor.wasmachine_total_kwh
-            name: Total Kwh
-        show_header_toggle: false
-        title: Washing Machine
-        type: glance
-      - columns: 4
-        entities:
-          - entity: sensor.droogkast_status
-            name: Status
-          - entity: switch.droogkast
-            name: Power
-          - entity: sensor.droogkast_volts
-            name: Voltage
-          - entity: sensor.droogkast_amp
-            name: Amperage
-          - entity: sensor.droogkast_watts
-            name: Watt
-          - entity: sensor.droogkast_today_kwh
-            name: Today Kwh
-          - entity: sensor.droogkast_total_kwh
-            name: Total Kwh
-        show_header_toggle: false
-        title: Droogkast
-        type: glance
-    path: chores
-    title: Chores
   - badges: []
     cards:
       - card:
@@ -225,61 +184,6 @@ views:
         type: entities
     path: new-home-design
     title: New Home Design
-  - badges: []
-    cards:
-      - cards:
-          - cards:
-              - column_width: calc(100%/3)
-                columns: 2
-                entities:
-                  - entity: light.office_spots
-                    tap_action:
-                      action: toggle
-                  - entity: switch.office_desk_left
-                    tap_action:
-                      action: toggle
-                  - entity: switch.office_library_left
-                    tap_action:
-                      action: toggle
-                  - entity: switch.office_s2
-                    tap_action:
-                      action: toggle
-                show_state: false
-                title: Verlichting
-                type: glance
-              - entity: light.office_spots
-                type: light
-            type: vertical-stack
-          - cards:
-              - artwork: cover-full-fit
-                entity: media_player.office_mini
-                shortcuts:
-                  buttons:
-                    - data:
-                        entity_id: media_player.office_mini
-                        shuffle: true
-                        uri: 'spotify:playlist:3xVR8cMwohCrRQnaXL6GFz'
-                      id: spotcast.start
-                      name: Undone
-                      type: service
-                type: 'custom:mini-media-player'
-              - artwork: cover
-                entity: media_player.living_room
-                type: 'custom:mini-media-player'
-              - artwork: cover
-                entity: media_player.woonkamer
-                type: 'custom:mini-media-player'
-            type: vertical-stack
-          - client_id: f159c1ec38974e0da0ddfba8822457ed
-            device: media_player.office_mini
-            limit: 10
-            player: Office speaker
-            type: 'custom:spotify-card'
-        column_width: 100%
-        type: horizontal-stack
-    panel: true
-    path: kantoor
-    title: Kantoor
   - badges:
       - entity: binary_sensor.wan
       - entity: binary_sensor.updater
