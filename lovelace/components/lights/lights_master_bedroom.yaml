@@ -1,5 +1,3 @@
-title: Verlichting
-type: glance
 columns: 2
 entities:
   - entity: light.dad_bedroom_spots
@@ -17,4 +15,5 @@ entities:
     name: Douche Spots
     tap_action:
       action: toggle
-        
+title: Verlichting
+type: glance
