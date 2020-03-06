@@ -1,5 +1,6 @@
 type: entities
 title: Home Radio
+show_header_toggle: false
 entities:
   - input_select.home_speakers
   - input_select.music_type_source
