@@ -12,4 +12,3 @@ cards:
   - type: 'custom:mini-media-player'
     artwork: cover
     entity: media_player.spotify_michel_van_hoof
-        

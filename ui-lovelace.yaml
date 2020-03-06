@@ -46,6 +46,6 @@ views:
   - !include /config/lovelace/views/status.yaml
   - !include /config/lovelace/views/living_area/view.yaml
   - !include /config/lovelace/views/office/office-view.yaml
-  - !include /config/lovelace/views/master_bedroom.yaml
+  - !include /config/lovelace/views/master_bedroom/view-master-bedroom.yaml
   - !include /config/lovelace/views/debug.yaml  
   - !include /config/lovelace/views/chores.yaml
