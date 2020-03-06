@@ -3,6 +3,8 @@ path: master-bedroom
 panel: false
 badges: []
 cards:
-  - !include /config/lovelace/components/home-radio.yaml   
+  - !include /config/lovelace/components/home-radio.yaml
+    entities:
+      - light.master_bedroom_spots   
   - !include /config/lovelace/components/master-bedroom-alarm.yaml
     
