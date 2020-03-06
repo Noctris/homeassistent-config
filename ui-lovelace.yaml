@@ -45,11 +45,6 @@ views:
   - !include /config/lovelace/views/master_bedroom.yaml
   - badges: []
     cards:
-      - id_filter: ^home_feed_.*
-        more_info_on_tap: true
-        show_empty: true
-        title: Home Feed
-        type: 'custom:home-feed-card'
       - cards:
           - card:
               entity: media_player.spotify_michel_van_hoof
