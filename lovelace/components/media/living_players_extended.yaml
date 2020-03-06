@@ -1,0 +1,15 @@
+type: vertical-stack
+cards:
+  - type: 'custom:mini-media-player'
+    artwork: full-cover-fit
+    entity: media_player.living_room
+  - type: 'custom:mini-media-player'
+    artwork: full-cover
+    entity: media_player.living_tv
+  - type: 'custom:mini-media-player'
+    artwork: cover
+    entity: media_player.living_kodi
+  - type: 'custom:mini-media-player'
+    artwork: cover
+    entity: media_player.spotify_michel_van_hoof
+        

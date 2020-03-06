@@ -115,20 +115,6 @@ views:
         show_header_toggle: false
         title: Music
         type: entities
-      - cards:
-          - artwork: full-cover-fit
-            entity: media_player.living_room
-            type: 'custom:mini-media-player'
-          - artwork: full-cover
-            entity: media_player.living_tv
-            type: 'custom:mini-media-player'
-          - artwork: cover
-            entity: media_player.living_kodi
-            type: 'custom:mini-media-player'
-          - artwork: cover
-            entity: media_player.spotify_michel_van_hoof
-            type: 'custom:mini-media-player'
-        type: vertical-stack
     path: living
     title: Living
   - badges: []
