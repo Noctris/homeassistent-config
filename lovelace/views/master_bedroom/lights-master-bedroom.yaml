@@ -13,6 +13,17 @@ cards:
         style:
           - font-size: 12px
           - font-weight: bold
+      - type: 'custom:button-card'
+        action: more_info
+        color: auto
+        color_type: card
+        default_color: 'rgb(255, 233, 155)'
+        entity: switch.dad_bedroom_fan
+        icon: 'mdi:fan'
+        name: Fan
+        style:
+          - font-size: 12px
+          - font-weight: bold
   - type: horizontal-stack
     cards:
       - type: 'custom:button-card'
@@ -31,9 +42,9 @@ cards:
         color: auto
         color_type: card
         default_color: 'rgb(255, 233, 155)'
-        entity: switch.office_library_left
+        entity: switch.dad_bedroom_s1
         icon: 'mdi:lamp'
-        name: Nachtlamp R
+        name: s1
         style:
           - font-size: 12px
           - font-weight: bold
@@ -42,9 +53,20 @@ cards:
         color: auto
         color_type: card
         default_color: 'rgb(255, 233, 155)'
-        entity: Ventilator
-        icon: 'mdi:fan'
-        name: S2
+        entity: switch.dad_bedroom_s2
+        icon: 'mdi:lamp'
+        name: s2
+        style:
+          - font-size: 12px
+          - font-weight: bold
+      - type: 'custom:button-card'
+        action: more_info
+        color: auto
+        color_type: card
+        default_color: 'rgb(255, 233, 155)'
+        entity: switch.dad_bedroom_s3
+        icon: 'mdi:lamp'
+        name: s3
         style:
           - font-size: 12px
           - font-weight: bold
