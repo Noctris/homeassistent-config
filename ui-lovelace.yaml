@@ -38,6 +38,8 @@ resources:
     url: /community_plugin/calendar-card/calendar-card.js
   - type: module
     url: /community_plugin/atomic_calendar/atomic_calendar.js
+  - type: js
+    url: https://github.com/thomasloven/lovelace-auto-entities/raw/master/auto-entities.js
 title: Van Hoof
 views:
   - !include /config/lovelace/views/home.yaml
