@@ -1,0 +1,44 @@
+title: Chores
+path: chores
+badges: []
+cards:
+  - title: Washing Machine
+    type: glance
+    show_header_toggle: false
+    columns: 4
+    entities:
+      - entity: sensor.washing_machine_status
+        name: Status
+      - entity: switch.wasmachine
+        name: Power
+      - entity: sensor.wasmachine_volts
+        name: Voltage
+      - entity: sensor.wasmachine_amp
+        name: Amperage
+      - entity: sensor.wasmachine_watts
+        name: Watt
+      - entity: sensor.wasmachine_today_kwh
+        name: Today Kwh
+      - entity: sensor.wasmachine_total_kwh
+        name: Total Kwh
+  - title: Droogkast
+    show_header_toggle: false
+    type: glance
+    columns: 4
+    entities:
+      - entity: sensor.droogkast_status
+        name: Status
+      - entity: switch.droogkast
+        name: Power
+      - entity: sensor.droogkast_volts
+        name: Voltage
+      - entity: sensor.droogkast_amp
+        name: Amperage
+      - entity: sensor.droogkast_watts
+        name: Watt
+      - entity: sensor.droogkast_today_kwh
+        name: Today Kwh
+      - entity: sensor.droogkast_total_kwh
+        name: Total Kwh
+       
+ 

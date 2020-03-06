@@ -1,0 +1,56 @@
+title: Kantoor
+path: office
+panel: true
+badges: []
+cards:
+    - type: horizontal-stack
+      column_width: 100%
+      cards:
+          - type: vertical-stack
+            cards:
+              - title: Verlichting
+                type: glance
+                column_width: calc(100%/3)
+                columns: 2
+                entities:
+                  - entity: light.office_spots
+                    tap_action:
+                      action: toggle
+                  - entity: switch.office_desk_left
+                    tap_action:
+                      action: toggle
+                  - entity: switch.office_library_left
+                    tap_action:
+                      action: toggle
+                  - entity: switch.office_s2
+                    tap_action:
+                      action: toggle                
+              - entity: light.office_spots
+                type: light
+          - type: vertical-stack
+            cards:
+              - type: 'custom:mini-media-player'
+                artwork: cover-full-fit
+                entity: media_player.office_mini
+                shortcuts:
+                  buttons:
+                    - data:
+                        entity_id: media_player.office_mini
+                        shuffle: true
+                        uri: 'spotify:playlist:3xVR8cMwohCrRQnaXL6GFz'
+                      id: spotcast.start
+                      name: Undone
+                      type: service
+              - type: 'custom:mini-media-player'
+                artwork: cover
+                entity: media_player.living_room
+              - type: 'custom:mini-media-player'
+                artwork: cover
+                entity: media_player.woonkamer
+          - client_id: f159c1ec38974e0da0ddfba8822457ed
+            device: media_player.office_mini
+            limit: 10
+            player: Office speaker
+            type: 'custom:spotify-card'
+        
+  

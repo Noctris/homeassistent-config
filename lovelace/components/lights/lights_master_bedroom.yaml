@@ -1,0 +1,19 @@
+columns: 2
+entities:
+  - entity: light.dad_bedroom_spots
+    name: Spots
+    tap_action:
+      action: toggle
+  - entity: light.stairs_0_1
+    name: Hal 0/1
+    tap_action:
+      action: toggle
+  - entity: light.bathroom_spots
+    tap_action:
+      action: toggle
+  - entity: light.bathroom_shower_spots
+    name: Douche Spots
+    tap_action:
+      action: toggle
+title: Verlichting
+type: glance
