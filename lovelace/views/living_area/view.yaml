@@ -3,6 +3,6 @@ path: living-area
 panel: false
 badges: []
 cards:
-  - !include /config/lovelace/components/lights/lights_living_area.yaml
+  - !include lights_living_area.yaml
   - !include /config/lovelace/components/home_radio.yaml
   - !include /config/lovelace/components/media/gelijkvloers_active_media_players_extended.yaml
