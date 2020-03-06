@@ -13,4 +13,5 @@ cards:
     camera_image: camera.buienradar_loop
     entity: camera.buienradar_loop
   - !include /config/lovelace/components/home-radio.yaml
+  - !include /config/lovelace/components/who-is-home.yaml
        
