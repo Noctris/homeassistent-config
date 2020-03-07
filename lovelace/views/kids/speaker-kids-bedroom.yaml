@@ -2,13 +2,14 @@ title: Muziek
 show_header_toggle: false
 type: entities
 entities:
-  - entity: media_player.alexandra_slaapkamer
+  - entity: media_player.slaapkamer_alexandra_speaker
+    name: Kids Speaker
     type: 'custom:mini-media-player'
     artwork: full-cover-fit
     shortcuts:
       buttons:
         - data:
-            entity_id: media_player.alexandra_slaapkamer
+            entity_id: media_player.slaapkamer_alexandra_speaker
             shuffle: true
             uri: 'spotify:playlist:3xVR8cMwohCrRQnaXL6GFz'
           id: spotcast.start
