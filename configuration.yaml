@@ -93,8 +93,6 @@ sabnzbd:
     - month_size
     - total_size
 
-
-
 tplink: !include integrations/tp-link/tp-link.yaml
 
 weather:
