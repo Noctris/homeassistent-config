@@ -1,0 +1,12 @@
+title: Kids slaapkamer
+path: kids-bedroom
+panel: false
+badges: []
+cards:
+  - type: weather-forecast
+    column_width: 100% / 3
+    entity: weather.thuis
+    theme: Backend-selected
+  - !include lights-kids-bedroom.yaml
+  - !include speaker-kids-bedroom.yaml
+    
