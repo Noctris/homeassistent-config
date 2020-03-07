@@ -1,0 +1,14 @@
+card:
+  title: Mediaplayers Playing
+  type: 'custom:mini-media-player'
+filter:
+  exclude:
+    - entity_id: switch.droogkast
+    - entity_id: switch.wasmachine
+    - domain: light_group
+  include:
+    - domain: media_player
+      state: playing
+show_empty: false
+sort: 'domain, name'
+type: 'custom:auto-entities'
