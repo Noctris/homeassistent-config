@@ -2,4 +2,4 @@ title: Debug
 path: debug
 badges: []
 cards:
-  - !inlcude forced-radio-card.yaml
+  - !include forced-radio-card.yaml
