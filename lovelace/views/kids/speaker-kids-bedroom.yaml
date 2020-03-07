@@ -11,7 +11,8 @@ entities:
         - data:
             entity_id: media_player.slaapkamer_alexandra_speaker
             shuffle: true
-            uri: 'spotify:playlist:3xVR8cMwohCrRQnaXL6GFz'
+            uri: 'spotify:playlist:0RjWeffpczpDLonTnsuml9'
           id: spotcast.start
-          name: Undone
+          name: Alexandra Favoriet
           type: service
+          icon: mdi:heart

@@ -2,6 +2,7 @@ title: Debug
 path: debug
 badges: []
 cards:
+  - !inlcude forced-radio-card.yaml
   - type: 'custom:mini-media-player'
     artwork: cover
     entity: media_player.office_mini
