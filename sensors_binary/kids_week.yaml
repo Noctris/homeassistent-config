@@ -1,6 +1,5 @@
   - platform: template
     sensors:
        kids_Week:
-        name: Kids Week
-        value_template: >-
-          "{{is_state_attr('calendar.michel_van_hoof_prive', 'message', 'Kids') }}"
+        friendly_name: Kids Week
+        value_template: {{is_state_attr('calendar.michel_van_hoof_prive', 'message', 'Kids') }}
