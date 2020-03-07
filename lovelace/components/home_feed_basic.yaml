@@ -1,0 +1,7 @@
+title: Home Feed
+type: 'custom:home-feed-card'
+id_filter: ^home_feed_.*
+more_info_on_tap: true
+show_empty: false
+
+        

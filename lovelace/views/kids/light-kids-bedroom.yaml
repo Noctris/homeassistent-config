@@ -1,0 +1,78 @@
+type: vertical-stack
+cards:
+  - type: horizontal-stack
+    cards:
+      - type: 'custom:button-card'
+        action: more_info
+        color: auto
+        color_type: card
+        default_color: 'rgb(255, 233, 155)'
+        entity: light.kids_bedroom_spots
+        icon: 'mdi:bed-king-outline'
+        name: Spots
+        style:
+          - font-size: 12px
+          - font-weight: bold
+      - type: 'custom:button-card'
+        action: more_info
+        color: auto
+        color_type: card
+        default_color: 'rgb(255, 233, 155)'
+        entity: switch.kids_bedroom_fan
+        icon: 'mdi:fan'
+        name: Fan
+        style:
+          - font-size: 12px
+          - font-weight: bold
+  - type: horizontal-stack
+    cards:
+      - type: 'custom:button-card'
+        action: more_info
+        color: auto
+        color_type: card
+        default_color: 'rgb(255, 233, 155)'
+        entity: switch.kids_bedroom_s1
+        icon: 'mdi:lamp'
+        name: S1
+        style:
+          - font-size: 12px
+          - font-weight: bold
+      - type: 'custom:button-card'
+        action: more_info
+        color: auto
+        color_type: card
+        default_color: 'rgb(255, 233, 155)'
+        entity: switch.kids_bedroom_s3
+        icon: 'mdi:lamp'
+        name: s3
+        style:
+          - font-size: 12px
+          - font-weight: bold
+      - type: 'custom:button-card'
+        action: more_info
+        color: auto
+        color_type: card
+        default_color: 'rgb(255, 233, 155)'
+        entity: switch.kids_bedroom_s4
+        icon: 'mdi:lamp'
+        name: s4
+        style:
+          - font-size: 12px
+          - font-weight: bold
+      - type: 'custom:button-card'
+        action: more_info
+        color: auto
+        color_type: card
+        default_color: 'rgb(255, 233, 155)'
+        entity: switch.kids_bedroom_window_left
+        icon: 'mdi:lamp'
+        name: Raam Links
+        style:
+          - font-size: 12px
+          - font-weight: bold
+  - type: entity-filter
+    entities:
+      - entity: light.kids_bedroom_spots
+        type: 'custom:slider-entity-row'
+    state_filter:
+      - 'on'

@@ -1,0 +1,10 @@
+title: Kantoor
+path: office
+panel: false
+badges: []
+cards:
+    - !include /config/lovelace/views/office/office-lights.yaml
+    - !include /config/lovelace/components/home-radio.yaml
+    - !include office-media-player.yaml
+        
+  

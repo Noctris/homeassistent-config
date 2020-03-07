@@ -1,0 +1,19 @@
+title: Home2 Van Hoof
+path: home2
+icon: 'mdi:home'
+panel: false
+badges: []
+cards:
+  - type: weather-forecast
+    column_width: 100% / 3
+    entity: weather.thuis
+    theme: Backend-selected
+  - type: picture-entity
+    aspect_ratio: 86%
+    camera_image: camera.buienradar_loop
+    entity: camera.buienradar_loop
+  - !include /config/lovelace/components/quick_info.yaml    
+  - !include /config/lovelace/components/home_feed_basic.yaml
+  - !include /config/lovelace/components/who-is-home.yaml
+  - !include /config/lovelace/components/home_status.yaml
+       

@@ -44,7 +44,7 @@ google:
 
 #lovelace in yaml style
 lovelace:
-  #mode: yaml
+  mode: yaml
 
 # Discover some devices automatically
 discovery:
