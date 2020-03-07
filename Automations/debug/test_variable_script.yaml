@@ -1,0 +1,13 @@
+- id: 'test_variable_automation'
+  alias: zTEST - Test Variable In Automation
+  description: ''
+  trigger:
+  condition:
+  action:
+  - service: system_log.write
+    data_template:
+      message: 'Test variable automation Trggered for {{ lamp }}'
+      level: info
+  - service: light.turn_on
+    data_template:
+      entity_id: '{{ lamp }}'
