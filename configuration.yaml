@@ -1,6 +1,6 @@
 homeassistant:
   # Name of the location where Home Assistant is running
-  name: Home
+  name: !secret home_assistant_name
   # Location required to calculate the time the sun rises and sets
   latitude: !secret home_lat
   longitude: !secret home_lon
@@ -59,7 +59,7 @@ light: !include_dir_merge_list lights/
 switch: !include_dir_merge_list switches/
 ## Include all my inputs
 #TODO: move to seperate folders
-input_select: !include_dir_merge_named input/select/
+input_select: !include_dir_merge_list input/select/
 input_number: !include_dir_merge_named input/number/
 input_text: !include_dir_merge_named input/text/
 input_boolean: !include_dir_merge_named input/boolean/
