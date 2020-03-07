@@ -4,7 +4,9 @@ show_header_toggle: false
 entities:
   - entity: input_boolean.master_bedroom_alarm_enabled
   - entity: input_datetime.master_bedroom_alarm_clock_time
-  - entity: script.wake_up_light_masterbedroom
+  - service: script.wake_up_light_10_minutes
+    data_template:
+      lamp: light.master_bedroom_spots
   - entity: media_player.master_bedroom_speaker
         
         
