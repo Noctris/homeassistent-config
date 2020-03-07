@@ -3,7 +3,7 @@ show_header_toggle: false
 type: entities
 entities:
   - entity: media_player.slaapkamer_alexandra_speaker
-    name: Kids Speaker
+    name: Kids Luidspreker
     type: 'custom:mini-media-player'
     artwork: full-cover-fit
     shortcuts:
