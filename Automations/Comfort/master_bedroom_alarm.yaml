@@ -14,6 +14,10 @@
       entity_id: input_boolean.master_bedroom_alarm_enabled
       state: 'on'
   action:
+  - service: system_log.write
+    data_template:
+      message: 'Master bedroom alarm triggered'
+      level: info
   - service: script.wake_up_light_10_minutes
     data_template:
       lamp: light.master_bedroom_spots
