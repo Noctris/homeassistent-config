@@ -70,7 +70,8 @@ cards:
         style:
           - font-size: 12px
           - font-weight: bold
-  - card:
+  - type: "custom:auto-entities"
+    card:
       title: Lights on
       type: "custom:slider-entity-row"
     filter:
@@ -79,10 +80,4 @@ cards:
           state: 'on'
     show_empty: false
     sort: 'domain, name'
-    type: "custom:auto-entities"
-  - type: "custom:auto-entities"
-    entities:
-      - entity: light.master_bedroom_spots
-        type: 'custom:slider-entity-row'
-    state_filter:
-      - 'on'
+    
