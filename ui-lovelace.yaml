@@ -1,3 +1,46 @@
+custom_header:
+  compact_mode: true
+  kiosk_mode: false
+  disable_sidebar: false
+  hide_config: false
+  hide_help: false
+  voice_hide: false
+  options_hide: false
+  menu_dropdown: true
+  indicator_top: true
+  chevrons: true
+  background: var(--app-header-background-color)
+  elements_color: var(--app-header-text-color)
+  active_tab_color: var(--state-icon-active-color)
+  tab_indicator_color: var(--state-icon-active-color)
+  hide_tabs:
+    - 0 to 100
+  exceptions:
+    - conditions:
+        user: Michel
+      config:
+        show_tabs:
+          - 0 to 100
+    - condition:
+        user: 
+          - Alexandra
+      config:
+        kiosk_mode: true
+        show_tabs: '0,5'
+    - conditions:
+        # user: maykar, Bram Kragten, Ludeeus
+        user_agent: Mobile
+        media_query: "(max-width: 600px)"
+      config:
+        #footer_mode: true
+        #reverse_button_direction: true
+        #reverse_tab_direction: true
+        disable_sidebar: true
+        voice_hide: true
+        options_hide: true
+        chevrons: false
+        menu_dropdown: true
+#Some templates to use further
 resources:
   # https://github.com/lukevink/home-assistant-buienradar-forecast-card/blob/master/buien-rain-card.js
   - url: /local/custom_ui/buien-radar/buien-rain-card.js
@@ -31,51 +74,6 @@ resources:
   - type: module
     url: /local/custom_ui/harmony-card/harmony-card.js
 
-custom_header:
-  compact_mode: true
-  kiosk_mode: false
-  disable_sidebar: false
-  hide_config: false
-  hide_help: false
-  voice_hide: false
-  options_hide: false
-  menu_dropdown: true
-  indicator_top: true
-  chevrons: true
-  background: var(--app-header-background-color)
-  elements_color: var(--app-header-text-color)
-  active_tab_color: var(--state-icon-active-color)
-  tab_indicator_color: var(--state-icon-active-color)
-  hide_tabs:
-    - 0 to 100
-  exceptions:
-    - conditions:
-        user: Michel
-      config:
-        show_tabs:
-          - 0 to 100
-    - condition:
-        user: 
-          - Alexandra
-      config:
-        kiosk_mode: true
-        show_tabs:
-          - 0
-          - 5
-    - conditions:
-        # user: maykar, Bram Kragten, Ludeeus
-        user_agent: Mobile
-        media_query: "(max-width: 600px)"
-      config:
-        #footer_mode: true
-        #reverse_button_direction: true
-        #reverse_tab_direction: true
-        disable_sidebar: true
-        voice_hide: true
-        options_hide: true
-        chevrons: false
-        menu_dropdown: true
-#Some templates to use further
 button_card_templates: !include_dir_merge_list lovelace/card_templates/
 #Actual start of the main view
 title: Van Hoof
