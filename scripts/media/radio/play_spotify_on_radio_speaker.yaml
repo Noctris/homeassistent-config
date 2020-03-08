@@ -6,10 +6,10 @@ play_spotify_on_radio_speaker:
       state: Spotify
     - service: script.set_radio_speaker_volume
       data_template:
-        speaker: {{speaker}}
-        source: {{source}}
-        content_id: {{content_id}}
-        volume: {{volume}}
+        speaker: '{{speaker}}'
+        source: '{{source}}'
+        content_id: '{{content_id}}'
+        volume: '{{volume}}'
     - service: spotcast.start
       data_template:
         device_name: '{{ state_attr(states("{{speaker}}"),"friendly_name") | string}}'
