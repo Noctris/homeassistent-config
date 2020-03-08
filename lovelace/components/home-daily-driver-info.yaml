@@ -1,3 +1,19 @@
+type: glance
+columns: 3
+entities:
+  - person.michel
+  - person.alexandra
+  - person.nicholas
+  - binary_sensor.kids_week
+  - entity: input_boolean.guests_in_the_house
+    tap_action:
+      action: toggle
+  - entity: input_boolean.school_night
+    tap_action:
+      action: toggle
+  - sensor.home_commute
+  - sensor.to_xant
+  - sensor.to_bagaar
 type: vertical-stack
 cards:
   - type: entity-filter
