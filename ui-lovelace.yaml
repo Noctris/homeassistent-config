@@ -20,6 +20,10 @@ resources:
     # https://github.com/kalkih/mini-media-player
   - url: /local/custom_ui/mini-media-player/mini-media-player-bundle.js
     type: module
+
+    # https://github.com/gadgetchnnel/lovelace-home-feed-card/
+  - type: js
+    url: /local/custom_ui/lovelace-home-feed-card/lovelace-home-feed-card.js
     
 
 
