@@ -4,3 +4,5 @@ entities:
   light.leefruimte_spots:
     state: 'on'
     brightness_pct: 5
+  light.achtergrond_verlichting_leefruimte:
+    state: 'off'
