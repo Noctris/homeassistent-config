@@ -51,11 +51,13 @@ custom_header:
   exceptions:
     - conditions:
         user: Michel
+      config:
         show_tabs:
           - 0 to 100
     - condition:
         user: 
           - Alexandra
+      config:
         show_tabs:
           - 0
           - 5
