@@ -2,8 +2,32 @@
    longitude: !secret home_lon
    latitude: !secret home_lat
    monitored_conditions:
+    #Current Conditions & Information
+    - stationname
+    - barometerfc
+    - barometerfcname
+    - conditioncode
+    - condition
+    - conditiondetailed
+    - conditionexact
     - symbol
+    - feeltemperature
     - humidity
     - temperature
+    - groundtemperature
     - windspeed
+    - windforce
+    - winddirection
+    - windazimuth
     - pressure
+    - visibility
+    - windgust
+    - precipitation
+    - irradiance
+    - precipitation_forecast_average
+    - precipitation_forecast_total
+    - rainlast24hour
+    - rainlasthour
+    - rain_1d
+    - symbol_1d
+    - conditiondetailed

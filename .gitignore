@@ -27,3 +27,6 @@ google_calendars.yaml
 .spotify-token-cache
 automations.yaml
 .vscode/settings.json
+harmony_living_room_hub.conf
+harmony_living_room.conf
+.HA_VERSION
