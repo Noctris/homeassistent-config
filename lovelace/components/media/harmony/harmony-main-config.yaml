@@ -1,5 +1,17 @@
-- type: vertical-stack
-  cards:
-    - type: horizontal-stack
-      cards:
-        - !include tv/tv_power_off.yaml
+type: vertical-stack
+cards:
+  - type: horizontal-stack
+    cards:
+      - !include tv/tv_power_off.yaml
+      - !include tv/tv_power_on.yaml
+  - type: horizontal-stack
+    cards:
+      - !include tv/tv_to_chromecast.yaml
+      - !include tv/tv_to_telenet.yaml
+      - !include tv/tv_to_kodi.yaml
+      - !include tv/tv_to_gaming.yaml
+  - type: horizontal-stack
+    cards:
+      - !include tv/tv_mute.yaml
+      - !include tv/tv_volume_up.yaml
+      - !include tv/tv_volume_down.yaml
