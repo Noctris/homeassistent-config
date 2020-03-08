@@ -59,15 +59,15 @@ custom_header:
         chevrons: false
         menu_dropdown: true
 #Some templates to use further
-button_card_templates: !include_dir_merge_list /config/lovelace/card_templates/
+button_card_templates: !include_dir_merge_list lovelace/card_templates/
 #Actual start of the main view
 title: Van Hoof
 views:
-  - !include /config/lovelace/views/home.yaml
-  - !include /config/lovelace/views/status.yaml
-  - !include /config/lovelace/views/living_area/view.yaml
-  - !include /config/lovelace/views/office/office-view.yaml
-  - !include /config/lovelace/views/master_bedroom/view-master-bedroom.yaml
-  - !include /config/lovelace/views/kids/view-kids.yaml
-  - !include /config/lovelace/views/debug/view-debug.yaml  
-  - !include /config/lovelace/views/chores.yaml
+  - !include lovelace/views/home.yaml
+  - !include lovelace/views/status.yaml
+  - !include lovelace/views/living_area/view.yaml
+  - !include lovelace/views/office/office-view.yaml
+  - !include lovelace/views/master_bedroom/view-master-bedroom.yaml
+  - !include lovelace/views/kids/view-kids.yaml
+  - !include lovelace/views/debug/view-debug.yaml  
+  - !include lovelace/views/chores.yaml

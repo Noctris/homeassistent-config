@@ -10,5 +10,7 @@ card:
     - font-weight: bold
 entities:
   - light.kitchen_main
+  - light.dinning_spots
+  - light.living_spots
 state_filter:
   - 'on'
