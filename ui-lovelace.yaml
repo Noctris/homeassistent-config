@@ -83,6 +83,14 @@ resources:
   - type: module
     url: /local/custom_ui/harmony-card/harmony-card.js
 
+    # https://github.com/lukevink/home-assistant-buienradar-forecast-card
+  - type: module
+    url: /local/custom_ui/buien-rain-card/buien-rain-card.js
+
+    # https://github.com/custom-cards/text-element
+  - type: module
+    url: /local/custom_ui/text-element/text-element.js
+
 button_card_templates: !include_dir_merge_list lovelace/card_templates/
 #Actual start of the main view
 title: Van Hoof

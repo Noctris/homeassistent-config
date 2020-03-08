@@ -7,6 +7,40 @@ cards:
   - !include /config/lovelace/components/home-daily-driver-info.yaml
   - !include ../components/lights_turned_on_glance.yaml
   - !include ../components/entity_filter_lights_on.yaml
+  - type: 'custom:buien-rain-forecast'
+    long: 4.543181
+    lat: 51.108007
+        #latitude: 51.108007
+        #longitude: 4.543181
+    lineColor: 'rgba(89, 160, 238, 1)'
+    fillColor: 'rgba(89, 160, 238, 0.2)'
+    icon: 'mdi:weather-rainy'
+  - type: picture-elements
+    image: "http://api.buienradar.nl/image/1.0/radarmapbe/gif/?hist=0&forc=36&width=550&l=1&step=1"
+    elements:
+      - type: image
+        tap_action: 
+          action: call-service
+          service: input_boolean.toggle
+          service_data: 
+            entity_id: input_boolean.buienradar_image    
+          entity: input_boolean.buienradar_image
+          state_image:
+            "on": "http://api.buienradar.nl/image/1.0/radarmapbe/gif/?hist=0&forc=36&width=550&l=1&step=1"
+            "off": "https://image.buienradar.nl/2.0/image/animation/RadarMapRain24HourForecastBE?height=512&width=550&extension=gif&renderBackground=True&renderBranding=False&renderText=True&history=0&forecast=24&skip=0"
+          style:
+            left: 50%
+            top: 50% 
+            width: 100%
+      - type: "custom:text-element"
+        text: "Buienradar"
+        title: null
+        tap_action: none
+        style:
+          left: 10%
+          top: 95%
+          color: 'rgba(255, 255, 255, 1)'
+              # font-weight: normal
   - type: weather-forecast
     column_width: 100% / 3
     entity: weather.thuis
