@@ -9,6 +9,7 @@ cards:
           state: 'on'
     show_empty: true
   - type: entity-filter
+    shpow_empty: false
     entities:
       - entity: light.kids_bedroom_spots
         type: 'custom:slider-entity-row'
