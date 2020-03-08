@@ -1,6 +1,6 @@
 card:
   title: Lights on
-  type: 'custom:button-card'
+  type: glance
 filter:
   exclude:
     - entity_id: switch.droogkast
