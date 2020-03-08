@@ -59,7 +59,7 @@ custom_header:
         chevrons: false
         menu_dropdown: true
 # Some templates to use further
-!inlude /config/lovelace/card_templates/button_card_template.yaml
+!include /config/lovelace/card_templates/button_card_template.yaml
 # Actual start of the main view
 title: Van Hoof
 views:
