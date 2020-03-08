@@ -1,9 +1,3 @@
-custom_header:
-  chevrons: false
-  compact_mode: true
-  exceptions: []
-  menu_dropdown: false
-  shadow: false
 resources:
   # https://github.com/lukevink/home-assistant-buienradar-forecast-card/blob/master/buien-rain-card.js
   - url: /local/custom_ui/buien-radar/buien-rain-card.js
@@ -37,13 +31,12 @@ resources:
   - type: module
     url: /local/custom_ui/harmony-card/harmony-card.js
 
-
 custom_header:
   compact_mode: true
   kiosk_mode: false
   disable_sidebar: false
-  hide_config: false
-  hide_help: false
+  hide_config: true
+  hide_help: true
   voice_hide: false
   options_hide: false
   chevrons: true
@@ -64,6 +57,7 @@ custom_header:
         voice_hide: true
         options_hide: true
         chevrons: false
+        menu_dropdown: true
 
 title: Van Hoof
 views:
