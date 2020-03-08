@@ -1,6 +1,6 @@
 id: 'groundfloor - calm living area light'
-  name: calm living area
-  entities:
-    light.leefruimte_spots:
-      state: on
-      brightness_pct: 5
+name: calm living area
+entities:
+  light.leefruimte_spots:
+    state: 'on'
+    brightness_pct: 5
