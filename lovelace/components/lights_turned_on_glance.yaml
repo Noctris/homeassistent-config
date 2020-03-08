@@ -1,0 +1,23 @@
+card:
+  title: Lights on
+  type: glance
+  tap_action:
+    action: toggle
+  columns: 3
+column_width: calc(100% / 3)
+filter:
+  exclude:
+    - entity_id: switch.droogkast
+    - entity_id: switch.wasmachine
+    - domain: light_group
+  include:
+    - domain: light
+      options:
+        tap_action:
+          action: toggle
+      state: 'on'
+    - domain: media_player
+      state: playing
+show_empty: false
+sort: 'domain, name'
+type: 'custom:auto-entities'
