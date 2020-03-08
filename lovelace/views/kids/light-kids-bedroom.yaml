@@ -7,8 +7,7 @@ cards:
     filter:
       include:
         - entity_id: light.kids_bedroom_spots
-          options:
-            state: 'on'
+          state: 'on'
     show_empty: true
     sort: 'domain, name'
   - type: entity-filter
