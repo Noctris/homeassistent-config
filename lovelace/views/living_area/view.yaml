@@ -7,4 +7,4 @@ cards:
   - !include /config/lovelace/components/home-radio.yaml
   - !include /config/lovelace/components/media/gelijkvloers_active_media_players_extended.yaml
   - !include remote-harmony.yaml
-  - !include components/media/harmony_remote.yaml
+  - !include ../components/media/harmony_remote.yaml
