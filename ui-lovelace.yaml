@@ -27,7 +27,7 @@ resources:
   - type: module
     url: /local/custom_ui/lovelace-slider-entity-row/slider-entity-row.js
 
-    # https://github.com/sbryfcz/harmony-card/blob/master/README.md
+    # https://github.com/sbryfcz/harmony-card/
   - type: module
     url: /local/custom_ui/harmony-card/harmony-card.js
 
@@ -35,8 +35,8 @@ custom_header:
   compact_mode: true
   kiosk_mode: false
   disable_sidebar: false
-  hide_config: true
-  hide_help: true
+  hide_config: false
+  hide_help: false
   voice_hide: false
   options_hide: false
   menu_dropdown: true
