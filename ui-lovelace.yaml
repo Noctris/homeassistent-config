@@ -33,6 +33,10 @@ resources:
   - type: module
     url: /local/custom_ui/lovelace-slider-entity-row/slider-entity-row.js
 
+    # https://github.com/sbryfcz/harmony-card/blob/master/README.md
+  - type: module
+    url: /local/custom_ui/harmony-card/harmony-card.js
+
 
 custom_header:
   compact_mode: true
