@@ -1,0 +1,12 @@
+title_card:
+  template: main
+  styles:
+    card:
+      - color_type: label-card
+      - color: rgb(30, 30, 80)
+      - background-color: var(--app-header-background-color)
+      #'#101030'
+    name: 
+      - font-size: 16px
+      - font-weight: bold
+      - color: var(--state-icon-active-color)

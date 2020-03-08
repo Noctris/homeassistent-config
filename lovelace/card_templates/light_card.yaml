@@ -1,0 +1,8 @@
+light_card:
+  template: main
+  icon: mdi:lightbulb-outline
+  show_icon: true
+  show_state: false
+  styles:
+   card:
+     - background-color: '#202020'

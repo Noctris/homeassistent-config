@@ -1,5 +1,20 @@
 type: vertical-stack
 cards:
+#  - type: 'custom:auto-entities'
+#    card:
+#      type: 'custom:slider-entity-row'
+#    filter:
+#      include:
+#        - entity_id: light.kids_bedroom_spots
+#          state: 'on'
+#    show_empty: true
+  - type: entity-filter
+    shpow_empty: false
+    entities:
+      - entity: light.kids_bedroom_spots
+        type: 'custom:slider-entity-row'
+    state_filter:
+      - 'on'
   - type: horizontal-stack
     cards:
       - type: 'custom:button-card'
@@ -70,9 +85,3 @@ cards:
         style:
           - font-size: 12px
           - font-weight: bold
-  - type: entity-filter
-    entities:
-      - entity: light.kids_bedroom_spots
-        type: 'custom:slider-entity-row'
-    state_filter:
-      - 'on'

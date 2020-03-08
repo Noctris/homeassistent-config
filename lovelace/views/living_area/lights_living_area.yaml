@@ -3,15 +3,19 @@ cards:
   - type: entity-filter
     entities:
       - entity: light.leefruimte_spots
+        name: Leefruimte
         type: 'custom:slider-entity-row'
       - entity: light.living_spots
+        name: Living
         type: 'custom:slider-entity-row'
       - entity: light.dinning_spots
-        name: Eetkamer Spots
+        name: Eetkamer
         type: 'custom:slider-entity-row'
       - entity: light.kitchen_main
+        name: Keuken
         type: 'custom:slider-entity-row'
       - entity: light.kitchen_coffee_area
+        name: Koffie
         type: 'custom:slider-entity-row'
     state_filter:
       - 'on'
@@ -24,7 +28,7 @@ cards:
         default_color: 'rgb(255, 233, 155)'
         entity: light.kitchen_main
         icon: 'mdi:silverware-fork-knife'
-        name: Living
+        name: Keuken
         style:
           - font-size: 12px
           - font-weight: bold

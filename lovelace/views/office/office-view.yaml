@@ -1,5 +1,6 @@
 title: Kantoor
 path: office
+icon: mdi:office-building
 panel: false
 badges: []
 cards:

@@ -1,0 +1,10 @@
+type: 'custom:harmony-card'
+entity: remote.living_room
+volume_entity: media_player.living_tv
+activities:
+  - name: Watch Kodi
+    device: Kodi Living
+    # volume_entity: media_player.living_kodi
+  - name: Watch TV
+    device: Living Samsung TV
+    # volume_entity: media_player.living_kodi
