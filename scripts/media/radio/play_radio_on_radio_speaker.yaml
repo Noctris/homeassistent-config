@@ -5,10 +5,10 @@ play_radio_on_radio_speaker:
       value_template: '{{source}}|lower == "radio"'
     - service: script.set_radio_speaker_volume
       data_template:
-        speaker: {{speaker}}
-        source: {{source}}
-        content_id: {{content_id}}
-        volume: {{volume}}
+        speaker: '{{speaker}}'
+        source: '{{source}}'
+        content_id: "{{content_id}}"
+        volume: "{{volume}}"
     - service: media_player.play_media
       data_template:
         entity_id: '{{speaker}}'
