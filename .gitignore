@@ -25,9 +25,7 @@ sabnzbd.conf
 traccar.xml
 google_calendars.yaml
 .spotify-token-cache
-<<<<<<< HEAD
 automations.yaml
 .vscode/settings.json
-=======
 harmony_living_room_hub.conf
->>>>>>> Added Hacs
+harmony_living_room.conf
