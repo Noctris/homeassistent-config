@@ -4,4 +4,4 @@ card:
 entities:
   - light.kitchen_main
 state_filter:
-  state: 'on'
+  - 'on'
