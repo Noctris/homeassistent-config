@@ -17,3 +17,7 @@
       message: kids arrived sensor
       title: kids arrived
     service: notify.mobile_app_michel_s10_plus
+  - service: light.turn_on
+    data:
+      entity_id: light
+
