@@ -6,7 +6,7 @@ cards:
       type: 'custom:slider-entity-row'
     filter:
       include:
-        - entity: light.kids_bedroom_spots
+        - entity_id: light.kids_bedroom_spots
           options:
             state: 'on'
     show_empty: true
