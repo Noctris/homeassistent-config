@@ -1,0 +1,3 @@
+# https://github.com/lukevink/home-assistant-buienradar-forecast-card/blob/master/buien-rain-card.js
+url: /local/custom_ui/buien-radar/buien-rain-card.js
+type: module
