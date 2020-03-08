@@ -1,45 +1,66 @@
-custom_header:
-  chevrons: false
-  compact_mode: true
-  exceptions: []
-  menu_dropdown: false
-  shadow: false
 resources:
-  - type: module
-    url: /local/atomic_calendar.js
-  - type: module
-    url: /community_plugin/mini-media-player/mini-media-player-bundle.js
-  - type: module
-    url: /community_plugin/lovelace-slider-entity-row/slider-entity-row.js
-  - type: module
-    url: /community_plugin/spotify-card/spotify-card.js
-  - type: module
-    url: /community_plugin/weather-card/weather-card.js
-  - type: module
-    url: /community_plugin/custom-header/custom-header.js
-  - type: module
-    url: /community_plugin/button-card/button-card.js
-  - type: module
-    url: /community_plugin/harmony-card/harmony-card.js
-  - type: module
-    url: /community_plugin/flex-horseshoe-card/flex-horseshoe-card.js
-  - type: module
-    url: /community_plugin/lovelace-animated-background/animated-background.js
-  - type: module
-    url: /community_plugin/mini-graph-card/mini-graph-card-bundle.js
+  # https://github.com/lukevink/home-assistant-buienradar-forecast-card/blob/master/buien-rain-card.js
+  - url: /local/custom_ui/buien-radar/buien-rain-card.js
+    type: module
+
+  # https://github.com/maykar/custom-header
+  - url: /local/custom_ui/custom-header/custom-header.js
+    type: module
+
+  # https://github.com/thomasloven/lovelace-auto-entities
+  - url: /local/custom_ui/auto-entities/auto-entities.js
+    type: module
+
+    # https://github.com/kalkih/mini-media-player
+  - url: /local/custom_ui/mini-media-player/mini-media-player-bundle.js
+    type: module
+
+    # https://github.com/gadgetchnnel/lovelace-home-feed-card/
   - type: js
-    url: >-
-      https://raw.githubusercontent.com/gadgetchnnel/lovelace-home-feed-card/master/custom_card.json
-  - type: js
-    url: /community_plugin/lovelace-home-feed-card/lovelace-home-feed-card.js
+    url: /local/custom_ui/lovelace-home-feed-card/lovelace-home-feed-card.js
+
+    # https://github.com/custom-cards/button-card
   - type: module
-    url: /community_plugin/lovelace-layout-card/layout-card.js
-  - type: js
-    url: /community_plugin/calendar-card/calendar-card.js
+    url: /local/custom_ui/button-card/button-card.js
+
+    # https://github.com/thomasloven/lovelace-slider-entity-row
   - type: module
-    url: /community_plugin/atomic_calendar/atomic_calendar.js
+    url: /local/custom_ui/lovelace-slider-entity-row/slider-entity-row.js
+
+    # https://github.com/sbryfcz/harmony-card/blob/master/README.md
   - type: module
-    url: /local/auto-entities.js
+    url: /local/custom_ui/harmony-card/harmony-card.js
+
+custom_header:
+  compact_mode: true
+  kiosk_mode: false
+  disable_sidebar: false
+  hide_config: true
+  hide_help: true
+  voice_hide: false
+  options_hide: false
+  chevrons: true
+  background: var(--app-header-background-color)
+  elements_color: var(--app-header-text-color)
+  active_tab_color: var(--state-icon-active-color)
+  tab_indicator_color: var(--state-icon-active-color)
+  exceptions:
+    - conditions:
+        # user: maykar, Bram Kragten, Ludeeus
+        user_agent: Mobile
+        media_query: "(max-width: 600px)"
+      config:
+        #footer_mode: true
+        #reverse_button_direction: true
+        #reverse_tab_direction: true
+        disable_sidebar: true
+        voice_hide: true
+        options_hide: true
+        chevrons: false
+        menu_dropdown: true
+#Some templates to use further
+button_card_templates: !include_dir_merge_list /config/lovelace/card_templates/
+#Actual start of the main view
 title: Van Hoof
 views:
   - !include /config/lovelace/views/home.yaml

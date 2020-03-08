@@ -25,7 +25,7 @@ tts:
   - platform: google_translate
 
 group: !include groups.yaml
-automation: !include automations.yaml
+#automation: !include automations.yaml
 # Also Support manual transformation creation in files for cleaner code
 automation old: !include_dir_merge_list Automations/
 script: !include scripts.yaml
@@ -41,6 +41,7 @@ cloud:
 google:
     client_id: !secret google_client_id
     client_secret: !secret google_client_secret
+    
 
 #lovelace in yaml style
 lovelace:
@@ -94,11 +95,13 @@ sabnzbd:
     - total_size
 
 tplink: !include integrations/tp-link/tp-link.yaml
+remote: !include integrations/harmony.yaml
 
 weather:
   - platform: darksky
     api_key: !secret darksky_api_key
   - platform: buienradar
+
 
 camera:
   - platform: buienradar
@@ -127,3 +130,4 @@ calendar: !include integrations/todoist.yaml
 spotcast:
   username: !secret spotify_username
   password: !secret spotify_password
+

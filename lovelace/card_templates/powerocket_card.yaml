@@ -1,0 +1,8 @@
+powersocket_card:
+  template: main
+  icon: mdi:power-socket-eu
+  show_icon: true
+  show_state: false
+  styles:
+    card:
+      - background-color: '#202020'

@@ -1,0 +1,19 @@
+temperatuur:
+  template: main
+  icon: mdi:temperature-celcius
+  show_icon: true
+  show_state: false
+  show_label: true
+  label: '[[[ return (Math.round(entity.state * 10) / 10) +" °C" ]]]'
+  styles:
+    card:
+      - background-color: '#202020'
+    # state: 
+      # - font-size: 30px
+      # - position: middle
+    name: 
+      - font-size: 12px
+    label:
+      - color: '#D0C0B0'
+      - font-weight: normal
+      - text-transform: none
