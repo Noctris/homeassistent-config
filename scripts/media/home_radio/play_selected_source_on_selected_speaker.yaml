@@ -1,0 +1,11 @@
+play_selected_source_on_selected_speaker:
+  alias: 'Play the Selected Source on The selected Speaker'
+  sequence:
+    - service: script.turn_on
+      entity_id:
+      # Set Volume Right
+        - script.set_selected_speaker_volume
+        # Execute radio script which will check if Radio is selected
+        - script.play_radio_on_selected_speaker
+        # Execute Spotify script which will check if Spotify is selected
+        - script.play_spotify_on_selected_speaker
