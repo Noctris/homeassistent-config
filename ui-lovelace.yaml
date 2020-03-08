@@ -58,9 +58,9 @@ custom_header:
         options_hide: true
         chevrons: false
         menu_dropdown: true
-# Some templates to use further
+#Some templates to use further
 !include /config/lovelace/card_templates/button_card_template.yaml
-# Actual start of the main view
+#Actual start of the main view
 title: Van Hoof
 views:
   - !include /config/lovelace/views/home.yaml
