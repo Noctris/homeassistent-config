@@ -1,0 +1,31 @@
+type: horizontal-stack
+cards:
+  - type: entity-filter
+    card:
+      show_header_toggle: false
+      show_state: false
+      title: Who is home?
+      type: glance
+    entities:
+      - entity: person.michel
+        name: Michel
+      - entity: person.nicholas
+        name: Nicholas
+      - entity: person.alexandra
+        name: Alexandra
+    show_empty: false
+    state_filter:
+      - home
+  - type: glance
+    columns: 3
+    entities:
+      - entity: binary_sensor.kids_week
+        name: Kids Week
+      - entity: input_boolean.guests_in_the_house
+        name: Guests ?
+        tap_action:
+          action: toggle
+      - entity: input_boolean.school_night
+        name: School ?
+        tap_action:
+          action: toggle
