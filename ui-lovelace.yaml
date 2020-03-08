@@ -56,8 +56,8 @@ custom_header:
     - condition:
         user: Alexandra, Nicholas
         show_tabs:
-          - 0
-          - 5
+          - Home
+          - Kids slaapkamer
     - conditions:
         # user: maykar, Bram Kragten, Ludeeus
         user_agent: Mobile
