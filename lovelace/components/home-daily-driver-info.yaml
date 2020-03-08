@@ -1,5 +1,5 @@
 type: glance
-name: Daily Driver
+title: Daily Driver
 columns: 3
 entities:
   - entity: person.michel
