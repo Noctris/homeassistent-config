@@ -9,6 +9,7 @@ family:
     - person.nicholas
     - person.michel
     - person.alexandra
+  all: true
 living_relax_lights:
   name: Sfeerverlichting Living
   entities:
