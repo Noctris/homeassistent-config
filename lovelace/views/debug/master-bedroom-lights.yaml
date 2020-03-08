@@ -70,11 +70,10 @@ cards:
         style:
           - font-size: 12px
           - font-weight: bold
-  - type: "custom:auto-entities"
+  - type: 'custom:auto-entities'
     card:
-      type: custom:slider-entity-row
-    entities:
-      - light.master_bedroom_spots
+      #type: custom:slider-entity-row
+      type: glance
     filter:
       include:
         - entity_id: light.master_bedroom_spots
