@@ -22,6 +22,9 @@ cards:
   - type: horizontal-stack
     cards:
       - type: 'custom:button-card'
+        template: light_card
+        entity: light.kitchen_main
+      - type: 'custom:button-card'
         action: more_info
         color: auto
         color_type: card
