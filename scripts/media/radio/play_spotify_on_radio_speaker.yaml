@@ -2,7 +2,7 @@ play_spotify_on_radio_speaker:
   alias: 'Media - Radio - Play Spotify on a Selected Radio Speaker'
   sequence:
     - condition: template
-      value_template: '{{source}}|lower == "spotify"'
+      value_template: '{{source}}|lower == spotify'
       state: Spotify
     - service: script.set_radio_speaker_volume
       data_template:
