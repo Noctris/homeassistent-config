@@ -25,7 +25,8 @@ custom_header:
         user: Alexandra
       config:
         kiosk_mode: true
-        show_tabs: '0,5'
+        show_tabs:
+          - 0 to 100
     - conditions:
         # user: maykar, Bram Kragten, Ludeeus
         user_agent: Mobile
