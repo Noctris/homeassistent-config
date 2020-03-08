@@ -5,7 +5,7 @@ panel: false
 badges: []
 cards:
   - !include /config/lovelace/components/home-daily-driver-info.yaml
-  - !include /config/lovellace/components/lights_turned_on_glance.yaml
+  - !include ../components/lights_turned_on_glance.yaml
   - type: weather-forecast
     column_width: 100% / 3
     entity: weather.thuis
