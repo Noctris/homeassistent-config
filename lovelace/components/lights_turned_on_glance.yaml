@@ -1,6 +1,6 @@
 card:
   title: Lights on
-  type: glance
+  type: 'custom:button-card'
   tap_action:
     action: toggle
   columns: 3
