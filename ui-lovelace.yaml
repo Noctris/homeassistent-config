@@ -71,4 +71,3 @@ views:
   - !include /config/lovelace/views/kids/view-kids.yaml
   - !include /config/lovelace/views/debug/view-debug.yaml  
   - !include /config/lovelace/views/chores.yaml
-  - 
