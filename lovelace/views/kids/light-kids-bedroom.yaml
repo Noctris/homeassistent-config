@@ -2,7 +2,7 @@ type: vertical-stack
 cards:
   - type: 'custom:auto-entities'
     card:
-      type: 'custom:slider-entity-row'
+      type: entities
     filter:
       include:
         - entity_id: light.kids_bedroom_spots
