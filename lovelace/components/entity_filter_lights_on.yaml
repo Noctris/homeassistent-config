@@ -1,6 +1,13 @@
 type: entity-filter
 card:
   type: 'custom:button-card'
+  action: more_info
+  color: auto
+  color_type: card
+  default_color: 'rgb(255, 233, 155)'
+  style:
+    - font-size: 12px
+    - font-weight: bold
 entities:
   - light.kitchen_main
 state_filter:
