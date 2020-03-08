@@ -1,13 +1,13 @@
 type: vertical-stack
 cards:
-  - type: 'custom:auto-entities'
-    card:
-      type: 'custom:slider-entity-row'
-    filter:
-      include:
-        - entity_id: light.kids_bedroom_spots
-          state: 'on'
-    show_empty: true
+#  - type: 'custom:auto-entities'
+#    card:
+#      type: 'custom:slider-entity-row'
+#    filter:
+#      include:
+#        - entity_id: light.kids_bedroom_spots
+#          state: 'on'
+#    show_empty: true
   - type: entity-filter
     shpow_empty: false
     entities:
