@@ -1,10 +1,6 @@
 card:
   title: Lights on
   type: 'custom:button-card'
-  tap_action:
-    action: toggle
-  columns: 3
-column_width: calc(100% / 3)
 filter:
   exclude:
     - entity_id: switch.droogkast
