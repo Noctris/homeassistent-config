@@ -17,6 +17,12 @@ resources:
   - url: /local/custom_ui/auto-entities/auto-entities.js
     type: module
 
+    # https://github.com/kalkih/mini-media-player
+  - url: /local/custom_ui/mini-media-player/mini-media-player-bundle.js
+    type: module
+    
+
+
 custom_header:
   compact_mode: true
   kiosk_mode: false
