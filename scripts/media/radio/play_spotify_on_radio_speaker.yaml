@@ -3,7 +3,6 @@ play_spotify_on_radio_speaker:
   sequence:
     - condition: template
       value_template: '{{source}}|lower == spotify'
-      state: Spotify
     - service: script.set_radio_speaker_volume
       data_template:
         speaker: '{{speaker}}'
