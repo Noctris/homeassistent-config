@@ -12,5 +12,7 @@ entities:
   - light.kitchen_main
   - light.dinning_spots
   - light.living_spots
+  - light.dinning_table_lamp
+  - light.living_couch_dinning
 state_filter:
   - 'on'
