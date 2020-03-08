@@ -2,9 +2,12 @@ type: glance
 name: Daily Driver
 columns: 3
 entities:
-  - person.michel
-  - person.alexandra
-  - person.nicholas
+  - entity: person.michel
+    show_name: false
+  - entity: person.alexandra
+    show_name: false
+  - entity: person.nicholas
+    show_name: false
   - binary_sensor.kids_week
   - entity: input_boolean.guests_in_the_house
     name: Guests?
