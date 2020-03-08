@@ -24,8 +24,8 @@ custom_header:
         user: Alexandra
       config:
         compact_mode: false
-        hide_tabs:
-          - 1 to 4,6 to 10
+        show_tabls: '0,5'
+        default_tab: '5'
     - conditions:
         # user: maykar, Bram Kragten, Ludeeus
         user_agent: Mobile
