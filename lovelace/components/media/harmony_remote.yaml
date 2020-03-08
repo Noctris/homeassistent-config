@@ -1,6 +1,7 @@
 type: 'custom:button-card'
 name: Gaming
 icon: 'mdi:gamepad-variant'
+size: 40%
 tap_action:
   action: call-service
   service: remote.send_command
