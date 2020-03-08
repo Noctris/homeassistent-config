@@ -1,5 +1,22 @@
 type: vertical-stack
 cards:
+  - type: 'custom:auto-entities'
+    card:
+      title: Lights on
+      type: 'custom:slider-entity-row'
+    filter:
+      include:
+        - entity: light.kids_bedroom_spots
+          options:
+            state: 'on'
+    show_empty: false
+    sort: 'domain, name'
+  - type: entity-filter
+    entities:
+      - entity: light.kids_bedroom_spots
+        type: 'custom:slider-entity-row'
+    state_filter:
+      - 'on'
   - type: horizontal-stack
     cards:
       - type: 'custom:button-card'
@@ -70,9 +87,3 @@ cards:
         style:
           - font-size: 12px
           - font-weight: bold
-  - type: entity-filter
-    entities:
-      - entity: light.kids_bedroom_spots
-        type: 'custom:slider-entity-row'
-    state_filter:
-      - 'on'
