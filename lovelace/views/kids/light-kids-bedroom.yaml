@@ -9,7 +9,7 @@ cards:
         - entity: light.kids_bedroom_spots
           options:
             state: 'on'
-    show_empty: false
+    show_empty: true
     sort: 'domain, name'
   - type: entity-filter
     entities:
