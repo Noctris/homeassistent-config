@@ -1,4 +1,5 @@
 type: glance
+name: Daily Driver
 columns: 3
 entities:
   - person.michel
@@ -6,9 +7,11 @@ entities:
   - person.nicholas
   - binary_sensor.kids_week
   - entity: input_boolean.guests_in_the_house
+    name: Guests?
     tap_action:
       action: toggle
   - entity: input_boolean.school_night
+    name: School?
     tap_action:
       action: toggle
   - sensor.home_commute
