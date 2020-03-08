@@ -1,7 +1,7 @@
 type: glance
 columns: 3
 entities:
-  - entity: sensor.kids_week
+  - entity: binary_sensor.kids_week
     name: Kids Week
     tap_action:
       action: toggle
