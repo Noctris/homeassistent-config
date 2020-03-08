@@ -1,0 +1,31 @@
+type: glance
+title: Daily Driver
+columns: 3
+entities:
+  - entity: person.michel
+    show_name: false
+    name: ''
+  - entity: person.alexandra
+    show_name: false
+    name: ''
+  - entity: person.nicholas
+    show_name: false
+    name: ''
+  - entity: binary_sensor.kids_week
+    show_state: false
+  - entity: input_boolean.guests_in_the_house
+    name: Guests?
+    show_state: false
+    tap_action:
+      action: toggle
+  - entity: input_boolean.school_night
+    name: School?
+    show_state: false
+    tap_action:
+      action: toggle
+  - entity: sensor.home_commute
+    name: -> Home
+  - entity: sensor.to_xant
+    name: -> Xant
+  - entity: sensor.to_bagaar
+    name: -> Bagaar
