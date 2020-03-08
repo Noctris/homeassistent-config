@@ -5,6 +5,7 @@
         - !include tv/tv_power_off.yaml
         - !include tv/tv_power_on.yaml
     - type: horizontal-stack
+      cards:
         - !include tv/tv_to_chromecast.yaml
         - !include tv/tv_to_telenet.yaml
         - !include tv/tv_to_kodi.yaml
