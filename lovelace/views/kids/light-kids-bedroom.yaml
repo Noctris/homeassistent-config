@@ -2,14 +2,13 @@ type: vertical-stack
 cards:
   - type: 'custom:auto-entities'
     card:
-      type: entities
+      type: custom:slider-entity-row
     filter:
       include:
         - entity_id: light.kids_bedroom_spots
           type: custom:slider-entity-row
           state: 'on'
     show_empty: true
-    sort: 'domain, name'
   - type: entity-filter
     entities:
       - entity: light.kids_bedroom_spots
