@@ -29,6 +29,7 @@ custom_header:
         hide_help: true
         voice_hide: true
         options_hide: true
+        disable_sidebar: true
     - conditions:
         user: Michel
       config:
