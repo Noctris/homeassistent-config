@@ -72,7 +72,7 @@ cards:
           - font-weight: bold
   - type: "custom:auto-entities"
     card:
-      type: "custom:slider-entity-row"
+      type: custom:slider-entity-row
     entities:
       - light.master_bedroom_spots
     filter:
