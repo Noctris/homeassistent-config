@@ -24,6 +24,10 @@ resources:
     # https://github.com/gadgetchnnel/lovelace-home-feed-card/
   - type: js
     url: /local/custom_ui/lovelace-home-feed-card/lovelace-home-feed-card.js
+
+    # https://github.com/custom-cards/button-card
+  - type: module
+    url: /local/custom_ui/button-card/button-card.js
     
 
 
