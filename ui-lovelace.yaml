@@ -24,7 +24,6 @@ custom_header:
     - condition:
         user: Alexandra
       config:
-        kiosk_mode: true
         show_tabs:
           - 0 to 100
     - conditions:
