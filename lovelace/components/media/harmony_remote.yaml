@@ -1,0 +1,12 @@
+type: 'custom:button-card'
+name: Gaming
+tap_action:
+  action: call-service
+  service: remote.send_command
+  service_data:
+    entity_id: remote.living_room
+    device: 64916943
+    command: InputHdmi4
+    num_repeats: 1
+    delay_secs: 0.75
+    hold_secs: 2.5
