@@ -53,7 +53,8 @@ custom_header:
         show_tabs:
           - 0 to 100
     - condition:
-        user: Alexandra, Nicholas
+        user: 
+          - Alexandra
         show_tabs:
           - Home
           - Kids slaapkamer
