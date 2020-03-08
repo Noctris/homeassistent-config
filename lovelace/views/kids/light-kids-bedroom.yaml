@@ -2,7 +2,6 @@ type: vertical-stack
 cards:
   - type: 'custom:auto-entities'
     card:
-      title: Lights on
       type: 'custom:slider-entity-row'
     filter:
       include:
