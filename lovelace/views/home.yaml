@@ -4,6 +4,7 @@ icon: 'mdi:home'
 panel: false
 badges: []
 cards:
+  - - !include /config/lovelace/components/home-daily-driver-info.yaml   
   - type: weather-forecast
     column_width: 100% / 3
     entity: weather.thuis
