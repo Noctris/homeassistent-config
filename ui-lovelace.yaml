@@ -25,7 +25,9 @@ custom_header:
       config:
         header_text: Alexandra Bij Papa
         compact_mode: false
-        show_tabls: '0,5'
+        show_tabls:
+          - 0
+          - 5
         default_tab: '5'
     - conditions:
         # user: maykar, Bram Kragten, Ludeeus
