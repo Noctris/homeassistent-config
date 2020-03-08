@@ -17,6 +17,9 @@ entities:
     name: School?
     tap_action:
       action: toggle
-  - sensor.home_commute
-  - sensor.to_xant
-  - sensor.to_bagaar
+  - entity: sensor.home_commute
+    name: -> Home
+  - entity: sensor.to_xant
+    name: -> Xant
+  - entity: sensor.to_bagaar
+    name: -> Bagaar
