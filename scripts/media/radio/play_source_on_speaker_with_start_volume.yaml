@@ -1,0 +1,21 @@
+play_source_on_speaker_with_start_volume:
+  alias: 'Media - Radio - Play Source On Speaker With Start Volume'
+  sequence:
+    - service: script.set_radio_speaker_volume
+      data_template:
+        speaker: {{speaker}}
+        source: {{source}}
+        content_id: {{content_id}}
+        volume: {{volume}}
+    - service: script.play_radio_on_radio_speaker
+      data_template:
+        speaker: {{speaker}}
+        source: {{source}}
+        content_id: {{content_id}}
+        volume: {{volume}}
+    - service: script.play_spotify_on_radio_speaker
+      data_template:
+        speaker: {{speaker}}
+        source: {{source}}
+        content_id: {{content_id}}
+        volume: {{volume}}
