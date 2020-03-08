@@ -34,7 +34,7 @@ resources:
 custom_header:
   compact_mode: true
   kiosk_mode: false
-  disable_sidebar: true
+  disable_sidebar: false
   hide_config: true
   hide_help: true
   voice_hide: false
