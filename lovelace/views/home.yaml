@@ -8,10 +8,8 @@ cards:
   - !include ../components/lights_turned_on_glance.yaml
   - !include ../components/entity_filter_lights_on.yaml
   - type: 'custom:buien-rain-forecast'
-    long: 4.543181
-    lat: 51.108007
-        #latitude: 51.108007
-        #longitude: 4.543181
+    long: !secret home_lon
+    lat: !secret home_lat
     lineColor: 'rgba(89, 160, 238, 1)'
     fillColor: 'rgba(89, 160, 238, 0.2)'
     icon: 'mdi:weather-rainy'
