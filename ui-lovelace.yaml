@@ -34,11 +34,12 @@ resources:
 custom_header:
   compact_mode: true
   kiosk_mode: false
-  disable_sidebar: false
+  disable_sidebar: true
   hide_config: true
   hide_help: true
   voice_hide: false
   options_hide: false
+  menu_dropdown: true
   chevrons: true
   background: var(--app-header-background-color)
   elements_color: var(--app-header-text-color)
