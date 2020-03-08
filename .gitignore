@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Example .gitignore file for your config dir.
 # An * ensures that everything will be ignored.
 
@@ -29,3 +30,37 @@ automations.yaml
 .vscode/settings.json
 harmony_living_room_hub.conf
 harmony_living_room.conf
+=======
+# Example .gitignore file for your config dir.
+# An * ensures that everything will be ignored.
+
+# You can whitelist files/folders with !, these will not be ignored.
+!*.yaml
+!.gitignore
+!*.md
+
+# Ignore folders.
+.storage
+.cloud
+.google.token
+tts/
+www/secret_pictures/
+.vscode/
+
+# Ensure these YAML files are ignored, otherwise your secret data/credentials will leak.
+ip_bans.yaml
+secrets.yaml
+known_devices.yaml
+aircast.xml
+*.db
+*.log
+sabnzbd.conf
+traccar.xml
+google_calendars.yaml
+.spotify-token-cache
+automations.yaml
+.vscode/settings.json
+harmony_living_room_hub.conf
+harmony_living_room.conf
+.HA_VERSION
+>>>>>>> d47d2110a7b0e32599dfae9a15bdd4fa00bca879
