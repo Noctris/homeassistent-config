@@ -1,6 +1,7 @@
 card:
   title: Lights on
   type: glance
+  columns: 3
 filter:
   exclude:
     - entity_id: switch.droogkast
