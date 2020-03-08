@@ -10,7 +10,7 @@ resources:
     type: module
 
   # https://github.com/maykar/custom-header
-  - url: /local/community/custom-header/custom-header.js
+  - url: /local/custom_ui/custom-header/custom-header.js
     type: module
 
   # https://github.com/thomasloven/lovelace-auto-entities
