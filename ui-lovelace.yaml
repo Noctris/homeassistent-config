@@ -28,7 +28,10 @@ resources:
     # https://github.com/custom-cards/button-card
   - type: module
     url: /local/custom_ui/button-card/button-card.js
-    
+
+    # https://github.com/thomasloven/lovelace-slider-entity-row
+  - type: module
+    url: /local/custom_ui/lovelace-slider-entity-row/slider-entity-row.js
 
 
 custom_header:
