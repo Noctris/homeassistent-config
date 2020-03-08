@@ -21,9 +21,9 @@ custom_header:
           - 0
           - 1
     - condition:
-        header_text: Alexandra Bij Papa
         user: Alexandra
       config:
+        header_text: Alexandra Bij Papa
         compact_mode: false
         show_tabls: '0,5'
         default_tab: '5'
