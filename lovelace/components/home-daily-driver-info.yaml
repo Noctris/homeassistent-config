@@ -4,7 +4,7 @@ columns: 3
 entities:
   - entity: person.michel
     show_name: false
-    name: '{{states.person.michel}}'
+    name: ''
   - entity: person.alexandra
     show_name: false
     name: ''
