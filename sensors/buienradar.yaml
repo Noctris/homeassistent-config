@@ -7,3 +7,13 @@
     - temperature
     - windspeed
     - pressure
+    - conditionexact
+    - feeltemperature
+    - groundtemperature
+    - visibility
+    - windgust
+    - precipitation
+    - precipitation_forecast_average
+    - rain_1d
+    - symbol_1d
+    - conditiondetailed
