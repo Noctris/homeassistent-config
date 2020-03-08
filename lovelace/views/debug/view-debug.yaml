@@ -3,3 +3,6 @@ path: debug
 badges: []
 cards:
   - !include forced-radio-card.yaml
+  - type: "custom:button-card"
+    template: light_card
+    entity: light.kitchen_main
