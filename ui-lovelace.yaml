@@ -57,8 +57,8 @@ custom_header:
         user: 
           - Alexandra
         show_tabs:
-          - home2
-          - kids-bedroom
+          - 0
+          - 5
     - conditions:
         # user: maykar, Bram Kragten, Ludeeus
         user_agent: Mobile
