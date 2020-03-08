@@ -1,7 +1,0 @@
-type: 'custom:harmony-card'
-entity: remote.living_room
-volume_entity: media_player.living_tv
-activities:
-  - name: Watch Kodi
-    device: Microsoft Xbox One
-    volume_entity: media_player.living_kodi
