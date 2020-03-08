@@ -6,3 +6,4 @@ cards:
   - type: "custom:button-card"
     template: light_card
     entity: light.kitchen_main
+  - type: custom:gui-sandbox

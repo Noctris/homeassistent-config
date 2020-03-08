@@ -91,6 +91,10 @@ resources:
   - type: module
     url: /local/custom_ui/text-element/text-element.js
 
+    # https://github.com/thomasloven/lovelace-gui-sandbox
+  - type: module
+    url: /local/custom_ui/gui-sandbox/gui-sandbox.js
+
 button_card_templates: !include_dir_merge_list lovelace/card_templates/
 #Actual start of the main view
 title: Van Hoof
