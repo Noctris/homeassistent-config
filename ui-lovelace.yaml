@@ -23,7 +23,8 @@ custom_header:
           - 5
         default_tab: 5
         header_text: Alexandra Bij Papa
-        kiosk_mode: true
+        # For kiosk mode, we need to configure navigation buttons
+        #kiosk_mode: true
         hide_config: true
         hide_help: true
         voice_hide: true
