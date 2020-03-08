@@ -1,4 +1,4 @@
-type: 'custom:button-card'
+type: "custom:button-card"
 name: TV Off
 icon: 'mdi:power'
 size: 40%
