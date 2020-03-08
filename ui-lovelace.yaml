@@ -58,6 +58,7 @@ custom_header:
         user: 
           - Alexandra
       config:
+        kiosk_mode: true
         show_tabs:
           - 0
           - 5
