@@ -23,6 +23,7 @@ custom_header:
         header_text: Alexandra Bij Papa
         user: Alexandra
       config:
+        compact_mode: false
         hide_tabs:
           - 1 to 4,6 to 10
     - conditions:
