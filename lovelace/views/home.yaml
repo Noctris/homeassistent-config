@@ -5,7 +5,7 @@ panel: false
 badges: []
 cards:
   - !include /config/lovelace/components/home-daily-driver-info.yaml
-  - !include ../components/lights_turned_on_glance.yaml
+  - !include ../components/lights_turned_on.yaml
   - !include ../components/entity_filter_lights_on.yaml
   - type: 'custom:buien-rain-forecast'
     long: !secret home_lon
