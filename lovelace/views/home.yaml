@@ -6,6 +6,7 @@ badges: []
 cards:
   - !include /config/lovelace/components/home-daily-driver-info.yaml
   - !include ../components/lights_turned_on_glance.yaml
+  - !include ../components/entity_filter_lights_on.yaml
   - type: weather-forecast
     column_width: 100% / 3
     entity: weather.thuis

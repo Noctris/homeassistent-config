@@ -1,0 +1,7 @@
+type: entity-filter
+card:
+  type: 'custom:button-card'
+entities:
+  - light.kitchen_main
+state_filter:
+  state: 'on'
