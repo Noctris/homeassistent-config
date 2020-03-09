@@ -38,9 +38,12 @@ custom_header:
           - 6 to 100
     - conditions:
         # user: maykar, Bram Kragten, Ludeeus
+        user: Michel
         user_agent: Mobile
         media_query: "(max-width: 600px)"
       config:
+        show_tabs:
+          - 0 to 100
         #footer_mode: true
         #reverse_button_direction: true
         #reverse_tab_direction: true
@@ -90,6 +93,10 @@ resources:
     # https://github.com/custom-cards/text-element
   - type: module
     url: /local/custom_ui/text-element/text-element.js
+
+    # https://github.com/thomasloven/lovelace-gui-sandbox
+  - type: module
+    url: /local/custom_ui/gui-sandbox/gui-sandbox.js
 
 button_card_templates: !include_dir_merge_list lovelace/card_templates/
 #Actual start of the main view

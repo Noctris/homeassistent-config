@@ -1,0 +1,7 @@
+set_selected_speaker_volume:
+  alias: 'First, set the volume right according to home input'
+  sequence:
+    - service: media_player.volume_set
+      data_template:
+        entity_id: '{{states("sensor.selected_home_speaker")}}'
+        volume_level: '{{states("input_number.home_radio_volume")|int/100}}'
