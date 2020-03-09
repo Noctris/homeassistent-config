@@ -3,8 +3,7 @@ path: debug
 badges: []
 cards:
   - !include forced-radio-card.yaml
-  - type: "custom:button-card"
-    template: light_card
-    entity: light.kitchen_main
   - type: custom:gui-sandbox
   - !include master-bedroom-lights.yaml
+  - type: entities
+    name: Test

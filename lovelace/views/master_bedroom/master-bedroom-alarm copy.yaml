@@ -1,0 +1,38 @@
+type: entities
+title: Alarm
+show_header_toggle: false
+entities:
+  - entity: input_boolean.master_bedroom_alarm_enabled
+  - entity: input_datetime.master_bedroom_alarm_clock_time
+  - type: 'custom:button-card'
+    tap_action:
+      action: call-service
+      service: script.wake_up_light
+      service_data:
+        lamp: "light.kitchen_main"
+        #lamp: 'light.master_bedroom_spots'
+    color: auto
+    color_type: card
+    default_color: 'rgb(255, 233, 155)'
+    icon: 'mdi:alarm'
+    name: Wake Up Light
+    style:
+      - font-size: 12px
+      - font-weight: bold
+  - entity: input_select.alarm_master_bedroom_wake_up_sound_source
+  - entity: input_select.alarm_master_bedroom_radio_station
+type: horizontal-stack
+cards:
+  - type: 'custom:button-card'
+    tap_action:
+      action: call-service
+      service: script.alarm_clock_master_bedroom_play_music
+    color: auto
+    color_type: card
+    default_color: 'rgb(255, 233, 155)'
+    icon: 'mdi:play'
+    name: Music
+    style:
+      - font-size: 12px
+      - font-weight: bold
+        

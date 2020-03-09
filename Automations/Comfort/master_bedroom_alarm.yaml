@@ -1,5 +1,5 @@
-- id: 'master_bedroom_alarm'
-  alias: Master Bedroom Wake-up Routine when alarm is set
+- id: 'alarm_clock_master_bedroom'
+  alias: Alarm Clock - Master Bedroom - Wake-up Routine when alarm is set
   description: ''
   trigger:
   - platform: template
@@ -7,9 +7,9 @@
   condition:
   - condition: and
     conditions:
-#    - condition: state
-#      entity_id: person.michel
-#      state: home
+    - condition: state
+      entity_id: person.michel
+      state: home
     - condition: state
       entity_id: input_boolean.master_bedroom_alarm_enabled
       state: 'on'
@@ -18,15 +18,12 @@
     data_template:
       message: 'Master bedroom alarm triggered'
       level: info
-  - service: script.wake_up_light_10_minutes
-    data_template:
-      lamp: light.master_bedroom_spots
-  - service: media_player.volume_set
+  - service: script.master_bedroom_wake_up_light
+  - service: tts.google_translate_say
     data:
+      message: Ochtendroutine gestart
       entity_id: media_player.master_bedroom_speaker
-      volume_level: 30
-  - service: spotcast.start
-    data:
-      entity_id: media_player.master_bedroom_speaker
-      shuffle: true
-      uri: 'spotify:playlist:3xVR8cMwohCrRQnaXL6GFz'
+      language: 'nl'
+  - delay:
+      seconds: 30
+  - service: script.alarm_clock_master_bedroom_play_music
