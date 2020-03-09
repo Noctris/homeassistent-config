@@ -1,0 +1,11 @@
+remote_variable_command_to_variable_device:
+  alias: 'Execute a variable command on a variable device'
+  sequence:
+    - service: remote.send_command
+      data_template: 
+        entity_id: remote.living_room
+        device: '{{harmony_id}}'
+        command: '{{command}}'
+        num_repeats: 1
+        delay_secs: 0.75
+        hold_secs: 2.5

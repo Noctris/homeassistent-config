@@ -1,0 +1,7 @@
+id: 'Leefruimte Rustige Achtergrond'
+name: Background lighting Livingroom
+entities:
+  light.leefruimte_spots:
+    state: 'off'
+  light.achtergrond_verlichting_leefruimte:
+    state: 'on'
