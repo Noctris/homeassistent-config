@@ -71,7 +71,7 @@ cards:
           - font-size: 12px
           - font-weight: bold
   - type: 'custom:auto-entities'
-    card:
+    card: 
       type: 'custom:slider-entity-row'
     filter:
       include:
