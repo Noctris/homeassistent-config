@@ -66,8 +66,8 @@ input_text: !include_dir_merge_named input/text/
 input_boolean: !include_dir_merge_named input/boolean/
 input_datetime: !include_dir_merge_named input/datetime/
 # Sensors
-sensor: !include_dir_merge_list sensors/
-binary_sensor: !include_dir_merge_list sensors_binary/
+sensor: !include_dir_merge_list sensors/integrations/
+binary_sensor: !include_dir_merge_list sensors/binary/
 # Device trackers we are using
 device_tracker: !include_dir_merge_list device_trackers/
 

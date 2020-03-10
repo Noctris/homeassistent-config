@@ -5,6 +5,6 @@ activities:
   - name: Watch Kodi
     device: Kodi Living
     # volume_entity: media_player.living_kodi
-  - name: Watch TV
+  - name: Watch Telenet
     device: Living Samsung TV
     # volume_entity: media_player.living_kodi

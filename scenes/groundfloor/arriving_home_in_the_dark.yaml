@@ -1,0 +1,9 @@
+id: 'Comfort - Arriving Home In The Dark'
+name: Comfort - Arriving Home In The Dark
+entities:
+  light.enterance_light:
+    state: 'on'
+  light.hallway_lights:
+    state: 'on'
+  light.achtergrond_verlichting_leefruimte:
+    state: 'on'

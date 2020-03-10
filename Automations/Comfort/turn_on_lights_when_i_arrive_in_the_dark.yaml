@@ -1,0 +1,13 @@
+- id: 'turn_on_light_when_family_arrives_in_the_dark'
+  alias: Turn on lights when someone of the family arrives in the dark
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: person.michel
+    to: home
+  condition:
+  - condition: sun
+    after: sunset
+    after_offset: '-00:30'
+  action:
+  - scene: scene.background_lighting_livingroom
