@@ -5,6 +5,8 @@ entities:
   - entity: media_player.master_bedroom_speaker
     type: 'custom:mini-media-player'
     artwork: full-cover-fit
+    tts:
+      language: 'nl'
     shortcuts:
       buttons:
         - data:
@@ -14,3 +16,13 @@ entities:
           id: spotcast.start
           name: Undone
           type: service
+        - data:
+            entity_id: media_player.master_bedroom_speaker
+            shuffle: true
+            uri: 'spotify:playlist:37i9dQZF1DWYcDQ1hSjOpY'
+          id: spotcast.start
+          name: Deep Sleep
+          type: service
+    
+
+

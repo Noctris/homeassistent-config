@@ -1,0 +1,93 @@
+type: vertical-stack
+cards:
+  - type: entities
+    title: Alarm
+    show_header_toggle: false
+    entities:
+      - entity: input_boolean.master_bedroom_alarm_enabled
+      - entity: input_datetime.master_bedroom_alarm_clock_time
+      - entity: input_select.alarm_master_bedroom_wake_up_sound_source
+      - entity: input_select.alarm_master_bedroom_radio_station
+  - type: horizontal-stack
+    cards:
+      - type: 'custom:button-card'
+        tap_action:
+          action: call-service
+          service: script.alarm_clock_master_bedroom_play_music
+        color: auto
+        color_type: card
+        default_color: 'rgb(255, 233, 155)'
+        icon: 'mdi:play'
+        name: Music
+        style:
+          - font-size: 12px
+          - font-weight: bold
+      - type: 'custom:button-card'
+        tap_action:
+          action: call-service
+          service: script.master_bedroom_wake_up_light
+        color: auto
+        color_type: card
+        default_color: 'rgb(255, 233, 155)'
+        icon: 'mdi:alarm'
+        name: Wake Up Light
+        style:
+          - font-size: 12px
+          - font-weight: bold
+      - type: 'custom:button-card'
+        tap_action:
+          action: call-service
+          service: homeassistant.turn_off
+          service_data:
+            entity_id: script.master_bedroom_wake_up_light
+        color: auto
+        color_type: card
+        default_color: 'rgb(255, 233, 155)'
+        icon: 'mdi:alarm-off'
+        name: StopLight
+        style:
+          - font-size: 12px
+          - font-weight: bold
+      - type: 'custom:button-card'
+        tap_action:
+          action: call-service
+          service: script.master_bedroom_fall_asleep_music
+        color: auto
+        color_type: card
+        default_color: 'rgb(255, 233, 155)'
+        icon: 'mdi:sleep'
+        name: Fall Asleep
+        style:
+          - font-size: 12px
+          - font-weight: bold
+      - type: 'custom:button-card'
+        tap_action:
+          action: call-service
+          service: script.master_bedroom_turn_off_fall_asleep_music
+        color: auto
+        color_type: card
+        default_color: 'rgb(255, 233, 155)'
+        icon: 'mdi:sleep-off'
+        name: Fall Asleep
+        style:
+          - font-size: 12px
+          - font-weight: bold
+      - type: 'custom:button-card'
+        tap_action:
+          action: toggle
+          entity: script.master_bedroom_wake_up_light
+        color: auto
+        color_type: card
+        default_color: 'rgb(255, 233, 155)'
+        icon: 'mdi:alarm-off'
+        name: Wake Light
+        style:
+          - font-size: 12px
+          - font-weight: bold
+  - type: entity-filter
+    entities:
+      - entity: media_player.master_bedroom_speaker
+        type: 'custom:slider-entity-row'
+    state_filter:
+      - 'playing'
+        

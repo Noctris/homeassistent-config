@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Example .gitignore file for your config dir.
 # An * ensures that everything will be ignored.
 
@@ -30,7 +29,6 @@ automations.yaml
 .vscode/settings.json
 harmony_living_room_hub.conf
 harmony_living_room.conf
-=======
 # Example .gitignore file for your config dir.
 # An * ensures that everything will be ignored.
 
@@ -63,4 +61,5 @@ automations.yaml
 harmony_living_room_hub.conf
 harmony_living_room.conf
 .HA_VERSION
->>>>>>> d47d2110a7b0e32599dfae9a15bdd4fa00bca879
+.vscode/settings.json
+.HA_VERSION
