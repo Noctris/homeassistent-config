@@ -1,0 +1,11 @@
+alarm_master_bedroom_radio_station:
+  name: 'Select Radio Station:'
+  options:
+    - None
+    - Studio Brussel
+    - Q-Music
+    - Radio 1
+    - Radio 2 Antwerpen
+    - Joe FM
+    - MNM
+  initial: Radio 2 Antwerpen

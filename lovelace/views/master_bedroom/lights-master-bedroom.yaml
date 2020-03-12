@@ -7,7 +7,7 @@ cards:
         color: auto
         color_type: card
         default_color: 'rgb(255, 233, 155)'
-        entity: light.master_bedroom_spots
+        entity: light.dad_bedroom_spots
         icon: 'mdi:bed-king-outline'
         name: Spots
         style:
@@ -31,19 +31,7 @@ cards:
         color: auto
         color_type: card
         default_color: 'rgb(255, 233, 155)'
-        entity: switch.office_desk_left
-        icon: 'mdi:lamp'
-        name: Nachtlamp L
-        style:
-          - font-size: 12px
-          - font-weight: bold
-      - type: 'custom:button-card'
-        action: more_info
-        color: auto
-        color_type: card
-        default_color: 'rgb(255, 233, 155)'
         entity: switch.dad_bedroom_s1
-        icon: 'mdi:lamp'
         name: s1
         style:
           - font-size: 12px
@@ -53,9 +41,8 @@ cards:
         color: auto
         color_type: card
         default_color: 'rgb(255, 233, 155)'
-        entity: switch.dad_bedroom_s2
-        icon: 'mdi:lamp'
-        name: s2
+        entity: switch.dad_bedroom_s3
+        name: s3
         style:
           - font-size: 12px
           - font-weight: bold
@@ -64,15 +51,15 @@ cards:
         color: auto
         color_type: card
         default_color: 'rgb(255, 233, 155)'
-        entity: switch.dad_bedroom_s3
-        icon: 'mdi:lamp'
-        name: s3
+        entity: light.master_bedroom_nachtlamp_rechts
+        #icon: 'mdi:lamp'
+        name: Rechts
         style:
-          - font-size: 12px
+          - font-size: 8px
           - font-weight: bold
   - type: entity-filter
     entities:
-      - entity: light.master_bedroom_spots
+      - entity: light.dad_bedroom_spots
         type: 'custom:slider-entity-row'
     state_filter:
       - 'on'

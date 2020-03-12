@@ -1,6 +1,6 @@
   - platform: template
     sensors:
-       kids_week:
+       working_day:
         friendly_name: Kids Week
         value_template: >-
-          {{is_state_attr('calendar.michel_van_hoof_prive', 'message', 'Kids')}}
+          {{is_state_attr('calendar.xylos_2', 'message', 'xylos')}}

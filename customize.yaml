@@ -65,6 +65,9 @@ light.living_couch_dinning:
 light.living_couch_window:
     icon: mdi:floor-lamp
 
+light.master_bedroom_nachtlamp_rechts:
+    icon: 'mdi:lamp'
+    name: Nachtlamp Michel
 
 # Media Player
 media_player.living_kodi:
