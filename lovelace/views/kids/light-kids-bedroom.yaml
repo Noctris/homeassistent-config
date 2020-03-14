@@ -5,13 +5,13 @@ cards:
 #      type: 'custom:slider-entity-row'
 #    filter:
 #      include:
-#        - entity_id: light.kids_bedroom_spots
+#        - entity_id: light.slaapkamer_2_dimbare_spots_l1
 #          state: 'on'
 #    show_empty: true
   - type: entity-filter
     shpow_empty: false
     entities:
-      - entity: light.kids_bedroom_spots
+      - entity: light.slaapkamer_2_dimbare_spots_l1
         type: 'custom:slider-entity-row'
     state_filter:
       - 'on'
@@ -22,7 +22,7 @@ cards:
         color: auto
         color_type: card
         default_color: 'rgb(255, 233, 155)'
-        entity: light.kids_bedroom_spots
+        entity: light.slaapkamer_2_dimbare_spots_l1
         icon: 'mdi:bed-king-outline'
         name: Spots
         style:

@@ -7,3 +7,4 @@ entities:
     state: 'on'
   light.achtergrond_verlichting_leefruimte:
     state: 'on'
+

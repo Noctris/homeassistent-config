@@ -129,7 +129,7 @@ cards:
         color: auto
         color_type: card
         default_color: 'rgb(255, 233, 155)'
-        entity: light.living_s4
+        entity: light.eetkamer_s1
         icon: 'mdi:floor-plan'
         name: S4
         style:

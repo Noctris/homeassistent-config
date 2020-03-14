@@ -22,13 +22,13 @@ switch.office_s2:
     icon: mdi:power-socket-eu
 switch.office_library_left:
     icon: mdi:power-socket-eu
-switch.living_tv_light_socket:
+switch.living_s1:
     icon: mdi:power-socket-eu
-switch.living_couch_window_socket:
+switch.living_s2:
     icon: mdi:power-socket-eu
-switch.living_couch_dinning_socket:
+switch.living_s3:
     icon: mdi:power-socket-eu
-switch.dinning_table_socket:
+switch.eetkamer_s1:
     icon: mdi:power-socket-eu
 switch.dad_bedroom_fan:
     icon: mdi:fan
@@ -56,18 +56,25 @@ switch.master_bedroom_s3:
     icon: mdi:power-socket-eu
 
 ### Verlichting
-light.dinning_table_lamp:
+light.eetkamer_s1:
+    name: Eetkamer Lamp
     icon: mdi:lamp
-light.living_tv_light:
+light.living_s1:
+    name: Living Tv Licht
     icon: mdi:lamp
-light.living_couch_dinning:
+light.living_s3:
+    name: Living Zetel Eetkamer
     icon: mdi:lamp
-light.living_couch_window:
+light.living_s2:
+    name: Living Zetel Raam Lamp
     icon: mdi:floor-lamp
 
-light.dad_bedroom_nachtlamp_rechts:
+light.slaapkamer_1_s2:
     icon: 'mdi:lamp'
     name: Nachtlamp Michel
+light.slaapkamer_2_s3:
+    icon: 'mdi:lamp'
+    name: Nachtlampje
 
 # Media Player
 media_player.living_kodi:

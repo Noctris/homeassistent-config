@@ -2,7 +2,7 @@
     name: Achtergrond verlichting Leefruimte
     entities:
       - light.living_s1
-      - light.living_tv_light
+      - light.living_s1
       - light.living_s2
       - light.living_s3
-      - light.living_s4
+      - light.eetkamer_s1

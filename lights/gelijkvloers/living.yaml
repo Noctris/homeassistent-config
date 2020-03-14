@@ -15,6 +15,7 @@
     name: Keuken Dimbare Spots L3
     address: '0/3/16'
     state_address: '0/3/17'
+    # Stopcontact TV - Kant Raam
   - platform: knx
     name: Living S1
     address: '0/3/4'
