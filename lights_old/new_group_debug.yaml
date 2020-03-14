@@ -3,9 +3,9 @@
     entities:
       - light.background_lights_downstairs
       - light.bathroom_l3
-      - light.bathroom_shower_spots
-      - light.bathroom_spots
-      - light.carport_flowerbed
+      - light.badkamer_1_l2
+      - light.badkamer_1_l1
+      - light.carport_bloembak_l1
       - light.carport_main_light
       - light.carport_night_light
       - light.carport_storage_1
@@ -18,7 +18,7 @@
       - light.dinning_table_lamp
       - light.dressing_spots
       - light.enterance_light
-      - light.hallway_lights
+      - light.gang_bureau
       - light.kids_bedroom_l2
       - light.kids_bedroom_spots
       - light.keuken.dimbare_spots_l2
