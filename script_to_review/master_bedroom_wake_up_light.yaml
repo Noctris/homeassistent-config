@@ -1,4 +1,4 @@
-'master_bedroom_wake_up_light':
+master_bedroom_wake_up_light:
   alias: Alarm Clock - Master Bedroom - Wake Up Light
   sequence:
   - data_template:
