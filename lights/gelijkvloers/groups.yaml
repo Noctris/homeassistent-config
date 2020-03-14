@@ -3,7 +3,7 @@
     entities:
       - light.living_couch_window
       - light.living_tv_light
-      - light.kitchen_coffee_area
+      - light.keuken.dimbare_spots_l2
       - light.dinning_table_lamp
       - light.living_couch_dinning
   - platform: group
@@ -40,14 +40,14 @@
       - light.hallway_lights
       - light.kids_bedroom_l2
       - light.kids_bedroom_spots
-      - light.kitchen_coffee_area
+      - light.keuken.dimbare_spots_l2
       - light.kitchen_l3
-      - light.kitchen_main
+      - light.keuken_dimbare_spots_l1
       - light.living_couch_dinning
       - light.living_couch_window
       - light.living_l2
       - light.living_l3
-      - light.living_spots
+      - light.living_dimbare_spots_l1
       - light.living_tv_light
       - light.master_bathroom_l2
       - light.master_bathroom_l3
@@ -57,7 +57,7 @@
       - light.master_bedroom_spots
       - light.office_l2
       - light.office_l3
-      - light.office_spots
+      - light.bureau_dimbare_spots_l1
       - light.stairs_0_1
       - light.stairs_1_2
       - light.terrace

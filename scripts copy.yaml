@@ -3,7 +3,7 @@
   sequence:
     service: script.wake_up_light_test
     data_template:
-      lamp: light.living_spots
+      lamp: light.living_dimbare_spots_l1
 'wake_up_light_10_minutes':
   alias: Wakup Light Test
   sequence:
