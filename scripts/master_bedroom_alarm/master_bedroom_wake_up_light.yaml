@@ -3,94 +3,94 @@
   sequence:
   - data_template:
       brightness_pct: 5
-      entity_id: 'light.dad_bedroom_spots'
+      entity_id: 'light.slaapkamer_1_dimbare_spots_l1'
     service: light.turn_on
   - data_template:
-      entity_id: 'light.dad_bedroom_spots'
+      entity_id: 'light.slaapkamer_1_dimbare_spots_l1'
     service: light.turn_on
   - delay:
       seconds: 30
   - data_template:
       brightness_pct: 10
-      entity_id: 'light.dad_bedroom_spots'
+      entity_id: 'light.slaapkamer_1_dimbare_spots_l1'
     service: light.turn_on
   - delay:
       seconds: 30
   - data_template:
       brightness_pct: 15
-      entity_id: 'light.dad_bedroom_spots'
+      entity_id: 'light.slaapkamer_1_dimbare_spots_l1'
     service: light.turn_on
   - delay:
       seconds: 30
   - data_template:
       brightness_pct: 20
-      entity_id: 'light.dad_bedroom_spots'
+      entity_id: 'light.slaapkamer_1_dimbare_spots_l1'
     service: light.turn_on
   - delay:
       seconds: 30
   - data_template:
       brightness_pct: 25
-      entity_id: 'light.dad_bedroom_spots'
+      entity_id: 'light.slaapkamer_1_dimbare_spots_l1'
     service: light.turn_on
   - delay:
       seconds: 30
   - data_template:
       brightness_pct: 30
-      entity_id: 'light.dad_bedroom_spots'
+      entity_id: 'light.slaapkamer_1_dimbare_spots_l1'
     service: light.turn_on
   - delay:
       seconds: 30
   - data_template:
       brightness_pct: 35
-      entity_id: 'light.dad_bedroom_spots'
+      entity_id: 'light.slaapkamer_1_dimbare_spots_l1'
     service: light.turn_on
   - delay:
       seconds: 30
   - data_template:
       brightness_pct: 40
-      entity_id: 'light.dad_bedroom_spots'
+      entity_id: 'light.slaapkamer_1_dimbare_spots_l1'
     service: light.turn_on
   - delay:
       seconds: 30
   - data_template:
       brightness_pct: 45
-      entity_id: 'light.dad_bedroom_spots'
+      entity_id: 'light.slaapkamer_1_dimbare_spots_l1'
     service: light.turn_on
   - delay:
       seconds: 30
   - data_template:
       brightness_pct: 50
-      entity_id: 'light.dad_bedroom_spots'
+      entity_id: 'light.slaapkamer_1_dimbare_spots_l1'
     service: light.turn_on
   - delay:
       seconds: 30
   - data_template:
       brightness_pct: 55
-      entity_id: 'light.dad_bedroom_spots'
+      entity_id: 'light.slaapkamer_1_dimbare_spots_l1'
     service: light.turn_on
   - delay:
       seconds: 30
   - data_template:
       brightness_pct: 60
-      entity_id: 'light.dad_bedroom_spots'
+      entity_id: 'light.slaapkamer_1_dimbare_spots_l1'
     service: light.turn_on
   - delay:
       seconds: 30
   - data_template:
       brightness_pct: 65
-      entity_id: 'light.dad_bedroom_spots'
+      entity_id: 'light.slaapkamer_1_dimbare_spots_l1'
     service: light.turn_on
   - delay:
       seconds: 30
   - data_template:
       brightness_pct: 70
-      entity_id: 'light.dad_bedroom_spots'
+      entity_id: 'light.slaapkamer_1_dimbare_spots_l1'
     service: light.turn_on
   - delay:
       seconds: 30
   - data_template:
       brightness_pct: 75
-      entity_id: 'light.dad_bedroom_spots'
+      entity_id: 'light.slaapkamer_1_dimbare_spots_l1'
     service: light.turn_on
   - delay:
       seconds: 30
@@ -99,23 +99,23 @@
     service: light.turn_on
   - data_template:
       brightness_pct: 80
-      entity_id: 'light.dad_bedroom_spots'
+      entity_id: 'light.slaapkamer_1_dimbare_spots_l1'
     service: light.turn_on
   - delay:
       seconds: 30
   - data_template:
       brightness_pct: 85
-      entity_id: 'light.dad_bedroom_spots'
+      entity_id: 'light.slaapkamer_1_dimbare_spots_l1'
     service: light.turn_on
   - delay:
       seconds: 30
   - data_template:
       brightness_pct: 90
-      entity_id: 'light.dad_bedroom_spots'
+      entity_id: 'light.slaapkamer_1_dimbare_spots_l1'
     service: light.turn_on
   - delay:
       seconds: 60
   - data_template:
       brightness_pct: 100
-      entity_id: 'light.dad_bedroom_spots'
+      entity_id: 'light.slaapkamer_1_dimbare_spots_l1'
     service: light.turn_on

@@ -1,6 +1,6 @@
 columns: 2
 entities:
-  - entity: light.dad_bedroom_spots
+  - entity: light.slaapkamer_1_dimbare_spots_l1
     name: Spots
     tap_action:
       action: toggle
