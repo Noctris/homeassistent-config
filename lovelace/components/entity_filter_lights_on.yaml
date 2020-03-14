@@ -12,7 +12,7 @@ entities:
   - light.keuken_dimbare_spots_l1
   - light.dinning_spots
   - light.living_dimbare_spots_l1
-  - light.dinning_table_lamp
-  - light.living_couch_dinning
+  - light.eetkamer_s1
+  - light.living_s3
 state_filter:
   - 'on'

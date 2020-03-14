@@ -12,7 +12,7 @@
   action:
   - entity_id: light.enterance_light
     service: light.turn_on
-  - entity_id: light.hallway_lights
+  - entity_id: light.gang_bureau
     service: light.turn_on
   - scene: scene.turn_on_relax_lights
 

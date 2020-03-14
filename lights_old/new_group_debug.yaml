@@ -3,33 +3,33 @@
     entities:
       - light.background_lights_downstairs
       - light.bathroom_l3
-      - light.bathroom_shower_spots
-      - light.bathroom_spots
-      - light.carport_flowerbed
+      - light.badkamer_1_l2
+      - light.badkamer_1_l1
+      - light.carport_bloembak_l1
       - light.carport_main_light
       - light.carport_night_light
       - light.carport_storage_1
       - light.carport_storage_2
       - light.cv_room
-      - light.dad_bedroom_spots
+      - light.slaapkamer_1_dimbare_spots_l1
       - light.dinning_l2
       - light.dinning_l3
       - light.dinning_spots
-      - light.dinning_table_lamp
+      - light.eetkamer_s1
       - light.dressing_spots
       - light.enterance_light
-      - light.hallway_lights
+      - light.gang_bureau
       - light.kids_bedroom_l2
-      - light.kids_bedroom_spots
+      - light.slaapkamer_2_dimbare_spots_l1
       - light.keuken.dimbare_spots_l2
       - light.kitchen_l3
       - light.keuken_dimbare_spots_l1
-      - light.living_couch_dinning
-      - light.living_couch_window
+      - light.living_s3
+      - light.living_s2
       - light.living_l2
       - light.living_l3
       - light.living_dimbare_spots_l1
-      - light.living_tv_light
+      - light.living_s1
       - light.master_bathroom_l2
       - light.master_bathroom_l3
       - light.master_bathroom_spots

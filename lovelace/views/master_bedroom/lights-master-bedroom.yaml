@@ -7,7 +7,7 @@ cards:
         color: auto
         color_type: card
         default_color: 'rgb(255, 233, 155)'
-        entity: light.dad_bedroom_spots
+        entity: light.slaapkamer_1_dimbare_spots_l1
         icon: 'mdi:bed-king-outline'
         name: Spots
         style:
@@ -51,7 +51,7 @@ cards:
         color: auto
         color_type: card
         default_color: 'rgb(255, 233, 155)'
-        entity: light.dad_bedroom_nachtlamp_rechts
+        entity: light.slaapkamer_1_s2
         #icon: 'mdi:lamp'
         name: Rechts
         style:
@@ -59,7 +59,7 @@ cards:
           - font-weight: bold
   - type: entity-filter
     entities:
-      - entity: light.dad_bedroom_spots
+      - entity: light.slaapkamer_1_dimbare_spots_l1
         type: 'custom:slider-entity-row'
     state_filter:
       - 'on'
