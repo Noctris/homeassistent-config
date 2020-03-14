@@ -1,0 +1,13 @@
+# Carport
+  - platform: knx
+    name: Carport L1
+    address: '1/3/0'
+    state_address: '1/3/1'
+  - platform: knx
+    name: Carport L2
+    address: '1/3/2'
+    state_address: '1/3/3'
+  - platform: knx
+    name: Carport Bloembak L1
+    address: '1/3/4'
+    state_address: '1/3/5'

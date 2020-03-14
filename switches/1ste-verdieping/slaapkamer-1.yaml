@@ -1,0 +1,13 @@
+#Slaapkamer 1
+  - platform: knx
+    name: Slaapkamer 1 S1
+    address: '0/7/0'
+    state_address: '0/7/1'
+  - platform: knx
+    name: Slaapkamer 1 S2
+    address: '0/7/2'
+    state_address: '0/7/3'
+  - platform: knx
+    name: Slaapkamer 1 S3
+    address: '0/7/4'
+    state_address: '0/7/5'

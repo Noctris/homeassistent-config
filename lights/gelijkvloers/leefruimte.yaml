@@ -1,0 +1,6 @@
+# Keuken
+  - platform: knx
+    name: Group Leefruimte Dimbare Spots
+    address: '2/3/0'
+    state_address: '2/3/1'
+    brightness_address: '2/3/3'

@@ -7,7 +7,7 @@ cards:
         color: auto
         color_type: card
         default_color: 'rgb(255, 233, 155)'
-        entity: light.office_spots
+        entity: light.bureau_dimbare_spots_l1
         icon: 'mdi:head-lightbulb'
         name: Spots
         style:
@@ -20,7 +20,7 @@ cards:
         color: auto
         color_type: card
         default_color: 'rgb(255, 233, 155)'
-        entity: switch.office_desk_left
+        entity: switch.bureau_s1
         icon: 'mdi:lamp'
         name: Bureau L
         style:
@@ -31,7 +31,7 @@ cards:
         color: auto
         color_type: card
         default_color: 'rgb(255, 233, 155)'
-        entity: switch.office_library_left
+        entity: switch.bureau_s2
         icon: 'mdi:lamp'
         name: Library Left
         style:
@@ -42,15 +42,15 @@ cards:
         color: auto
         color_type: card
         default_color: 'rgb(255, 233, 155)'
-        entity: switch.office_s2
+        entity: switch.bureau_s4
         icon: 'mdi:lamp'
-        name: S2
+        name: S4
         style:
           - font-size: 12px
           - font-weight: bold
   - type: entity-filter
     entities:
-      - entity: light.office_spots
+      - entity: light.bureau_dimbare_spots_l1
         type: 'custom:slider-entity-row'
     state_filter:
       - 'on'
