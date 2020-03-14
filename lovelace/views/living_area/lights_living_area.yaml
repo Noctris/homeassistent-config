@@ -5,16 +5,16 @@ cards:
       - entity: light.leefruimte_spots
         name: Leefruimte
         type: 'custom:slider-entity-row'
-      - entity: light.living_spots
+      - entity: light.living_dimbare_spots_l1
         name: Living
         type: 'custom:slider-entity-row'
-      - entity: light.dinning_spots
+      - entity: light.eetkamer_dimbare_spots_l1
         name: Eetkamer
         type: 'custom:slider-entity-row'
-      - entity: light.kitchen_main
+      - entity: light.keuken_dimbare_spots_l1
         name: Keuken
         type: 'custom:slider-entity-row'
-      - entity: light.kitchen_coffee_area
+      - entity: light.keuken_dimbare_spots_l2
         name: Koffie
         type: 'custom:slider-entity-row'
     state_filter:
@@ -26,7 +26,7 @@ cards:
         color: auto
         color_type: card
         default_color: 'rgb(255, 233, 155)'
-        entity: light.kitchen_main
+        entity: light.keuken_dimbare_spots_l1
         icon: 'mdi:silverware-fork-knife'
         name: Keuken
         style:
@@ -37,7 +37,7 @@ cards:
         color: auto
         color_type: card
         default_color: 'rgb(255, 233, 155)'
-        entity: light.dinning_spots
+        entity: light.eetkamer_dimbare_spots_l1
         icon: 'mdi:lightbulb'
         name: Eetkamer
         style:
@@ -61,7 +61,7 @@ cards:
         color: auto
         color_type: card
         default_color: 'rgb(255, 233, 155)'
-        entity: light.kitchen_coffee_area
+        entity: light.keuken_dimbare_spots_l2
         icon: 'mdi:coffee-maker'
         name: Keuken Koffie
         style:
@@ -72,7 +72,7 @@ cards:
         color: auto
         color_type: card
         default_color: 'rgb(255, 233, 155)'
-        entity: light.living_spots
+        entity: light.living_dimbare_spots_l2
         icon: 'mdi:sofa'
         name: Living
         style:
@@ -86,6 +86,52 @@ cards:
         entity: light.leefruimte_spots
         icon: 'mdi:floor-plan'
         name: Eetkamer
+        style:
+          - font-size: 12px
+          - font-weight: bold
+  - type: horizontal-stack
+    cards:
+      - type: 'custom:button-card'
+        action: more_info
+        color: auto
+        color_type: card
+        default_color: 'rgb(255, 233, 155)'
+        entity: light.living_s1
+        icon: 'mdi:coffee-maker'
+        name: S1
+        style:
+          - font-size: 12px
+          - font-weight: bold
+      - type: 'custom:button-card'
+        action: more_info
+        color: auto
+        color_type: card
+        default_color: 'rgb(255, 233, 155)'
+        entity: light.living_s2
+        icon: 'mdi:sofa'
+        name: S2
+        style:
+          - font-size: 12px
+          - font-weight: bold
+      - type: 'custom:button-card'
+        action: more_info
+        color: auto
+        color_type: card
+        default_color: 'rgb(255, 233, 155)'
+        entity: light.living_s3
+        icon: 'mdi:floor-plan'
+        name: S3
+        style:
+          - font-size: 12px
+          - font-weight: bold
+      - type: 'custom:button-card'
+        action: more_info
+        color: auto
+        color_type: card
+        default_color: 'rgb(255, 233, 155)'
+        entity: light.living_s4
+        icon: 'mdi:floor-plan'
+        name: S4
         style:
           - font-size: 12px
           - font-weight: bold

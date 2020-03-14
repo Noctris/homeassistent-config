@@ -1,0 +1,5 @@
+#Berghok 2
+  - platform: knx
+    name: Living TV Light Socket
+    address: '1/5/0'
+    state_address: '1/5/1'

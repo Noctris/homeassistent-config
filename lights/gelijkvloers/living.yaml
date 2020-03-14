@@ -1,0 +1,17 @@
+# Living
+  - platform: knx
+    name: Living Dimbare Spots L1
+    address: '0/3/0'
+    state_address: '0/3/1'
+    brightness_address: '0/3/3'
+    brightness_state_address: '0/3/22'
+  - platform: knx
+    name: Living Dimbare Spots L2
+    address: '0/3/12'
+    state_address: '0/3/13'
+    brightness_address: '0/3/15'
+    brightness_state_address: '0/3/23'
+  - platform: knx
+    name: Keuken Dimbare Spots L3
+    address: '0/3/16'
+    state_address: '0/3/17'

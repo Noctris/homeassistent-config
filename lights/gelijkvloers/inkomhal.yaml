@@ -1,0 +1,5 @@
+# Bureau
+  - platform: knx
+    name: Inkomhal Licht
+    address: '0/1/0'
+    state_address: '0/1/1'
