@@ -17,3 +17,8 @@
     state_address: '0/2/9'
     brightness_address: '0/2/7'
     brightness_state_address: '0/2/14'
+  - platform: group
+    name: Keuken Verlichting
+    entities:
+      - light.keuken_dimbare_spots_l1
+      - light.keuken_dimbare_spots_l2

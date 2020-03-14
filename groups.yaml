@@ -10,10 +10,3 @@ family:
     - person.michel
     - person.alexandra
   all: true
-living_relax_lights:
-  name: Sfeerverlichting Living
-  entities:
-    - switch.living_couch_window
-    - switch.living_tv_light
-    - light.keuken.dimbare_spots_l2
-    - switch.dinning_table
