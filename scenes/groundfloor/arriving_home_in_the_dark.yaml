@@ -1,7 +1,7 @@
 id: 'Comfort - Arriving Home In The Dark'
 name: Comfort - Arriving Home In The Dark
 entities:
-  light.enterance_light:
+  light.inkomhal_licht:
     state: 'on'
   light.gang_bureau:
     state: 'on'
