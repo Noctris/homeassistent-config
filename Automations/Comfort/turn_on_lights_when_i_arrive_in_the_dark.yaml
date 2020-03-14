@@ -1,0 +1,19 @@
+- id: 'turn_on_light_when_family_arrives_in_the_dark'
+  alias: Turn on lights when someone of the family arrives in the dark
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: person.michel
+    to: home
+  condition:
+  - condition: sun
+    after: sunset
+    after_offset: '-00:30'
+  action:
+  - data:
+      message: Welkom Thuis!
+      title: Ik deed het licht voor je aan
+    service: notify.mobile_app_michel_s10_plus
+  - service: light.turn_on
+    entity_id: light.enterance_light
+  - scene: scene.background_lighting_livingroom

@@ -1,0 +1,7 @@
+type: "custom:button-card"
+name: Kodi Power
+icon: 'mdi:power'
+size: 40%
+tap_action:
+  tap_action: toggle
+  entity: switch.kodi_living_room
