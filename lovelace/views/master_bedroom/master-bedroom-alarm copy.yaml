@@ -9,7 +9,7 @@ entities:
       action: call-service
       service: script.wake_up_light
       service_data:
-        lamp: "light.kitchen_main"
+        lamp: "light.keuken_dimbare_spots_l1"
         #lamp: 'light.master_bedroom_spots'
     color: auto
     color_type: card

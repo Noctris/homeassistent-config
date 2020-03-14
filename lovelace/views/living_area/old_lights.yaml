@@ -5,12 +5,12 @@
       - type: section
         label: Verlichting
       - type: 'custom:slider-entity-row'
-        entity: light.living_spots
+        entity: light.living_dimbare_spots_l1
       - type: 'custom:slider-entity-row'
         entity: light.light.dinning_spots
-        entity: light.living_spots
+        entity: light.living_dimbare_spots_l1
       - type: 'custom:slider-entity-row'
-        entity: light.kitchen_main
+        entity: light.keuken_dimbare_spots_l1
       - type: 'custom:slider-entity-row'
         entity: light.leefruimte_spots    
       - type: section
