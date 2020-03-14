@@ -51,7 +51,7 @@ cards:
         color: auto
         color_type: card
         default_color: 'rgb(255, 233, 155)'
-        entity: light.master_bedroom_nachtlamp_rechts
+        entity: light.dad_bedroom_nachtlamp_rechts
         #icon: 'mdi:lamp'
         name: Rechts
         style:

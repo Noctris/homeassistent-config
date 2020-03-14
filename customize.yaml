@@ -65,7 +65,7 @@ light.living_couch_dinning:
 light.living_couch_window:
     icon: mdi:floor-lamp
 
-light.master_bedroom_nachtlamp_rechts:
+light.dad_bedroom_nachtlamp_rechts:
     icon: 'mdi:lamp'
     name: Nachtlamp Michel
 

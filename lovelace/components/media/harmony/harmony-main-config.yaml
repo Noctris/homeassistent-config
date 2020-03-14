@@ -2,6 +2,7 @@ type: vertical-stack
 cards:
   - type: horizontal-stack
     cards:
+      - !include kodi/kodi_power.yaml
       - !include tv/tv_power_off.yaml
       - !include tv/tv_power_on.yaml
   - type: horizontal-stack

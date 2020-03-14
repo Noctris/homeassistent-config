@@ -2,22 +2,14 @@
   alias: Monitor - Kids - Sensor Kids arrived Fired
   description: ''
   trigger:
-  - entity_id: binary_sensor.kids_arrived
-    from: 'off'
+  - entity_id: binary_sensor.kids_week
     platform: state
-    to: 'on'
   condition: []
   action:
-  - data:
-      id: home_feed_kids_arrived
-      message: kids arrived sensor
-      title: kids arrived
-    service: persistent_notification.create
-  - data:
-      message: kids arrived sensor
-      title: kids arrived
-    service: notify.mobile_app_michel_s10_plus
-  - service: light.turn_on
-    data:
-      entity_id: light
+  - service: notify.mobile_app_michel_s10_plus
+    data_template:
+      title: 'Kinderweek {% if states.binary_sensor.kids_week.state==on %}Gestart!{% else %}ten einde :({% endif %}'
+      message: 'Kinderweek {% if states.binary_sensor.kids_week.state==on %}begint vandaag{% else %}is ten einde vandaag:({% endif %}'
+    
+
 

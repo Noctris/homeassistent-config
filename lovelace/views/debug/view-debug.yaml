@@ -7,3 +7,16 @@ cards:
   - !include master-bedroom-lights.yaml
   - type: entities
     name: Test
+  - type: 'custom:auto-entities'
+    show_empty: false
+    card:
+      type: entities
+      title: Battery Warning
+      show_header_toggle: false
+    filter:
+      include:
+        - entity_id: sensor*battery_level*
+          attributes:
+            is_charging: false
+          state: "<20"
+

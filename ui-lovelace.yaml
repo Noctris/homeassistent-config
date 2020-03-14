@@ -34,7 +34,7 @@ custom_header:
         user: Michel
       config:
         show_tabs:
-          - 0 to 4
+          - 0 to 5
           - 6 to 100
     - conditions:
         # user: maykar, Bram Kragten, Ludeeus
@@ -97,6 +97,10 @@ resources:
     # https://github.com/thomasloven/lovelace-gui-sandbox
   - type: module
     url: /local/custom_ui/gui-sandbox/gui-sandbox.js
+   
+    # https://github.com/custom-cards/upcoming-media-card
+  - type: module
+    url: /local/custom_ui/upcoming-media-card/upcoming-media-card.js
 
 button_card_templates: !include_dir_merge_list lovelace/card_templates/
 #Actual start of the main view
@@ -106,7 +110,9 @@ views:
   - !include lovelace/views/status.yaml
   - !include lovelace/views/living_area/view.yaml
   - !include lovelace/views/office/office-view.yaml
+  - !include lovelace/views/media-geek/media-geek-view.yaml
   - !include lovelace/views/master_bedroom/view-master-bedroom.yaml
   - !include lovelace/views/kids/view-kids.yaml
-  - !include lovelace/views/debug/view-debug.yaml  
+  - !include lovelace/views/debug/view-debug.yaml
+  - !include lovelace/views/home-panel/home-panel-view.yaml  
   - !include lovelace/views/chores.yaml
