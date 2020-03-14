@@ -31,7 +31,7 @@ automation old: !include_dir_merge_list Automations/
 script: !include scripts.yaml
 script manual: !include_dir_merge_named scripts/ 
 scene: !include scenes.yaml
-scene old: !include_dir_merge_named scenes/
+#scene old: !include_dir_merge_named scenes/
 
 speedtestdotnet:
 
