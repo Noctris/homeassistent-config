@@ -19,4 +19,15 @@ cards:
           attributes:
             is_charging: false
           state: "<20"
+  - type: 'custom:auto-entities'
+    show_empty: false
+    card:
+      type: entities
+      title: Lights
+      show_header_toggle: true
+    filter:
+      include:
+        - domain: light
+        - domain: switch
+    sort: name
 

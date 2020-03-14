@@ -9,9 +9,9 @@ card:
     - font-size: 12px
     - font-weight: bold
 entities:
-  - light.kitchen_main
+  - light.keuken_dimbare_spots_l1
   - light.dinning_spots
-  - light.living_spots
+  - light.living_dimbare_spots_l1
   - light.dinning_table_lamp
   - light.living_couch_dinning
 state_filter:

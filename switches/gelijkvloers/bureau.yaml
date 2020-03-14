@@ -1,0 +1,17 @@
+#Bureau
+  - platform: knx
+    name: Bureau S1
+    address: '0/0/9'
+    state_address: '0/0/10'
+  - platform: knx
+    name: Bureau S2
+    address: '0/0/11'
+    state_address: '0/0/12'
+  - platform: knx
+    name: Bureau S3
+    address: '0/0/13'
+    state_address: '0/0/14'
+  - platform: knx
+    name: Bureau S4
+    address: '0/0/15'
+    state_address: '0/0/16'

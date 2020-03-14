@@ -1,0 +1,19 @@
+# Keuken
+  - platform: knx
+    name: Keuken Dimbare Spots L1
+    address: '0/2/0'
+    state_address: '0/2/1'
+    brightness_address: '0/2/3'
+    brightness_state_address: '0/2/12'
+  - platform: knx
+    name: Keuken Dimbare Spots L2
+    address: '0/2/4'
+    state_address: '0/2/5'
+    brightness_address: '0/2/7'
+    brightness_state_address: '0/2/13'
+  - platform: knx
+    name: Keuken Dimbare Spots L3
+    address: '0/2/8'
+    state_address: '0/2/9'
+    brightness_address: '0/2/7'
+    brightness_state_address: '0/2/14'

@@ -1,0 +1,5 @@
+# Berghok 1
+  - platform: knx
+    name: Berghok 1 S1
+    address: '1/4/0'
+    state_address: '1/4/1'
