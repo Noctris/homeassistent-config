@@ -1,4 +1,5 @@
 master_bedroom_wake_up_light:
+# Comment just to be able to do a commit for config purpose
  alias: Comfort - Master Bedroom - Alarm Clock - Wake Up Light
  sequence:
    - service: light.turn_on
