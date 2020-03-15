@@ -18,7 +18,7 @@ cards:
         color: auto
         color_type: card
         default_color: 'rgb(255, 233, 155)'
-        entity: switch.dad_bedroom_fan
+        entity: light.slaapkamer_1_l2
         icon: 'mdi:fan'
         name: Fan
         style:
@@ -31,7 +31,7 @@ cards:
         color: auto
         color_type: card
         default_color: 'rgb(255, 233, 155)'
-        entity: switch.dad_bedroom_s1
+        entity: switch.slaapkamer_1_s1
         name: s1
         style:
           - font-size: 12px
@@ -41,7 +41,7 @@ cards:
         color: auto
         color_type: card
         default_color: 'rgb(255, 233, 155)'
-        entity: switch.dad_bedroom_s3
+        entity: switch.slaapkamer_1_s3
         name: s3
         style:
           - font-size: 12px
