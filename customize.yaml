@@ -28,25 +28,26 @@ switch.living_s2:
     icon: mdi:power-socket-eu
 switch.living_s3:
     icon: mdi:power-socket-eu
-switch.eetkamer_s1:
-    icon: mdi:power-socket-eu
-switch.dad_bedroom_fan:
+switch.living_s4:
+    friendly_name: Airwick
+    icon: mdi:air-filter
+light.slaapkamer_1_l2:
     icon: mdi:fan
-switch.dad_bedroom_s1:
+switch.slaapkamer_1_s1:
     icon: mdi:power-socket-eu
-switch.dad_bedroom_s2:
+switch.slaapkamer_1_s2:
     icon: mdi:power-socket-eu
-switch.dad_bedroom_s3:
+switch.slaapkamer_1_s3:
     icon: mdi:power-socket-eu
-switch.kids_bedroom_fan:
+light.slaapkamer_2_l3:
     icon: mdi:fan
-switch.kids_bedroom_s1:
+switch.slaapkamer_2_s1:
     icon: mdi:power-socket-eu
-switch.kids_bedroom_window_left:
+switch.slaapkamer_2_s2:
     icon: mdi:power-socket-eu
-switch.kids_bedroom_s3:
+switch.slaapkamer_2_s3:
     icon: mdi:power-socket-eu
-switch.kids_bedroom_s4:
+switch.slaapkamer_2_s4:
     icon: mdi:power-socket-eu
 switch.master_bedroom_s1:
     icon: mdi:power-socket-eu
@@ -57,25 +58,32 @@ switch.master_bedroom_s3:
 
 ### Verlichting
 light.eetkamer_s1:
-    name: Eetkamer Lamp
-    icon: mdi:lamp
-light.living_s1:
-    name: Living Tv Licht
-    icon: mdi:lamp
+    friendly_name: Eetkamer Lamp
+    icon: mdi:lightbulb-on-outline
 light.living_s3:
-    name: Living Zetel Eetkamer
+    friendly_name: Living Zetel Eetkamer
     icon: mdi:lamp
 light.living_s2:
-    name: Living Zetel Raam Lamp
+    friendly_name: Living Zetel Raam Lamp
     icon: mdi:floor-lamp
-
+light.slaapkamer_1_dimbare_spots_l1:
+    icon: mdi:lightbulb-on-outline
+    friendly_name: Slaapkamer Papa Spots
+light.slaapkamer_2_dimbare_spots_l1:
+    icon: mdi:lightbulb-on-outline
+    friendly_name: Slaapkamer Aapjes Spots
 light.slaapkamer_1_s2:
     icon: 'mdi:lamp'
-    name: Nachtlamp Michel
+    friendly_name: Nachtlamp Papa
 light.slaapkamer_2_s3:
     icon: 'mdi:lamp'
-    name: Nachtlampje
-
+    friendly_name: Nachtlamp Aapjes
+light.bureau_dimbare_spots_l1:
+    icon: mdi:lightbulb-on-outline
+    friendly_name: Bureau Spots
+light.living_s1:
+    icon: 'mdi:lamp'
+    friendly_name: Tv Hue Lamp
 # Media Player
 media_player.living_kodi:
     icon: mdi:kodi

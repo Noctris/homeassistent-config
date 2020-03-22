@@ -42,4 +42,13 @@ cards:
 #  - !include /config/lovelace/components/quick_info.yaml    
   - !include /config/lovelace/components/home_feed_basic.yaml
 #  - !include /config/lovelace/components/who-is-home.yaml
+  - type: history-graph
+    title: Internet Speed
+    entities:
+      - entity: sensor.speedtest_download
+      - entity: sensor.speedtest_upload
+    hours_to_show: 72
+    refresh_interval: 0
+
+
        
