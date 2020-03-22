@@ -4,4 +4,3 @@
     password: !secret ddwrt_groundfloor_pass
     new_device_defaults:
       track_new_devices: false
-      hide_if_away: true
