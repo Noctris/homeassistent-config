@@ -39,6 +39,14 @@ cards:
           top: 95%
           color: 'rgba(255, 255, 255, 1)'
               # font-weight: normal
+  - type: entities
+    entities:
+      - entity: sensor.belgium_coronavirus_confirmed
+      - entity: sensor.belgium_coronavirus_current
+      - entity: sensor.belgium_coronavirus_deaths
+      - entity: sensor.belgium_coronavirus_recovered
+    title: Corona
+    show_header_toggle: false
 #  - !include /config/lovelace/components/quick_info.yaml    
   - !include /config/lovelace/components/home_feed_basic.yaml
 #  - !include /config/lovelace/components/who-is-home.yaml
