@@ -23,7 +23,6 @@
     - visibility
     - windgust
     - precipitation
-    - irradiance
     - precipitation_forecast_average
     - precipitation_forecast_total
     - rainlast24hour

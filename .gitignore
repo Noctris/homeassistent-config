@@ -13,6 +13,9 @@
 tts/
 www/secret_pictures/
 .vscode/
+custom_components/fontawesome/
+custom_components/spotcast/
+appdaemon/
 
 # Ensure these YAML files are ignored, otherwise your secret data/credentials will leak.
 ip_bans.yaml
@@ -62,5 +65,4 @@ harmony_living_room_hub.conf
 harmony_living_room.conf
 .HA_VERSION
 .vscode/settings.json
-.HA_VERSION
 .pip_progress
