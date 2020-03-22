@@ -2,7 +2,7 @@
     "files.associations": {
         "*.yaml": "home-assistant"
     },
-    "vscode-home-assistant.hostUrl": "http://10.32.1.9:8123",
+    "vscode-home-assistant.hostUrl": "https://hassio.vanhoof.me",
     "vscode-home-assistant.ignoreCertificates": true,
-    "vscode-home-assistant.longLivedAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI0MTdmZmE0YTdiOTE0NDYwYTk5MjE4ZTg1N2QzZGQ1ZSIsImlhdCI6MTU4NDIxNTUwMywiZXhwIjoxODk5NTc1NTAzfQ.wQeECmlXwcYwNlWZX2xw2LBCO8X5gAdFsNS2aa-TkPc"
+    "vscode-home-assistant.longLivedAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI2NGZlMDBjY2RjOGY0ZTgxODk4OTJiZWM2MzgyYzhiNiIsImlhdCI6MTU4NDI5MjI4NywiZXhwIjoxODk5NjUyMjg3fQ.UGUAWLIjRMZvvNwNs0xm7sIerdg6yIUodmo8C-PKq6s"
 }

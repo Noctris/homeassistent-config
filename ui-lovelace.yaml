@@ -47,9 +47,9 @@ custom_header:
         #footer_mode: true
         #reverse_button_direction: true
         #reverse_tab_direction: true
-        disable_sidebar: true
+        disable_sidebar: false
         voice_hide: true
-        options_hide: true
+        options_hide: false
         chevrons: false
         menu_dropdown: true
 #Some templates to use further

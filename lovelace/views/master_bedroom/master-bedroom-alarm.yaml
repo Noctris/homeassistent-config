@@ -25,6 +25,18 @@ cards:
       - type: 'custom:button-card'
         tap_action:
           action: call-service
+          service: script.master_bedroom_fall_asleep_music
+        color: auto
+        color_type: card
+        default_color: 'rgb(255, 233, 155)'
+        icon: 'mdi:sleep'
+        name: Fall Asleep
+        style:
+          - font-size: 12px
+          - font-weight: bold
+      - type: 'custom:button-card'
+        tap_action:
+          action: call-service
           service: script.master_bedroom_wake_up_light
         color: auto
         color_type: card
@@ -34,29 +46,19 @@ cards:
         style:
           - font-size: 12px
           - font-weight: bold
+  - type: horizontal-stack
+    cards:
       - type: 'custom:button-card'
         tap_action:
           action: call-service
-          service: homeassistant.turn_off
-          service_data:
-            entity_id: script.master_bedroom_wake_up_light
+          service: media_player.media_stop
+          data:
+            entity: media_player.master_bedroom_speaker
         color: auto
         color_type: card
         default_color: 'rgb(255, 233, 155)'
-        icon: 'mdi:alarm-off'
-        name: StopLight
-        style:
-          - font-size: 12px
-          - font-weight: bold
-      - type: 'custom:button-card'
-        tap_action:
-          action: call-service
-          service: script.master_bedroom_fall_asleep_music
-        color: auto
-        color_type: card
-        default_color: 'rgb(255, 233, 155)'
-        icon: 'mdi:sleep'
-        name: Fall Asleep
+        icon: 'mdi:stop'
+        name: Stop
         style:
           - font-size: 12px
           - font-weight: bold
@@ -74,13 +76,15 @@ cards:
           - font-weight: bold
       - type: 'custom:button-card'
         tap_action:
-          action: toggle
-          entity: script.master_bedroom_wake_up_light
+          action: call-service
+          service: homeassistant.turn_off
+          service_data:
+            entity_id: script.master_bedroom_wake_up_light
         color: auto
         color_type: card
         default_color: 'rgb(255, 233, 155)'
         icon: 'mdi:alarm-off'
-        name: Wake Light
+        name: StopLight
         style:
           - font-size: 12px
           - font-weight: bold

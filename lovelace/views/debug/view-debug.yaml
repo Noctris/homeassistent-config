@@ -29,5 +29,5 @@ cards:
       include:
         - domain: light
         - domain: switch
-    sort: name
+    sort: domain, name
 

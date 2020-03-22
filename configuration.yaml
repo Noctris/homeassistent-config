@@ -12,17 +12,33 @@ homeassistant:
   time_zone: Europe/Brussels
   # Customization file
   customize: !include customize.yaml
+  # auth_providers:
+  # - type: trusted_networks
+  #   trusted_networks:
+  #     - 10.32.1.0/24
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
 frontend:
   themes: !include_dir_merge_named themes #!include_dir_merge_list themes/
+
 # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
 # http:
 #   base_url: example.duckdns.org:8123
+http:
+    base_url: !secret home_base_url
+    use_x_forwarded_for: true
+    trusted_proxies:
+      - !secret reverse_proxy_ip
+    ip_ban_enabled: false
+    login_attempts_threshold: 5
+  
+
 
 # Text to speech
 tts:
   - platform: google_translate
+    language: 'nl'
+
 
 group: !include groups.yaml
 #automation: !include automations.yaml

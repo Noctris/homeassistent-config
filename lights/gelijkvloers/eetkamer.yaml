@@ -15,3 +15,7 @@
     name: Eetkamer L3
     address: '0/4/8'
     state_address: '0/4/9'
+  - platform: knx
+    name: eetkamer S1
+    address: '0/3/10'
+    state_address: '0/3/11'

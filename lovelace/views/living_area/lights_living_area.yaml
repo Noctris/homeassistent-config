@@ -97,8 +97,6 @@ cards:
         color_type: card
         default_color: 'rgb(255, 233, 155)'
         entity: light.living_s1
-        icon: 'mdi:coffee-maker'
-        name: S1
         style:
           - font-size: 12px
           - font-weight: bold
@@ -108,8 +106,6 @@ cards:
         color_type: card
         default_color: 'rgb(255, 233, 155)'
         entity: light.living_s2
-        icon: 'mdi:sofa'
-        name: S2
         style:
           - font-size: 12px
           - font-weight: bold
@@ -119,8 +115,6 @@ cards:
         color_type: card
         default_color: 'rgb(255, 233, 155)'
         entity: light.living_s3
-        icon: 'mdi:floor-plan'
-        name: S3
         style:
           - font-size: 12px
           - font-weight: bold
@@ -129,9 +123,7 @@ cards:
         color: auto
         color_type: card
         default_color: 'rgb(255, 233, 155)'
-        entity: light.eetkamer_s1
-        icon: 'mdi:floor-plan'
-        name: S4
+        entity: switch.living_s4
         style:
           - font-size: 12px
           - font-weight: bold
