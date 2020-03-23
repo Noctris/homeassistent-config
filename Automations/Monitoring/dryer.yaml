@@ -4,7 +4,23 @@
   trigger:
   - entity_id: sensor.droogkast_status
     from: running
+    to: 'off'
     platform: state
+    for: '00:10:00'
+  - entity_id: sensor.droogkast_status
+    from: 'on'
+    to: 'off'
+    platform: state
+    for: '00:10:00'
+  - entity_id: sensor.droogkast_status
+    to: 'off'
+    platform: state
+    for: '00:10:00'
+  - entity_id: sensor.droogkast_status
+    from: running
+    to: 'on'
+    platform: state
+    for: '00:10:00'
   condition: []
   action:
   - data:
@@ -12,3 +28,5 @@
       notification_id: home_feed_dryer_is_done
       title: Droogkast uitladen!
     service: persistent_notification.create
+  - service: input_boolean.turn_on
+    entity_id: input_boolean.chore_empty_dryer

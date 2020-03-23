@@ -9,6 +9,5 @@ cards:
   - !include /config/lovelace/components/media_players_playing.yaml
   - !include /config/lovelace/components/media_players_playing_custom.yaml
   - !include /config/lovelace/components/lights_turned_on.yaml
-  - !include /config/lovelace/components/who-is-home.yaml
   - !include /config/lovelace/components/home_status.yaml
        

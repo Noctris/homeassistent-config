@@ -1,6 +1,6 @@
 card:
   title: Mediaplayers Playing
-  type: 'custom:mini-media-player'
+  type: 'entities'
 filter:
   exclude:
     - entity_id: switch.droogkast
