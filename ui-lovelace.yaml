@@ -58,6 +58,10 @@ resources:
   - url: /local/custom_ui/buien-radar/buien-rain-card.js
     type: module
 
+  # https://github.com/atomic7777/atomic_calendar
+  - url: /local/custom_ui/atomic-calendar/atomic-calendar.js
+    type: module
+
   # https://github.com/maykar/custom-header
   - url: /local/custom_ui/custom-header/custom-header.js
     type: module
@@ -77,6 +81,10 @@ resources:
     # https://github.com/custom-cards/button-card
   - type: module
     url: /local/custom_ui/button-card/button-card.js
+
+    # ???
+  - type: module
+    url: /local/custom_ui/calendar-card/calendar-card.js
 
     # https://github.com/thomasloven/lovelace-slider-entity-row
   - type: module
