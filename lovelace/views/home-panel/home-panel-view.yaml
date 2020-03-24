@@ -10,7 +10,6 @@ cards:
         cards:
           - !include /config/lovelace/components/home-daily-driver-info.yaml
           - !include /config/lovelace/components/lights_turned_on.yaml
-          - !include /config/lovelace/components/entity_filter_lights_on.yaml
       - type: vertical-stack
         cards:
           - type: 'custom:buien-rain-forecast'

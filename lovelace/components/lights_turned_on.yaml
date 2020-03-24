@@ -13,8 +13,6 @@ filter:
         tap_action:
           action: toggle
       state: 'on'
-    - domain: media_player
-      state: playing
 show_empty: false
 sort: 'domain, name'
 type: 'custom:auto-entities'

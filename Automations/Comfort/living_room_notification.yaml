@@ -1,0 +1,21 @@
+- id: 'Notify - Notify me of stuff when I am home and there are no guests'
+  alias: Notify - Notify me of stuff when I am home and there are no guests
+  description: 'Notify - Notify me of stuff when I am home and there are no guests'
+  trigger:
+  - platform: mqtt
+    topic: home-assistant/notify
+  condition:
+    - condition: and
+      conditions:
+        - condition: state
+          entity_id: person.michel
+          state: 'home'
+        - condition: state
+          entity_id: input_boolean.guests_in_the_house
+          state: 'off'
+  action:
+    - service: tts.google_translate_say
+      entity_id: media_player.living_room
+      data_template:
+        message: "{{ trigger.payload_json.message }}"
+        language: 'nl'

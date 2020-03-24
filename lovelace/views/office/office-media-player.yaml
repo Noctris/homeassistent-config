@@ -2,25 +2,25 @@ title: Media
 show_header_toggle: false
 type: entities
 entities:
-  - entity: media_player.office_tv
+  - entity: media_player.bureau_tv
     type: 'custom:mini-media-player'
     artwork: full-cover-fit
     shortcuts:
       buttons:
         - data:
-            entity_id: media_player.office_tv
+            entity_id: media_player.bureau_tv
             shuffle: true
             uri: 'spotify:playlist:3xVR8cMwohCrRQnaXL6GFz'
           id: spotcast.start
           name: Undone
           type: service
-  - entity: media_player.office_mini
+  - entity: media_player.kantoor_mini
     type: 'custom:mini-media-player'
     artwork: full-cover-fit
     shortcuts:
       buttons:
         - data:
-            entity_id: media_player.office_mini
+            entity_id: media_player.kantoor_mini
             shuffle: true
             uri: 'spotify:playlist:3xVR8cMwohCrRQnaXL6GFz'
           id: spotcast.start

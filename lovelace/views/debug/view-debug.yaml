@@ -3,6 +3,8 @@ path: debug
 badges: []
 cards:
   - !include forced-radio-card.yaml
+  - !include chores.yaml
+  - !include chores2.yaml
   - type: custom:gui-sandbox
   - !include master-bedroom-lights.yaml
   - type: entities
@@ -30,4 +32,13 @@ cards:
         - domain: light
         - domain: switch
     sort: domain, name
-
+  - type: 'custom:auto-entities'
+    show_empty: false
+    card:
+      type: entities
+      title: Media Players
+      show_header_toggle: true
+    filter:
+      include:
+        - domain: media_player
+    sort: domain, name

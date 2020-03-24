@@ -1,0 +1,48 @@
+- id: 'Special - Home Schooling System'
+  alias: Special - Home Schooling System
+  description: 'Special - Home Schooling System'
+  trigger:
+  - platform: time
+    at: '08:30'
+  - platform: time
+    at: '09:45'
+  - platform: time
+    at: '10:15'
+  - platform: time
+    at: '11:00'
+  - platform: time
+    at: '12:00'
+  - platform: time
+    at: '13:00'
+  - platform: time
+    at: '13:45'
+  - platform: time
+    at: '14:45'
+  - platform: time
+    at: '15:15'
+  - platform: time
+    at: '16:00'
+  condition:
+    - condition: and
+      conditions:
+        - condition: state
+          entity_id: group.kids
+          state: 'home'
+        - condition: state
+          entity_id: person.michel
+          state: 'home'
+        - condition: time
+          weekday:
+            - mon
+            - tue
+            - wed
+            - thu
+            - fri
+  action: 
+    - service: media_player.volume_set
+      entity_id: media_player.living_room
+      data:
+        volume_level: 0.5
+    - service: script.schoolbel_home_radio_system
+      data_template:
+        speaker: 'media_player.living_room'

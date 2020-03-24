@@ -1,8 +1,10 @@
  - platform: sonarr
    api_key: !secret sonarr_api_key
-   host: !secret sonarr_host
+   host: !secret 
+   urlbase: /
    port: 443
    ssl: true
+   days: 7
    monitored_conditions:
       - upcoming
       - wanted

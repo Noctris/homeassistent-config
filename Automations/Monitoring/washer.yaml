@@ -4,11 +4,18 @@
   trigger:
   - entity_id: sensor.washing_machine_status
     from: running
+    to: 'off'
     platform: state
-  condition: []
+    for: '00:10:00'
+  condition:
+    - condition: state
+      entity_id: input_boolean.chore_empty_washingmachine
+      state: 'off'
   action:
   - data:
       message: Gelieve de wasmachine over te laden in de droger
-      notification_id: home_feed_wasmachine_status_klaar
+      notification_id: home_feed_chore_wasmachine_uitladen
       title: Wasmachine Klaar!
     service: persistent_notification.create
+  - service: input_boolean.turn_on
+    entity_id: input_boolean.chore_empty_washer

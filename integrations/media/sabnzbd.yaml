@@ -1,0 +1,18 @@
+api_key: !secret sabnzb_family_api_key
+host: !secret sabnzb_family_host
+path: /
+name: Family sab
+port: 443
+ssl: true
+sensors:
+  - current_status
+  - speed
+  - queue_size
+  - queue_remaining
+  - disk_size
+  - disk_free
+  - queue_count
+  - day_size
+  - week_size
+  - month_size
+  - total_size
