@@ -1,0 +1,19 @@
+system_notification_service:
+  alias: System - Notification Service
+  sequence:
+  - data_template:
+      payload: Dit Bericht is van {{ now().strftime('%-I') }}:{{ now().strftime('%M')
+        }} {{ now().strftime('%p') }}. {{ message | truncate(220)}}
+      qos: 2
+      retain: true
+      topic: polly/lastmsg
+    service: mqtt.publish
+  - data_template:
+      entity_id: media_player.living_room_notifier
+      message: '{{message}}'
+    service: tts.amazon_polly_say
+  - condition: and
+    conditions:
+    - condition: state
+      entity_id: person.michel
+      state: home

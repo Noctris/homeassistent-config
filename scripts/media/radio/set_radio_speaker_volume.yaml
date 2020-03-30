@@ -1,7 +1,0 @@
-set_radio_speaker_volume:
-  alias: 'Media - Set the volume of a speaker '
-  sequence:
-    - service: media_player.volume_set
-      data_template:
-        entity_id: '{{speaker}}'
-        volume_level: '{{volume}}'

@@ -1,5 +1,5 @@
 type: 'custom:harmony-card'
-entity: remote.living_room
+entity: remote.living_room_hub
 volume_entity: media_player.living_tv
 activities:
   - name: Watch Kodi

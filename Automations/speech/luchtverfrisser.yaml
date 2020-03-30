@@ -1,0 +1,16 @@
+##########  ############################################################
+##  Announce when people come or go.
+## Announce over all Chromecast Audios
+######################################################################
+- alias: 'Monitor - Luchtverfrisser'
+
+  trigger:
+    - platform: state
+      entity_id:
+        - switch.living_s4
+      from: 'off'
+      to: 'on'
+  action:
+    - service: script.speech_engine
+      data_template:
+        value1: "De luchtverfrisser in de living staat nu aan"

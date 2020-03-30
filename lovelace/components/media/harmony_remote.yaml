@@ -6,7 +6,7 @@ tap_action:
   action: call-service
   service: remote.send_command
   service_data:
-    entity_id: remote.living_room
+    entity_id: remote.living_room_hub
     device: 64916943
     command: InputHdmi4
     num_repeats: 1

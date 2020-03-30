@@ -1,0 +1,47 @@
+##########  ############################################################
+##  Announce when people come or go.
+## Announce over all Chromecast Audios
+######################################################################
+- alias: 'People Greeting'
+
+  trigger:
+    - platform: state
+      entity_id:
+        - person.michel
+        - person.nicholas
+        - person.alexandra
+      from: 'not_home'
+      to: 'home'
+      for: '00:02:00'
+
+  action:
+    - service: script.speech_engine
+      data_template:
+        personarriving: >
+          {% set person = trigger.entity_id.split('.')[1]|replace('_', ' ')%}
+          {%- macro greeting_sentence(person) -%}
+          {{ [
+          "Welkom thuis" ~ person +".",
+          "Raad eens wie thuis is?" ~ person +" is er!",
+          person + " is nu in de woning.",
+          "Het leven is als een liedje, je bent terug waar je thuis hoort. Welkom thuis " ~ person,
+          "Hoi daar " ~ person + " Welkom thuis!",
+          "Klop Klop. Wie is daar?"   ~ person +" is er!",
+          person + " kan zich niet verstoppen van het systeem. Welkom thuis.",
+          person ~ "! Je bent thuis!",
+          "Ik ken een geheim! "  ~ person +" is thuis!",
+          "Hoi "  ~ person +". je aankomst is opgemerkt door het slimste huis van de straat.",
+          '<lang xml:lang="en-US">I am sensing a disturbance in the force.</lang>Is '  ~ person +" net thuis gekomen?",
+          "En het huis wordt thuis. Welkom terug " ~ person,
+          person + " is nu thuis.  Hash tag Welkom Thuis.",
+          person + " is nu thuis.  Hash tag Thuis.",
+          person + " is nu hier.  Hash tag Smart Home.",
+          "Snelle aankondiging. " ~ person +" is aangekomen!",
+          "Sorry voor de onderbreking maar " ~ person +" is thuis!",
+          "Mijn systeem pikt de aanwezigheid op van een additionele mens. " ~ person +" is geïdentificierd als thuis.",
+          "Welkom thuis "~person~"! Het is leuk je weer te zien.! Sta me toe het licht aan te doen. ",
+          "Het lijkt er op dat "~person~" eindelijk thuis is! Ik zal het huis voor je klaarmaken. "
+          ] | random }}
+          {%- endmacro -%}
+          {{greeting_sentence(person)}}
+        call_responsibilities: 1

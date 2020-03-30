@@ -1,0 +1,25 @@
+- id: 'Monitor - Chores - Dryer Done'
+  alias: Monitor - Chores - Dryer Done
+  description: 'When the dryer is done, turn on the chore empty dryer and notify us'
+  trigger:
+  - entity_id: sensor.droogkast_status
+    for: 00:05
+    from: running
+    platform: state
+    to: 'off'
+  condition:
+  - condition: state
+    entity_id: input_boolean.chore_empty_dryer
+    state: 'off'
+  action:
+  - data: {}
+    entity_id: input_boolean.chore_empty_dryer
+    service: input_boolean.turn_on
+  - data:
+      message: De Droogkast is klaar is klaar
+      notification_id: home_feed_chores_clear_dryer
+      title: Taak - Droogkast leegmaken
+    service: persistent_notification.create
+  - data:
+      value1: De droogkast is klaar en kan leeg gemaakt worden.
+    service: script.speech_engine

@@ -10,3 +10,13 @@ family:
     - person.michel
     - person.alexandra
   all: true
+Inhabitants:
+  name: Inhabitants
+  entities:
+    - person.nicholas
+    - person.michel
+    - person.alexandra
+guest_mode:
+  name: Guest Mode Group
+  entities:
+    - input_boolean.guest_mode

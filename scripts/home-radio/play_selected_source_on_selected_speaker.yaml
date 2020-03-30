@@ -1,0 +1,8 @@
+play_selected_source_on_selected_speaker:
+  alias: Play the Selected Source on The selected Speaker
+  sequence:
+  - service: script.turn_on
+    entity_id:
+    - script.set_selected_speaker_volume
+    - script.play_radio_on_selected_speaker
+    - script.play_spotify_on_selected_speaker

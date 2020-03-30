@@ -1,0 +1,12 @@
+- id: 'System - Media - Home Radio Volume Control'
+  alias: System - Media - Home Radio Volume Control
+  description: 'When the volume slider of the home radio is changed, update the playing players volume'
+  trigger:
+  - entity_id: input_number.home_radio_volume
+    platform: state
+  condition: []
+  action:
+  - data_template:
+      entity_id: '{{states("sensor.selected_home_speaker")}}'
+      volume_level: '{{states("input_number.home_radio_volume")|int/100}}'
+    service: media_player.volume_set

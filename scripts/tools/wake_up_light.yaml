@@ -1,4 +1,4 @@
-'wake_up_light':
+wake_up_light:
   alias: Tool - Wake Up Light
   sequence:
   - data_template:

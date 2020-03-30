@@ -1,0 +1,11 @@
+home_stats:
+  name: Home Stats
+  initial: off
+
+responsibilities:
+  name: responsibilities
+  initial: off
+
+bedtime:
+  name: Sleeping
+  initial: off

@@ -1,0 +1,22 @@
+- id: '1585413304575'
+  alias: System - Notifications - Save notifications on Create
+  description: ''
+  trigger:
+  - event_data:
+      domain: persistent_notification
+      service: create
+    event_type: call_service
+    platform: event
+  condition:
+  - condition: template
+    value_template: '{{ trigger.event.data.service_data.notification_id != "config_entry_discovery"
+      }}'
+  action:
+  - data_template:
+      payload: "{\n           \"notification_id\" : \"{{ trigger.event.data.service_data.notification_id\
+        \ }}\",\n           \"title\" : \"{{ trigger.event.data.service_data.title\
+        \ }}\",\n           \"message\" : \"{{ trigger.event.data.service_data.message\
+        \ }}\"\n         }"
+      topic: home-assistant/home/notifications/persistent/{{ trigger.event.data.service_data.notification_id
+        }}
+    service: mqtt.publish

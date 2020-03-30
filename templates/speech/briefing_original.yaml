@@ -1,0 +1,284 @@
+  >-
+  {%- macro dark_outside() -%}
+  {{ [
+      'It is pretty dark outside. I will turn on the outside lights now.',
+      'The sun is offical down. Exterior Cameras are now motion activated.',
+      'The sun has been ushered off the stage. Activating the perimiter cameras.',
+      'It is a little past Sunset. Time to turn on the outside lights. I am on it.',
+      'I will switch on the outside lights. It is getting dark outside.',
+      'Time to turn on the front lights. I will take care of it.',
+      'Switching to night mode! ',
+      'If you have not looked outside lately the light of the day is gone.',
+      'The outside world has switched to dark mode.'
+  ]|random }}
+  {%- endmacro -%}
+
+  {%- macro responsibilities() -%}
+  {% if now().strftime('%a') == 'Wed' or now().strftime('%a') == 'Sun' %}
+      Vandaag is {{ now().strftime('%A') }} en {{ now().strftime('%A') }} is vuilnisophaling.
+  {% endif %}
+  {% if now().strftime('%a') == 'Wed' %}
+      De vuilbak moet vandaag buiten.
+  {% endif %}
+  {% if now().strftime('%j')|int % 2 != 0 %}
+      Vandaag is het Aleandra haar dag om de klusjes te doen.
+  {% else %}
+      Vandaag is het Nicholas zijn dag om de klusjes te doen.
+  {% endif %}
+  {%- endmacro -%}
+
+  {%- macro inside_weather() -%}
+  Inside the house, it is {{ states.climate.downstairs.attributes['current_temperature'] }} degrees with around {{ states('sensor.downstairs_thermostat_humidity') }} percent humidity.
+  {%- endmacro -%}
+
+  {%- macro outside_weather() -%}
+  Outside, it is going to be {{ states('sensor.dark_sky_minutely_summary') }}
+  {%- endmacro -%}
+
+  {%- macro light_check() -%}
+  {% if states.group.all_lights.state != 'off' -%}
+      There are
+  {% for state in states.light if state.state == 'on' -%}
+      {%- if loop.last -%}
+      {{ loop.index }}
+      {%- endif -%}
+  {%- endfor %}
+  lights on right now.
+  {% set comma = joiner(', ') %}
+  The
+  {% for group in states.group|groupby('state') -%}
+      {%- for entity in group.list if entity.state == 'on'
+      and entity.name.split(' ')[1]|lower == 'lights'
+      and entity.name.split(' ')[0]|lower != 'all'
+      and entity.name.split(' ')[0]|lower != 'interior'
+      -%}
+      {{ 'and' if loop.last and not loop.first else comma() }}
+      {{ entity.name|replace('Lights','')}}
+      {%- endfor -%}
+  {%- endfor -%}
+  lights are on.
+  {%- endif -%}
+  {%- endmacro -%}
+
+  {%- macro window_check() -%}
+  {% if states.group.entry_points.state != 'off' -%}
+      {% set comma = joiner(', ') %}
+      The
+      {% for state in states.binary_sensor if state.state == 'on' and state.attributes.device_class == 'opening' -%}
+      {%- endfor %}
+      {% for group in states.binary_sensor|groupby('state') -%}
+      {%- for entity in group.list  if entity.state == 'on' and entity.attributes.device_class == 'opening'  -%}
+          {{ ' and' if loop.last and not loop.first else comma() }}
+          {{ entity.attributes.friendly_name }}
+      {%- endfor -%}
+      {% endfor %}
+      need to be closed.
+  {%- endif -%}
+  {%- endmacro -%}
+
+  {%- macro lock_check() -%}
+  {% if states.group.locks.state !='locked' -%}
+      The
+      {%- for state in states.lock -%}
+      {%- endfor %}
+      {% for group in states.lock|groupby('state') -%}
+      {%- for entity in group.list  if entity.state == 'unlocked' -%}
+          {{ ' and' if loop.last and not loop.first }}
+          {{ entity.attributes.friendly_name }}
+      {%- endfor -%}
+      {%- endfor %}
+      needs to be locked.
+  {%- endif -%}
+  {%- endmacro -%}
+
+  {%- macro garage_check() -%}
+  {% if states.group.garadget.state !='closed' -%}
+      The
+      {%- for state in states.cover -%}
+      {%- endfor %}
+      {% for group in states.cover|groupby('state') -%}
+      {%- for entity in group.list  if entity.state == 'open' and entity.attributes.device_class == 'garage'  -%}
+          {{ ' and' if loop.last and not loop.first }}
+          {{ entity.attributes.friendly_name }}
+      {%- endfor -%}
+      {%- endfor %}
+      need to be closed.
+  {%- endif -%}
+  {%- endmacro -%}
+
+  {%- macro medicine() -%}
+  {% if is_state('input_boolean.medicine', 'off') -%}
+      It looks like Carlo has not taken his medicine yet. Please make sure Carlo takes his medicine now.
+  {% endif -%}
+  {%- endmacro -%}
+
+  {%- macro iss() -%}
+  {% if is_state('binary_sensor.iss', 'on') -%}
+      Here is something interesting. The international space station is above us now. There are {{ states.binary_sensor.iss.attributes['number_of_people_in_space'] }} people in space right now.
+  {% endif -%}
+  {%- endmacro -%}
+
+  {%- macro moon() -%}
+    {%- if states.sensor.moon.state == 'Full moon' -%}
+      {{ [
+           "Het is volle maan vanavond!",
+           "Kijk nu eens, het is volle maan ",
+           "De maan is gigantisch! En vol. ",
+           "Als je de volle maan wil zien, vandaag is de dag"
+           ] | random }}
+    {%- endif -%}
+  {%- endmacro -%}
+
+  {%- macro uv() -%}
+  {% if states.sensor.dark_sky_uv_index.state|int >= 6 and states.sensor.dark_sky_uv_index.state|int <= 7.9 %}
+      Today's UV index is {{ states.sensor.dark_sky_uv_index.state }}.  You should wear sunscreen if going outside.
+  {% elif states.sensor.dark_sky_uv_index.state|int >= 8 and states.sensor.dark_sky_uv_index.state|int <=10.9 %}
+      Today's UV index is {{ states.sensor.dark_sky_uv_index.state }}.  This is VERY HIGH. Be sure wear sunscreen and re-apply.
+  {% elif states.sensor.dark_sky_uv_index.state|int >= 11 %}
+      Today's UV index is {{ states.sensor.dark_sky_uv_index.state }}.  This is EXTREME. You should be very cautious going outside.
+  {% endif %}
+  {%- endmacro -%}
+
+  {%- macro holiday() -%}
+  {% if states.sensor.holiday.state != '' %}
+      Vandaag is {{ states.sensor.holiday.state }}.
+  {% endif %}
+  {%- endmacro -%}
+
+  {# YOUTUBE VIDEO ********* https://www.vcloudinfo.com/2019/11/adding-days-until-sensor-to-my-home-assistant-speech-routines.html #}
+  {%- macro days_until() -%}
+  {% set month=states("sensor.date").split('-')[1] | int %}
+  {%- if month == 4 or month == 5 -%}
+      and don't forget, there are {{ states.sensor.mothersday_countdown.state }} days until Mothers day!
+  {%- elif month == 6 -%}
+      and don't forget, there are {{ states.sensor.fathersday_countdown.state }} days until Fathers day!
+  {%- elif month == 9 or month == 10 -%}
+      and don't forget, there are {{ states.sensor.halloween_countdown.state }} days until Halloween!
+  {%- elif month == 11 or month == 12 -%}
+      and don't forget, there are {{ states.sensor.christmas_countdown.state }} days until Christmas!
+  {% endif %}
+  {%- endmacro -%}
+
+  {% macro inspirational_quote() %}
+      {% set inspirational_quote = [
+      "en nog iets, Life is about making an impact, make it a positive one. ",
+      "en nog iets, Whatever the mind of man can conceive and believe, it can achieve. ",
+      "en nog iets, Strive not to be a success, but rather to be of value. ",
+      "en nog iets, I attribute my overall success to never giving or taking an excuse. ",
+      "en nog iets, You miss one hundred percent of the shots you don’t take. ",
+      "en nog iets, The most difficult thing is the decision to act, the rest is merely tenacity. ",
+      "en nog iets, Every strike brings me closer to the next home run. ",
+      "en nog iets, Defining thepurpose is the starting point of all achievement. ",
+      "en nog iets, Life is not about getting and having, it's about giving and being. ",
+      "en nog iets, We become what we think about. ",
+      "en nog iets, Life is ten percent what happens to you and ninety percent of how you react to it. ",
+      "en nog iets, The most common way people give up their power is by thinking they do not have any. ",
+      "en nog iets, The mind is everything. What you think, you will become.  ",
+      "en nog iets, The best time to plant a tree was twenty years ago. The second best time is now. ",
+      "en nog iets, An unexamined life is not worth living. ",
+      "en nog iets, Eighty percent of success is showing up. ",
+      "en nog iets, Your time is limited, so do not waste it living someone elses life. ",
+      "en nog iets, Winning is not everything, but wanting to win is. ",
+      "en nog iets, I am not a product of my circumstances. I am a product of my decisions. ",
+      "en nog iets, You can never cross the ocean until you have the courage to lose sight of the shore. ",
+      "en nog iets, Either you run the day, or the day runs you. ",
+      "en nog iets, Whether you think you can or you think you cannot, you will be right. ",
+      "en nog iets, The two most important days in your life are the day you are born and the day you find out why. ",
+      "en nog iets, Whatever you can do, or dream you can, begin it. Boldness has genius, power and magic in it. ",
+      "en nog iets, The best revenge is massive success. ",
+      "en nog iets, The universe can’t put good into your hands unless you let go of the bad.",
+      "en nog iets, People often say that motivation does not last. Well, neither does bathing. That is why we recommend it daily. ",
+      "en nog iets, Life shrinks or expands in proportion to ones courage. ",
+      "en nog iets, If you hear a voice within you say you cannot paint, then by all means paint and that voice will be silenced. ",
+      "en nog iets, There is only one way to avoid criticism: do nothing, say nothing, and be nothing. ",
+      "en nog iets, Ask and it will be given to you; search, and you will find; knock and the door will be opened for you. ",
+      "en nog iets, The only person you are destined to become is the person you decide to be. ",
+      "en nog iets, Go confidently in the direction of your dreams. Live the life you have imagined. ",
+      "en nog iets, Certain things catch your eye, but pursue only those that capture the heart. ",
+      "en nog iets, Believe you can and you are halfway there. ",
+      "en nog iets, Everything you have ever wanted is on the other side of fear. ",
+      "en nog iets, Start where you are. Use what you have. Do what you can. ",
+      "en nog iets, Fall seven times and stand up eight. ",
+      "en nog iets, Everything has beauty, but not everyone can see. ",
+      "en nog iets, Life is not measured by the number of breaths we take, but by the moments that take our breath away. ",
+      "en nog iets, Happiness is not something readymade. It comes from your own actions. ",
+      "en nog iets, If you are offered a seat on a rocket ship, do not ask what seat! Just get on. ",
+      "en nog iets, If the wind will not serve, take to the oars. ",
+      "en nog iets, You can not fall if you do not climb. But there’s no joy in living your whole life on the ground. ",
+      "en nog iets, Too many of us are not living our dreams because we are living our fears. ",
+      "en nog iets, Challenges are what make life interesting and overcoming them is what makes life meaningful. ",
+      "en nog iets, If you want to lift yourself up, lift up someone else. ",
+      "en nog iets, Be nice to others and nice things will happen to you.",
+      "en nog iets, It is nice to be important, but more important to be nice."
+      ] %}
+      {{inspirational_quote|random}}
+  {% endmacro %}
+
+  {# ********************************************* #}
+  {#  ******** Start the Speech routines ********  #}
+  {# ********************************************* #}
+
+  {% if call_no_announcement != 1 %}
+  {% if now().strftime('%H')|int < 12 and now().strftime('%H')|int > 6 %}
+      Goedemorgen.
+  {% elif now().strftime('%H')|int >= 12 and now().strftime('%H')|int < 17 %}
+     Goedemiddag.
+  {% else %}
+      Goedenavond.
+  {% endif %}
+  {% endif %}
+
+  {# Called from Annoucenments #}
+  {{ personarriving }}
+
+  {# Called from Nest when thermostats turn on #}
+  {{ NestStatus }}
+
+  {% if call_inside_weather == 1 %}
+  {{ inside_weather() }}
+  {% endif %}
+
+  {% if call_outside_weather == 1 and is_state('sun.sun', 'above_horizon') %}
+  {{ outside_weather() }}
+  {% endif %}
+
+  {{ DoorOpened }}
+  {{ DoorClosed }}
+
+  {{ lock_check() }}
+    {# These two lock statements are sent directly from automations. #}
+  {{ DoorLocked }}
+  {{ DoorUnLocked }}
+
+  {% if call_dark_outside == 1 %}
+  {{ dark_outside() }}
+  {% endif %}
+
+  {% if call_garage_check == 1 or is_state('sun.sun', 'below_horizon') %}
+  {{ garage_check() }}
+  {% endif %}
+
+  {% if (call_window_check == 1 or is_state('sun.sun', 'below_horizon')) or is_state('group.entry_points', 'on') %}
+  {{ window_check() }}
+  {% endif %}
+
+  {{ NewDevice }}
+
+  {% if call_light_check == 1 %}
+  {{ light_check() }}
+  {% endif %}
+
+  {% if call_responsibilities == 1 %}
+  {{ responsibilities() }}
+  {% endif %}
+
+  {% if now().strftime('%H')|int > 21 %}
+  {{ medicine() }}
+  {% endif %}
+
+  {% if value1 is not none %}
+  {{ value1 }}
+  {% endif %}
+
+  {# call a Random fact about the house or inspiration quote #}
+  {{ ([iss, moon, uv, holiday, days_until, outside_weather, outside_weather, inspirational_quote]|random)() }}

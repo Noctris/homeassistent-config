@@ -1,0 +1,10 @@
+living_room_freshen_air_1_hour:
+  alias: Freshen Air In LIving Room for 1 Hour
+  sequence:
+  - data: {}
+    entity_id: switch.living_s4
+    service: switch.turn_on
+  - delay: 01:00:00
+  - data: {}
+    entity_id: switch.living_s4
+    service: switch.turn_off

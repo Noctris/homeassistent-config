@@ -1,0 +1,22 @@
+- id: 'Comfort - Kids - Turn on kids nightlight'
+  alias: Comfort - Kids - Turn on kids nightlight
+  description: 'Comfort - Kids - Turn on kids nightlight'
+  trigger:
+  - at: '20:00'
+    platform: time
+  condition:
+  - condition: and
+    conditions:
+    - condition: state
+      entity_id: group.inhabitants
+      state: home
+    - condition: state
+      entity_id: binary_sensor.kids_week
+      state: 'on'
+  action:
+  - data: {}
+    entity_id: light.slaapkamer_2_s3
+    service: light.turn_on
+  - data:
+      value1: Het is bijna slaaptijd voor de kinderen. Ik heb hun nachtlampje aangedaan.
+    service: script.speech_engine

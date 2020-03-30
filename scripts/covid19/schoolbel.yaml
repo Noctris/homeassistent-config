@@ -1,0 +1,8 @@
+schoolbel_home_radio_system:
+  alias: Media - Schoolbel op geselecteeerde speaker
+  sequence:
+  - service: media_player.play_media
+    data_template:
+      entity_id: '{{speaker}}'
+      media_content_id: http://10.32.1.8:8123/local/audio/schoolbel.mp3
+      media_content_type: audio/mp3

@@ -1,0 +1,17 @@
+- id: 'Comfort - Kids - Turn Off Night Light'
+  alias: Comfort - Kids - Turn Off Night Light
+  description: ''
+  trigger:
+  - at: 09:00
+    platform: time
+  condition:
+  - condition: state
+    entity_id: light.slaapkamer_2_s3
+    state: 'on'
+  action:
+  - data: {}
+    entity_id: light.slaapkamer_2_s3
+    service: light.turn_off
+  - data:
+      value1: Ik heb het nachtlampje van de kinderen uit gezet.
+    service: script.speech_engine

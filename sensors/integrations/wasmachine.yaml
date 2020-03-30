@@ -25,9 +25,9 @@
         friendly_name: "Washing Machine Status"
         # Figuring out how i can diferantiate between just waiting to start (when you have scheduled washing) and running
         value_template: >-
-          {% if states('sensor.wasmachine_watts') | float < 4.5-%}
+          {% if states('sensor.wasmachine_watts') | float < 1-%}
           off
-          {% elif states('sensor.wasmachine_watts') | float > 4.5 -%}
+          {% elif states('sensor.wasmachine_watts') | float >= 1 -%}
           running
           {% else %}
           unkown

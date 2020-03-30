@@ -53,63 +53,6 @@ custom_header:
         chevrons: false
         menu_dropdown: true
 #Some templates to use further
-resources:
-  # https://github.com/lukevink/home-assistant-buienradar-forecast-card/blob/master/buien-rain-card.js
-  - url: /local/custom_ui/buien-radar/buien-rain-card.js
-    type: module
-
-  # https://github.com/atomic7777/atomic_calendar
-  - url: /local/custom_ui/atomic-calendar/atomic-calendar.js
-    type: module
-
-  # https://github.com/maykar/custom-header
-  - url: /local/custom_ui/custom-header/custom-header.js
-    type: module
-
-  # https://github.com/thomasloven/lovelace-auto-entities
-  - url: /local/custom_ui/auto-entities/auto-entities.js
-    type: module
-
-    # https://github.com/kalkih/mini-media-player
-  - url: /local/custom_ui/mini-media-player/mini-media-player-bundle.js
-    type: module
-
-    # https://github.com/gadgetchnnel/lovelace-home-feed-card/
-  - type: js
-    url: /local/custom_ui/lovelace-home-feed-card/lovelace-home-feed-card.js
-
-    # https://github.com/custom-cards/button-card
-  - type: module
-    url: /local/custom_ui/button-card/button-card.js
-
-    # ???
-  - type: module
-    url: /local/custom_ui/calendar-card/calendar-card.js
-
-    # https://github.com/thomasloven/lovelace-slider-entity-row
-  - type: module
-    url: /local/custom_ui/lovelace-slider-entity-row/slider-entity-row.js
-
-    # https://github.com/sbryfcz/harmony-card/
-  - type: module
-    url: /local/custom_ui/harmony-card/harmony-card.js
-
-    # https://github.com/lukevink/home-assistant-buienradar-forecast-card
-  - type: module
-    url: /local/custom_ui/buien-rain-card/buien-rain-card.js
-
-    # https://github.com/custom-cards/text-element
-  - type: module
-    url: /local/custom_ui/text-element/text-element.js
-
-    # https://github.com/thomasloven/lovelace-gui-sandbox
-  - type: module
-    url: /local/custom_ui/gui-sandbox/gui-sandbox.js
-   
-    # https://github.com/custom-cards/upcoming-media-card
-  - type: module
-    url: /local/custom_ui/upcoming-media-card/upcoming-media-card.js
-
 button_card_templates: !include_dir_merge_list lovelace/card_templates/
 #Actual start of the main view
 title: Van Hoof

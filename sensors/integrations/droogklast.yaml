@@ -24,9 +24,9 @@
         icon_template: mdi:tumble-dryer
         friendly_name: "Dryer Status"
         value_template: >-
-          {% if states('sensor.droogkast_watts') | float < 10 -%}
+          {% if states('sensor.droogkast_watts') | float < 1 -%}
           off
-          {% elif states('sensor.droogkast_watts') | float > 10 -%}
+          {% elif states('sensor.droogkast_watts') | float >= 1 -%}
           running
           {% else %}
           unkown

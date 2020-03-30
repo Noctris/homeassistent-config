@@ -1,107 +1,108 @@
 script.play_selected_source_on_selected_speaker:
-    friendly_name: Play Music
-    icon: mdi:play
+  friendly_name: Play Music
+  icon: mdi:play
 person.michel:
-    picture: !secret mivh_facebook_picture
-    entity_picture: !secret mivh_facebook_picture
+  picture: https://graph.facebook.com/1276561060/picture?type=normal
+  entity_picture: https://graph.facebook.com/1276561060/picture?type=normal
 person.alexandra:
-    picture: !secret alvh_picture
-    entity_picture: !secret alvh_picture
+  picture: /local/secret_pictures/alexandra.jpg
+  entity_picture: /local/secret_pictures/alexandra.jpg
 person.nicholas:
-    picture: !secret nivh_picture
-    entity_picture: !secret nivh_picture
-
-### Schakelaars
+  picture: /local/secret_pictures/nicholas2.jpg
+  entity_picture: /local/secret_pictures/nicholas2.jpg
 switch.droogkast:
-    icon: mdi:tumble-dryer
+  icon: mdi:tumble-dryer
 switch.wasmachine:
-    icon: mdi:washing-machine
+  icon: mdi:washing-machine
 switch.office_desk_left:
-    icon: mdi:power-socket-eu
+  icon: mdi:power-socket-eu
 switch.office_s2:
-    icon: mdi:power-socket-eu
+  icon: mdi:power-socket-eu
 switch.office_library_left:
-    icon: mdi:power-socket-eu
+  icon: mdi:power-socket-eu
 switch.living_s1:
-    icon: mdi:power-socket-eu
+  icon: mdi:power-socket-eu
 switch.living_s2:
-    icon: mdi:power-socket-eu
+  icon: mdi:power-socket-eu
 switch.living_s3:
-    icon: mdi:power-socket-eu
+  icon: mdi:power-socket-eu
 switch.living_s4:
-    friendly_name: Airwick
-    icon: mdi:air-filter
+  friendly_name: Airwick
+  icon: mdi:air-filter
 light.slaapkamer_1_l2:
-    icon: mdi:fan
+  icon: mdi:fan
 switch.slaapkamer_1_s1:
-    icon: mdi:power-socket-eu
+  icon: mdi:power-socket-eu
 switch.slaapkamer_1_s2:
-    icon: mdi:power-socket-eu
+  icon: mdi:power-socket-eu
 switch.slaapkamer_1_s3:
-    icon: mdi:power-socket-eu
+  icon: mdi:power-socket-eu
 light.slaapkamer_2_l3:
-    icon: mdi:fan
+  icon: mdi:fan
 switch.slaapkamer_2_s1:
-    icon: mdi:power-socket-eu
+  icon: mdi:power-socket-eu
 switch.slaapkamer_2_s2:
-    icon: mdi:power-socket-eu
+  icon: mdi:power-socket-eu
 switch.slaapkamer_2_s3:
-    icon: mdi:power-socket-eu
+  icon: mdi:power-socket-eu
 switch.slaapkamer_2_s4:
-    icon: mdi:power-socket-eu
+  icon: mdi:power-socket-eu
 switch.master_bedroom_s1:
-    icon: mdi:power-socket-eu
+  icon: mdi:power-socket-eu
 switch.master_bedroom_s2:
-    icon: mdi:power-socket-eu
+  icon: mdi:power-socket-eu
 switch.master_bedroom_s3:
-    icon: mdi:power-socket-eu
-
-### Verlichting
+  icon: mdi:power-socket-eu
 light.eetkamer_s1:
-    friendly_name: Eetkamer Lamp
-    icon: mdi:lightbulb-on-outline
+  friendly_name: Eetkamer Lamp
+  icon: mdi:lightbulb-on-outline
 light.living_s3:
-    friendly_name: Living Zetel Eetkamer
-    icon: mdi:lamp
+  friendly_name: Living Zetel Eetkamer
+  icon: mdi:lamp
 light.living_s2:
-    friendly_name: Living Zetel Raam Lamp
-    icon: mdi:floor-lamp
+  friendly_name: Living Zetel Raam Lamp
+  icon: mdi:floor-lamp
 light.slaapkamer_1_dimbare_spots_l1:
-    icon: mdi:lightbulb-on-outline
-    friendly_name: Slaapkamer Papa Spots
+  icon: mdi:lightbulb-on-outline
+  friendly_name: Slaapkamer Papa Spots
 light.slaapkamer_2_dimbare_spots_l1:
-    icon: mdi:lightbulb-on-outline
-    friendly_name: Slaapkamer Aapjes Spots
+  icon: mdi:lightbulb-on-outline
+  friendly_name: Slaapkamer Aapjes Spots
 light.slaapkamer_1_s2:
-    icon: 'mdi:lamp'
-    friendly_name: Nachtlamp Papa
+  icon: mdi:lamp
+  friendly_name: Nachtlamp Papa
 light.slaapkamer_2_s3:
-    icon: 'mdi:lamp'
-    friendly_name: Nachtlamp Aapjes
+  icon: mdi:lamp
+  friendly_name: Nachtlamp Aapjes
 light.bureau_dimbare_spots_l1:
-    icon: mdi:lightbulb-on-outline
-    friendly_name: Bureau Spots
+  icon: mdi:lightbulb-on-outline
+  friendly_name: Bureau Spots
 light.living_s1:
-    icon: 'mdi:lamp'
-    friendly_name: Tv Hue Lamp
-# Media Player
+  icon: mdi:lamp
+  friendly_name: Tv Hue Lamp
 media_player.living_kodi:
-    icon: mdi:kodi
+  icon: mdi:kodi
 light.achtergrond_verlichting_leefruimte:
-    icon: mdi:lamp
+  icon: mdi:lamp
 media_player.living_room:
-    icon: mdi:google-home
+  icon: mdi:google-home
 media_player.office_mini:
-    icon: mdi:cast-audio
+  icon: mdi:cast-audio
 media_player.master_bedroom_speaker:
-    icon: mdi:cast-audio
+  icon: mdi:cast-audio
 media_player.slaapkamer_alexandra_speaker:
-    icon: mdi:cast-audio
+  icon: mdi:cast-audio
 media_player.living_tv:
-    icon: mdi:cast
+  icon: mdi:cast
 media_player.woonkamer:
-    icon: mdi:cast-audio
-    name: Gelijkvloers
+  icon: mdi:cast-audio
+  name: Gelijkvloers
 media_player.home_group:
-    icon: mdi:cast-audio
-    name: Alle Speakers
+  icon: mdi:cast-audio
+  name: Alle Speakers
+input_boolean.chore_empty_washingmachine:
+  icon: mdi:washing-machine
+input_boolean.chore_empty_dryer:
+  icon: mdi:tumble-dryer
+zone.home:
+  radius: 30

@@ -1,0 +1,23 @@
+- id: 'System - Comfort - Turn off all lights when nobody home for 5 minutes'
+  alias: System - Comfort - Turn off all lights when nobody home for 5 minutes
+  description: 'When nobody of the inhabitants is home and we are not in guest mode, turn off all unneeded lights'
+  trigger:
+  - entity_id: group.inhabitants
+    for: 00:05
+    platform: state
+    to: not_home
+  condition:
+  - condition: and
+    conditions:
+    - condition: state
+      entity_id: input_boolean.guest_mode
+      state: 'off'
+  action:
+  - data: {}
+    entity_id: light.knx_lampen
+    service: light.turn_off
+  - data:
+      message: Er is niemand thuis voor meer dan 5 minuten en er brand nog licht. Ik heb dit
+        uitgedaan.
+      title: Automatisch Lichten Uit
+    service: notify.mobile_app_michel_s10_plus

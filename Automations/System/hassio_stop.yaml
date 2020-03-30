@@ -1,0 +1,11 @@
+- id: 'System - Info - Hassio Stop'
+  alias: Notify us from home assistant restarts
+  description: ''
+  trigger:
+  - event: shutdown
+    platform: homeassistant
+  condition: []
+  action:
+  - data:
+      value1: De huis Assistent wordt gestopt.
+    service: script.speech_engine

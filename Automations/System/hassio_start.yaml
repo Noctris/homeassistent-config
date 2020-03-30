@@ -1,0 +1,11 @@
+- id: 'System - Info - Hassio Start'
+  alias: Home Assistant Start
+  description: ''
+  trigger:
+  - event: start
+    platform: homeassistant
+  condition: []
+  action:
+  - data:
+      value1: De huis assistent is terug actief.
+    service: script.speech_engine

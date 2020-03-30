@@ -1,0 +1,21 @@
+- id: 'System - Light - Turn on lights when I arrive in the dark'
+  alias: 'System - Light - Turn on lights when I arrive in the dark'
+  description: 'When someone is arriving in the dark, turn on the lights'
+  trigger:
+  - entity_id: group.inhabitants
+    platform: state
+    to: home
+  condition:
+  - after: sunset
+    after_offset: -00:30
+    before: sunrise
+    before_offset: +00:30
+    condition: sun
+  action:
+  - data: {}
+    entity_id: light.inkomhal_licht
+    service: light.turn_on
+  - data: {}
+    entity_id: light.gang_bureau
+    service: light.turn_on
+  - scene: scene.background_lighting_livingroom

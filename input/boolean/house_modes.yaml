@@ -1,0 +1,35 @@
+guest_mode:
+  name: Guest Mode
+  icon: mdi:account-alert
+  initial: off
+
+school_mode:
+  name: School Mode
+  icon: mdi:school
+  initial: on
+
+homework_mode:
+  name: Working from home
+  icon: mdi:briefcase-outline
+  initial: off
+
+work_mode:
+  name: Working from home
+  icon: mdi:briefcase
+  initial: off
+
+away_mode:
+  name: Away mode
+  icon: mdi:palm-tree
+  initial: on
+
+
+covid_school_mode:
+  name: Covid19 School Mode
+  icon: mdi:school
+  initial: off
+
+alert_mode:
+  name: Alert Mode
+  icon: mdi:alert-octagram
+  initial: off

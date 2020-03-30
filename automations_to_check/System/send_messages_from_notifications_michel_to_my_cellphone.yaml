@@ -1,0 +1,16 @@
+- id: 'notify_michel_from_mqtt'
+  alias: Notify michel for these messages
+  initial_state: 'off'
+  description: ''
+  trigger:
+  - platform: mqtt
+    topic: notifications/michel/+
+  condition:   
+    - condition: state
+      entity_id: person.michel
+      state: away
+  action:
+  - data_template:
+      message: '{{ trigger.payload_json.message }}'
+      title: '{{ trigger.payload_json.title }}'
+    service: notify.mobile_app_michel_s10_plus
