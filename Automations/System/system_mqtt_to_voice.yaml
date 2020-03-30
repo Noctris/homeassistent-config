@@ -1,0 +1,11 @@
+- id: 'System - Notification - MQTT to Voice'
+  alias: 'System - Notification - MQTT to Voice'
+  description: System - Notification - MQTT to Voice
+  trigger:
+  - platform: mqtt
+    topic: home-assistant/notifications/voice/+
+  condition: []
+  action:
+  - data_template:
+      value1: '{{ trigger.payload_json.message }}'
+    service: script.speech_engine
