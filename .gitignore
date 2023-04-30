@@ -68,3 +68,4 @@ harmony_living_room.conf
 .vscode/settings.json
 .pip_progress
 .HA_VERSION
+/node-red/node-red-contrib-home-assistant-websocket.json
