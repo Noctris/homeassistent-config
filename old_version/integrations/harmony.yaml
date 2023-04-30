@@ -1,4 +1,0 @@
-  - platform: harmony
-    name: Living Room
-    #Removing this for self discovery
-    #host: !secret harmony_hub_ip

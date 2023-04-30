@@ -1,7 +1,0 @@
-run_lamp_in_living:
-  alias: Living Spots Wake Up Test
-  sequence:
-    service: script.wake_up_light_test
-    data_template:
-      lamp: light.living_dimbare_spots_l1
-      seconds_between_increment: 30

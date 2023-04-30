@@ -1,7 +1,0 @@
-music_type_source:
-  name: 'Muziek Keuze:'
-  options:
-    - Spotify
-    - Radio
-  initial: Radio
-  icon: mdi:music

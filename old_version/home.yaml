@@ -1,4 +1,0 @@
-home:
-  devices: 
-    - device_tracker.michel_s10_plus
-  tolerance: 50

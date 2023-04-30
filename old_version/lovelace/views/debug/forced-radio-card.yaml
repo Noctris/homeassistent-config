@@ -1,5 +1,0 @@
-type: entities
-entities:
-  - input_select.music_type_source
-  - input_select.radio_station
-  - input_select.spotify_playlist

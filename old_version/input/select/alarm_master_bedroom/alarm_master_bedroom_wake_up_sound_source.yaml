@@ -1,7 +1,0 @@
-alarm_master_bedroom_wake_up_sound_source:
-  name: 'Muziek Keuze:'
-  options:
-    - Spotify
-    - Radio
-  initial: Radio
-  icon: mdi:music

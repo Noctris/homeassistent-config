@@ -1,5 +1,0 @@
-- platform: kodi
-  host: 10.32.1.30
-  name: Living Kodi
-  username: !secret livingroom_kodi_user
-  password: !secret livingroom_kodi_password

@@ -1,8 +1,0 @@
-type: glance
-title: Where Is everyone?
-column_width: calc(100% / 3)
-entities:
-  - entity: person.michel
-  - entity: person.alexandra
-  - entity: person.nicholas
-        

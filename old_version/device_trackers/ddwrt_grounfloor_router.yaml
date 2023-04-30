@@ -1,6 +1,0 @@
-  - platform: ddwrt
-    host: !secret ddwrt_groundfloor_ip
-    username: !secret ddwrt_groundfloor_user
-    password: !secret ddwrt_groundfloor_pass
-    new_device_defaults:
-      track_new_devices: false

@@ -1,5 +1,0 @@
-# Keuken
-  - platform: knx
-    name: Terras L1
-    address: '1/6/0'
-    state_address: '1/6/1'
