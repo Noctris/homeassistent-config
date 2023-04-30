@@ -1,5 +1,26 @@
+#Basic Home Assistant Config
+homeassistant:
+  country: !secret home_country_code
+  name: Home
+  latitude: !secret home_latitude
+  longitude: !secret home_longtitude
+  elevation: 9
+  time_zone: "Europe/Brussels"
+  external_url: !secret external_url
+  internal_url: !secret internal_url
+  unit_system: metric
+  temperature_unit: C
+  currency: EUR
+  customize: !include customize.yaml
+
 # Loads default set of integrations. Do not remove.
 default_config:
+
+# Reverse Proxy Shizzle
+http:
+  use_x_forwarded_for: true
+  trusted_proxies:
+    - 172.0.0.0/8
 
 # Load frontend themes from the themes folder
 frontend:
@@ -12,6 +33,13 @@ tts:
 automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
+
+#Recorder should log to mysql for disk and performance reasons
+recorder:
+  db_url: !secret mariadb_url
+  commit_interval: 5
+  purge_keep_days: 30
+
 
 mqtt_statestream:
   base_topic: homeassistant
