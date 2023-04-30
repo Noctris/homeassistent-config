@@ -1,0 +1,10 @@
+title: Media Geek
+path: media-geek
+icon: 'mdi:play'
+panel: false
+badges: []
+cards:
+  - type: 'custom:upcoming-media-card'
+    entity: sensor.sonarr_upcoming
+  - type: 'custom:upcoming-media-card'
+    entity: sensor.sonarr_wanted

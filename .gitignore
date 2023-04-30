@@ -32,6 +32,7 @@ automations.yaml
 .vscode/settings.json
 harmony_living_room_hub.conf
 harmony_living_room.conf
+.HA_VERSION
 # Example .gitignore file for your config dir.
 # An * ensures that everything will be ignored.
 
