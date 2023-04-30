@@ -48,7 +48,7 @@ harmony_living_room.conf
 tts/
 www/secret_pictures/
 .vscode/
-
+old_version/
 # Ensure these YAML files are ignored, otherwise your secret data/credentials will leak.
 ip_bans.yaml
 secrets.yaml
@@ -69,3 +69,4 @@ harmony_living_room.conf
 .pip_progress
 .HA_VERSION
 /node-red/node-red-contrib-home-assistant-websocket.json
+
