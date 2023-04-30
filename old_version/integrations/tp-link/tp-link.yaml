@@ -1,4 +1,0 @@
- discovery: false
- switch:
-  - host: !secret dryer_hsp110_ip
-  - host: !secret washer_hsp110_ip

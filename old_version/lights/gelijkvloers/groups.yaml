@@ -1,7 +1,0 @@
-  - platform: group
-    name: Achtergrond verlichting Leefruimte
-    entities:
-      - light.living_s1
-      - light.living_s2
-      - light.living_s3
-      - light.keuken_dimbare_spots_l2

@@ -1,4 +1,0 @@
- - name: Lies
-   latitude: !secret lies_lat
-   longitude: !secret lies_lon
-   radius: 40

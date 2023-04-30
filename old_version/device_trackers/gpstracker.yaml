@@ -1,6 +1,0 @@
-#- platform: traccar
-#    host: !secret traccar_host
-#    username: !secret traccar_username
-#    password: !secret traccar_pass_m
-#    port: 443
-#    ssl: true

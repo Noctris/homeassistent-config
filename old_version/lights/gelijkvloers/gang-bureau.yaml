@@ -1,5 +1,0 @@
-# Gang Bureau
-  - platform: knx
-    name: Gang Bureau
-    address: '0/5/0'
-    state_address: '0/5/1'

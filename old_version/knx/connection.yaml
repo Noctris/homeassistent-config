@@ -1,6 +1,0 @@
-  tunneling:
-    host: !secret knx_gateway_ip
-    port: 3671
-    local_ip: !secret hassio_host_ip
-    state_updater: !secret knx_state_updater
-    rate_limit: !secret knx_rate_limit

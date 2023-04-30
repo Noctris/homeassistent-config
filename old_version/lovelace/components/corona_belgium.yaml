@@ -1,8 +1,0 @@
-title: Corona
-show_header_toggle: false
-type: entities
-entities:
-  - entity: sensor.belgium_coronavirus_confirmed
-  - entity: sensor.belgium_coronavirus_current
-  - entity: sensor.belgium_coronavirus_deaths
-  - entity: sensor.belgium_coronavirus_recovered

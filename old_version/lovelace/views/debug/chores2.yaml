@@ -1,9 +1,0 @@
-type: entity-filter
-state_filter:
-  - "on"
-  - "off"
-entities:
-  - input_boolean.chore_empty_dryer
-  - input_boolean.chore_empty_washingmachine
-card:
-  type: entities

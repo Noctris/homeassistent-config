@@ -1,9 +1,0 @@
-  - platform: group
-    name: 1ste_verdieping_lichten
-    entities:
-     - light.bathroom_spots
-     - light.bathroom_shower_spots
-     - light.bathroom_l3
-     - light.kids_bedroom_spots
-     - light.kids_bedroom_l2
-     - light.dad_bedroom_spots
