@@ -70,3 +70,4 @@ harmony_living_room.conf
 .HA_VERSION
 /node-red/node-red-contrib-home-assistant-websocket.json
 
+esphome/.esphome/esphome.json
