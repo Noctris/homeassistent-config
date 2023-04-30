@@ -1,8 +1,0 @@
-{
-    "files.associations": {
-        "*.yaml": "home-assistant"
-    },
-    "vscode-home-assistant.hostUrl": "https://hassio.vanhoof.me",
-    "vscode-home-assistant.ignoreCertificates": true,
-    "vscode-home-assistant.longLivedAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI2NGZlMDBjY2RjOGY0ZTgxODk4OTJiZWM2MzgyYzhiNiIsImlhdCI6MTU4NDI5MjI4NywiZXhwIjoxODk5NjUyMjg3fQ.UGUAWLIjRMZvvNwNs0xm7sIerdg6yIUodmo8C-PKq6s"
-}
